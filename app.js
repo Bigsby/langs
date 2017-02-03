@@ -115,6 +115,13 @@ var data = {
             languages: ["js", "cpp", "py", "fs", "go", "rb", "cs", "java", "pl"]
         },
         {
+            id: "comments",
+            name: "Commenting",
+            description: "Non-processed statements.",
+            type: "code",
+            languages: ["js", "cpp", "py", "fs", "go", "rb", "cs", "java", "pl"]
+        },
+        {
             id: "variables",
             name: "Variables",
             description: "Holding in-memory values to be (re)used.",
