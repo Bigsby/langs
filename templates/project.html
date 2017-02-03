@@ -2,12 +2,15 @@
 <p>{{$ctrl.project.description}}</p>
 <ul class="project_implementations">
     <li ng-repeat="imp in $ctrl.project.implementations">
-        <a ng-href="{{imp.link}}" target="_blank" title="Source Code">
-            <h3>{{imp.language.name}}</h3>
-        </a>
-        <div>
-            {{$ctrl.project.id}}.{{imp.language.id}}
-            <pre><code class="{{'language-' + imp.language.highlight}}">{{imp.code}}</code></pre>
+        <h3>{{imp.language.name}}</h3>
+        <div ng-switch="$ctrl.project.type">
+            <div ng-switch-when="code">
+                <a ng-href="{{imp.link}}" target="_blank" title="Source Code">
+                    {{$ctrl.project.id}}.{{imp.language.id}}
+                </a>
+                <pre><code class="{{'language-' + imp.language.highlight}}">{{imp.code}}</code></pre>
+            </div>
+            <steps ng-switch-when="steps" steps="imp.steps"></steps>
         </div>
     </li>
 </ul>

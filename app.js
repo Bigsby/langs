@@ -103,7 +103,7 @@ var data = {
     projects: [
         {
             id: "setup",
-            name: "Setup & Install",
+            name: "Setup & Run",
             type: "steps",
             description: "What needs to be installed to get started on each language."
         },
@@ -429,6 +429,7 @@ var data = {
         });
         data.projects.forEach(function (project) {
             FindAndReplace(project, "languages", data.languages);
+            project.isImplemented = project.type === 'steps' || (project.languages && project.languages.length);
         });
     })();
 
@@ -480,7 +481,18 @@ var data = {
                         break;
 
                     case "steps":
-
+                        var definitions = vm.implementations[project.id];
+                        if (definitions) {
+                            vm.languages.forEach(function (lang) {
+                                var definition = definitions[lang.id];
+                                if (definition)
+                                    project.implementations.push({
+                                        language: lang,
+                                        steps: definition
+                                    });
+                            });
+                        }
+                        vm.$timeout(function () { Prism.highlightAll(document.querySelectorAll(".language-bash")); }, 50);
                         break;
                 }
             }
@@ -492,7 +504,7 @@ var data = {
     app.component("steps", {
         templateUrl: templatesRoot + "steps.html",
         bindings: {
-            steps: ">"
+            steps: "<"
         }
     });
 

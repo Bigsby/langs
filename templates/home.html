@@ -13,8 +13,8 @@
 <p>Programs:</p>
 <ol start="0">
     <li ng-repeat="proj in $ctrl.projects">
-        <a ng-if="proj.languages.length" ui-sref="project({id:proj.id})">{{proj.name}}</a>
-        <span ng-if="!proj.languages.length">{{proj.name}}</span>
+        <a ng-if="proj.isImplemented" ui-sref="project({id:proj.id})">{{proj.name}}</a>
+        <span ng-if="!proj.isImplemented">{{proj.name}}</span>
     </li>
 </ol>
 
