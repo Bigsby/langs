@@ -212,7 +212,7 @@ var data = {
                     program: "Node.js",
                     link: "https://nodejs.org/",
                     notes: [
-                        "Make sure node.exe path in System PATH"
+                        "Make sure node.exe path is in System PATH"
                     ]
                 },
                 {
@@ -229,7 +229,7 @@ var data = {
             cpp: [
                 {
                     type: "install",
-                    text: "Visual C++ or Visual Studio Community/Professional/Enterprise",
+                    program: "Visual C++ or Visual Studio Community/Professional/Enterprise",
                     link: "https://www.visualstudio.com/vs/cplusplus/#downloadvs",
                     alternative: "https://www.visualstudio.com/downloads/",
                     notes: [
@@ -248,8 +248,149 @@ var data = {
                 },
                 {
                     type: "command",
-                    text: "Run program",
+                    text: "Run compiled program",
                     command: "«filename».exe"
+                }
+            ],
+            py: [
+                {
+                    type: "install",
+                    program: "Python",
+                    link: "https://www.python.org/downloads/"
+                },
+                {
+                    type: "open",
+                    name: "Command Prompt",
+                    program: "cmd.exe"
+                },
+                {
+                    type: "command",
+                    text: "Run program",
+                    command: "py «filename».py"
+                }
+            ],
+            fs: [
+                {
+                    type: "install",
+                    program: "Visual Studio Community/Professional/Enterprise",
+                    link: "https://www.visualstudio.com/downloads/",
+                    notes: [
+                        "Make sure to enable Features > Programming Languages > Visual F#"
+                    ]
+                },
+                {
+                    type: "open",
+                    name: "Visual Studio > Developmer Command Prompt",
+                    program: "VsDevCmd.bat"
+                },
+                {
+                    type: "command",
+                    text: "Compile Code",
+                    command: "fsc «filename».fs"
+                },
+                {
+                    type: "command",
+                    text: "Run compiled program",
+                    command: "«filename».exe"
+                }
+            ],
+            go: [
+                {
+                    type: "install",
+                    program: "Go",
+                    link: "https://golang.org/dl/"
+                },
+                {
+                    type: "open",
+                    name: "Command Prompt",
+                    program: "cmd.exe"
+                },
+                {
+                    type: "command",
+                    text: "Run program",
+                    command: "go run «filename».go"
+                }
+            ],
+            rb: [
+                {
+                    type: "install",
+                    program: "Ruby",
+                    link: "https://rubyinstaller.org/"
+                },
+                {
+                    type: "open",
+                    name: "Command Prompt",
+                    program: "cmd.exe"
+                },
+                {
+                    type: "command",
+                    text: "Run program",
+                    command: "ruby «filename».rb"
+                }
+            ],
+            cs: [
+                {
+                    type: "install",
+                    program: "Visual Studio Community/Professional/Enterprise",
+                    link: "https://www.visualstudio.com/downloads/"
+                },
+                {
+                    type: "open",
+                    name: "Visual Studio > Developmer Command Prompt",
+                    program: "VsDevCmd.bat"
+                },
+                {
+                    type: "command",
+                    text: "Compile Code",
+                    command: "csc «filename».cs"
+                },
+                {
+                    type: "command",
+                    text: "Run compiled program",
+                    command: "«filename».exe"
+                }
+            ],
+            java: [
+                {
+                    type: "install",
+                    program: "Java SE Development Kit",
+                    link: "http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html",
+                    notes: [
+                        "Make sure java.exe and javac.exe paths are in System PATH"
+                    ]
+                },
+                {
+                    type: "open",
+                    name: "Command Prompt",
+                    program: "cmd.exe"
+                },
+                {
+                    type: "command",
+                    text: "Compile Code",
+                    command: "javac «filename».java"
+                },
+                {
+                    type: "command",
+                    text: "Run compiled program",
+                    command: "java «filename»"
+                }
+            ],
+            pl: [
+                {
+                    type: "install",
+                    program: "Pearl",
+                    link: "http://dwimperl.com/windows.html",
+                    alternative: "https://www.perl.org/get.html#win32"
+                },
+                {
+                    type: "open",
+                    name: "Command Prompt",
+                    program: "cmd.exe"
+                },
+                {
+                    type: "command",
+                    text: "Run program",
+                    command: "pearl «filename».pl"
                 }
             ]
         }
@@ -339,12 +480,20 @@ var data = {
                         break;
 
                     case "steps":
+
                         break;
                 }
             }
             else
                 vm.$timeout(function () { Prism.highlightAll(); });
         })
+    });
+
+    app.component("steps", {
+        templateUrl: templatesRoot + "steps.html",
+        bindings: {
+            steps: ">"
+        }
     });
 
     app.component("specific", {
