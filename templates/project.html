@@ -6,6 +6,7 @@
         <a ng-href="{{imp.link}}" target="_blank" title="Source Code">
             <h3>{{imp.language.name}}</h3>
         </a>
+        {{$ctrl.project.id}}.{{imp.language.id}}
         <pre><code class="{{'language-' + imp.language.highlight}}">{{imp.code}}</code></pre>
     </li>
 </ul>
