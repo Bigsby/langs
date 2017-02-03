@@ -2,6 +2,7 @@ var data = {
     languages: [
         {
             id: "js",
+            highlight: "javascript",
             name: "JavaScript",
             link: "https://www.javascript.com/",
             runtimes: ["node"],
@@ -10,6 +11,7 @@ var data = {
         },
         {
             id: "cpp",
+            highlight: "cpp",
             name: "C++",
             link: "http://www.cplusplus.com/",
             runtimes: ["native"],
@@ -18,6 +20,7 @@ var data = {
         },
         {
             id: "py",
+            highlight: "python",
             name: "Python",
             link: "https://www.python.org/",
             runtimes: ["python"],
@@ -26,6 +29,7 @@ var data = {
         },
         {
             id: "fs",
+            highlight: "fsharp",
             name: "F#",
             link: "http://fsharp.org/",
             runtimes: ["net"],
@@ -34,6 +38,7 @@ var data = {
         },
         {
             id: "go",
+            highlight: "go",
             name: "Go",
             link: "https://golang.org/",
             ides: ["vscode", "eclipse"],
@@ -41,6 +46,7 @@ var data = {
         },
         {
             id: "rb",
+            highlight: "ruby",
             name: "Ruby",
             link: "https://www.ruby-lang.org/",
             runtimes: ["ruby"],
@@ -49,6 +55,7 @@ var data = {
         },
         {
             id: "cs",
+            highlight: "csharp",
             name: "C#",
             link: "https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx",
             runtimes: ["net"],
@@ -57,6 +64,7 @@ var data = {
         },
         {
             id: "java",
+            highlight: "java",
             name: "Java",
             link: "https://www.java.com/",
             runtimes: ["java"],
@@ -65,20 +73,37 @@ var data = {
         },
         {
             id: "rs",
+            highlight: "rust",
             name: "Rust",
             link: "https://www.rust-lang.org/",
             current: false
         },
         {
             id: "scala",
+            highlight: "scala",
             name: "Scala",
             link: "https://www.scala-lang.org/",
             current: false
         },
         {
             id: "hs",
+            highlight: "haskell",
             name: "Haskell",
             link: "https://www.haskell.org/",
+            current: false
+        },
+        {
+            id: "lua",
+            highlight: "lua",
+            name: "Lua",
+            link: "https://www.lua.org/",
+            current: false
+        },
+        {
+            id: "pl",
+            highlight: "perl",
+            name: "Perl",
+            link: "https://www.perl.org/",
             current: false
         }
     ],
@@ -210,10 +235,11 @@ var data = {
     var app = angular.module(appName, ["ngSanitize", "ui.router"]);
 
     function BuildController(onLoad) {
-        return function ($http, $stateParams) {
+        return function ($http, $stateParams, $timeout) {
             var vm = this;
             vm.$http = $http;
             vm.$stateParams = $stateParams;
+            vm.$timeout = $timeout;
 
             angular.extend(vm, data);
             if (onLoad)
@@ -245,6 +271,7 @@ var data = {
                     vm.$http.get("https://raw.githubusercontent.com/Bigsby/HelloLanguages/master/" + lang.id + "/" + project.id + "/" + project.id + "." + lang.id)
                     .then(function (response) {
                         implementation.code = response.data;
+                        vm.$timeout(function () { Prism.highlightElement(document.querySelector(".language-" + lang.highlight)); });
                     });
                 });
             }

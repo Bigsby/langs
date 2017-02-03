@@ -3,7 +3,7 @@
 <ul>
     <li ng-repeat="imp in $ctrl.project.implementations">
         <h2>{{imp.language.name}}</h2>
-        <p><a ng-href="{{imp.link}}" target=_blank>Link</a></p>
-        <pre>{{imp.code}}</pre>
+        <p><a ng-href="{{imp.link}}" target=_blank>Source Code</a></p>
+        <pre><code class="{{'language-' + imp.language.highlight}}">{{imp.code}}</code></pre>
     </li>
 </ul>
