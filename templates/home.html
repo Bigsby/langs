@@ -4,7 +4,10 @@
 
 <p>The current list of languages is:</p>
 <ul>
-    <li ng-repeat="lang in $ctrl.languages | filter: {current: true}"><a ng-href="{{lang.link}}" target="_blank">{{lang.name}}</a></li>
+    <li ng-repeat="lang in $ctrl.languages | filter: {current: true}">
+        <a ng-href="{{lang.link}}" target="_blank">{{lang.name}}</a>
+        (Runtime: <a ng-repeat="rt in lang.runtimes" target="_blank" ng-href="{{rt.link}}">{{rt.name}}</a>, IDEs: <span ng-repeat="ide in lang.ides" ><a target="_blank" ng-href="{{ide.link}}">{{ide.name}}</a>{{$last ? '' : ', '}}</span>)
+    </li>
 </ul>
 
 <p>To be included, one of these days:</p>
