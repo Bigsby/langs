@@ -102,6 +102,11 @@ var data = {
     ],
     projects: [
         {
+            id: "setup",
+            name: "Setup & Install",
+            description: "What needs to be installed to get started on each language."
+        },
+        {
             id: "hello",
             name: "Hello World!",
             description: "Of course, the first project is a 'Hello, World'.",
