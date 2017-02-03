@@ -104,25 +104,35 @@ var data = {
         {
             id: "setup",
             name: "Setup & Install",
+            type: "steps",
             description: "What needs to be installed to get started on each language."
         },
         {
             id: "hello",
             name: "Hello World!",
             description: "Of course, the first project is a 'Hello, World'.",
-            isCode: true,
+            type: "code",
             languages: ["js", "cpp", "py", "fs", "go", "rb", "cs", "java", "pl"]
+        },
+        {
+            id: "if",
+            name: "If/Else",
+            description: "Evey language has, at least, one conditional statement.",
+            type: "code",
+            languages: []
         },
         {
             id: "loop",
             name: "Looping",
             description: "Repeating until...",
+            type: "code",
             languages: []
         },
         {
             id: "iterate",
             name: "Iterating a sequence",
             description: "Repeat for every item in a sequence.",
+            type: "code",
             languages: []
         }
     ],
@@ -193,7 +203,57 @@ var data = {
             name: "NetBeans",
             link: "https://netbeans.org/"
         }
-    ]
+    ],
+    implementations: {
+        setup: {
+            js: [
+                {
+                    type: "install",
+                    program: "Node.js",
+                    link: "https://nodejs.org/",
+                    notes: [
+                        "Make sure node.exe path in System PATH"
+                    ]
+                },
+                {
+                    type: "open",
+                    name: "Command Prompt",
+                    program: "cmd.exe"
+                },
+                {
+                    type: "command",
+                    text: "Run program",
+                    command: "node «filename».js"
+                }
+            ],
+            cpp: [
+                {
+                    type: "install",
+                    text: "Visual C++ or Visual Studio Community/Professional/Enterprise",
+                    link: "https://www.visualstudio.com/vs/cplusplus/#downloadvs",
+                    alternative: "https://www.visualstudio.com/downloads/",
+                    notes: [
+                        "If installing Community/Professional/Enterprise, make sure to enable Features > Programming Languages > Visual C++ > Common Tools for Visual C++"
+                    ]
+                },
+                {
+                    type: "open",
+                    name: "Visual Studio > Developmer Command Prompt",
+                    program: "VsDevCmd.bat"
+                },
+                {
+                    type: "command",
+                    text: "Compile Code",
+                    command: "cl «filename».cpp"
+                },
+                {
+                    type: "command",
+                    text: "Run program",
+                    command: "«filename».exe"
+                }
+            ]
+        }
+    }
 };
 
 (function () {
@@ -256,26 +316,40 @@ var data = {
         controller: BuildController(function (vm) {
             var project = data.projects.find(function (project) { return project.id === vm.$stateParams.id });
             vm.project = project;
+
             if (!project.implementations) {
                 project.implementations = [];
 
-                project.languages.forEach(function (lang) {
-                    var implementation = {
-                        language: lang,
-                        link: "https://github.com/Bigsby/HelloLanguages/tree/master/" + lang.id + "/" + project.id
-                    };
+                switch (project.type) {
+                    case "code":
+                        project.languages.forEach(function (lang) {
+                            var implementation = {
+                                language: lang,
+                                link: "https://github.com/Bigsby/HelloLanguages/tree/master/" + lang.id + "/" + project.id
+                            };
 
-                    project.implementations.push(implementation);
+                            project.implementations.push(implementation);
 
-                    vm.$http.get("https://raw.githubusercontent.com/Bigsby/HelloLanguages/master/" + lang.id + "/" + project.id + "/" + project.id + "." + lang.id)
-                    .then(function (response) {
-                        implementation.code = response.data;
-                        vm.$timeout(function () { Prism.highlightElement(document.querySelector(".language-" + lang.highlight)); });
-                    });
-                });
+                            vm.$http.get("https://raw.githubusercontent.com/Bigsby/HelloLanguages/master/" + lang.id + "/" + project.id + "/" + project.id + "." + lang.id)
+                            .then(function (response) {
+                                implementation.code = response.data;
+                                vm.$timeout(function () { Prism.highlightElement(document.querySelector(".language-" + lang.highlight)); });
+                            });
+                        });
+                        break;
+
+                    case "steps":
+                        break;
+                }
             }
             else
                 vm.$timeout(function () { Prism.highlightAll(); });
+        })
+    });
+
+    app.component("specific", {
+        templateUrl: templatesRoot + "specific.html",
+        controller: BuildController(function (vm) {
         })
     });
 
@@ -294,6 +368,12 @@ var data = {
                 name: "project",
                 url: "/project/:id",
                 component: "project"
+            });
+
+            $stateProvider.state({
+                name: "specific",
+                url: "/project/:id/:lang",
+                component: "specific"
             });
 
             $urlRouterProvider.otherwise("/");

@@ -1,12 +1,13 @@
-﻿<a ui-sref="home"><h1>Hello Languages</h1></a>
-<h2>{{$ctrl.project.name}}</h2>
+﻿<h2>{{$ctrl.project.name}}</h2>
 <p>{{$ctrl.project.description}}</p>
 <ul class="project_implementations">
     <li ng-repeat="imp in $ctrl.project.implementations">
         <a ng-href="{{imp.link}}" target="_blank" title="Source Code">
             <h3>{{imp.language.name}}</h3>
         </a>
-        {{$ctrl.project.id}}.{{imp.language.id}}
-        <pre><code class="{{'language-' + imp.language.highlight}}">{{imp.code}}</code></pre>
+        <div>
+            {{$ctrl.project.id}}.{{imp.language.id}}
+            <pre><code class="{{'language-' + imp.language.highlight}}">{{imp.code}}</code></pre>
+        </div>
     </li>
 </ul>
