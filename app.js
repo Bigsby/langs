@@ -223,7 +223,7 @@ var data = {
                 {
                     type: "command",
                     text: "Run program",
-                    command: "node «filename».js"
+                    command: "node filename.js"
                 }
             ],
             cpp: [
@@ -244,12 +244,12 @@ var data = {
                 {
                     type: "command",
                     text: "Compile Code",
-                    command: "cl «filename».cpp"
+                    command: "cl filename.cpp"
                 },
                 {
                     type: "command",
                     text: "Run compiled program",
-                    command: "«filename».exe"
+                    command: "filename.exe"
                 }
             ],
             py: [
@@ -266,7 +266,7 @@ var data = {
                 {
                     type: "command",
                     text: "Run program",
-                    command: "py «filename».py"
+                    command: "py filename.py"
                 }
             ],
             fs: [
@@ -286,12 +286,12 @@ var data = {
                 {
                     type: "command",
                     text: "Compile Code",
-                    command: "fsc «filename».fs"
+                    command: "fsc filename.fs"
                 },
                 {
                     type: "command",
                     text: "Run compiled program",
-                    command: "«filename».exe"
+                    command: "filename.exe"
                 }
             ],
             go: [
@@ -308,7 +308,7 @@ var data = {
                 {
                     type: "command",
                     text: "Run program",
-                    command: "go run «filename».go"
+                    command: "go run filename.go"
                 }
             ],
             rb: [
@@ -325,7 +325,7 @@ var data = {
                 {
                     type: "command",
                     text: "Run program",
-                    command: "ruby «filename».rb"
+                    command: "ruby filename.rb"
                 }
             ],
             cs: [
@@ -342,12 +342,12 @@ var data = {
                 {
                     type: "command",
                     text: "Compile Code",
-                    command: "csc «filename».cs"
+                    command: "csc filename.cs"
                 },
                 {
                     type: "command",
                     text: "Run compiled program",
-                    command: "«filename».exe"
+                    command: "filename.exe"
                 }
             ],
             java: [
@@ -367,12 +367,12 @@ var data = {
                 {
                     type: "command",
                     text: "Compile Code",
-                    command: "javac «filename».java"
+                    command: "javac filename.java"
                 },
                 {
                     type: "command",
                     text: "Run compiled program",
-                    command: "java «filename»"
+                    command: "java filename"
                 }
             ],
             pl: [
@@ -390,7 +390,7 @@ var data = {
                 {
                     type: "command",
                     text: "Run program",
-                    command: "pearl «filename».pl"
+                    command: "pearl filename.pl"
                 }
             ]
         }
