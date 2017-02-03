@@ -1,0 +1,18 @@
+<h1>Hello Languages</h1>
+<p>This is my explorations in the most common languages. Simple to complex examples will be implemented parallelly on each language
+    to outline its implementation of the intended funcitonalilty.</p>
+
+<p>The current list of languages is:</p>
+<ul>
+    <li ng-repeat="lang in $ctrl.languages | filter: {current: true}"><a ng-href="{{lang.link}}" target="_blank">{{lang.name}}</a></li>
+</ul>
+
+<p>To be included, one of these days:</p>
+<ul>
+    <li ng-repeat="lang in $ctrl.languages | filter: {current:false}"><a ng-href="{{lang.link}}" target="_blank">{{lang.name}}</a></li>
+</ul>
+
+<p>Programs:</p>
+<ol>
+    <li ng-repeat="proj in $ctrl.projects">{{proj.name}}</li>
+</ol>
