@@ -17,6 +17,7 @@
 <p>Programs:</p>
 <ol>
     <li ng-repeat="proj in $ctrl.projects">
-        <a ui-sref="project({id:proj.id})">{{proj.name}}</a>
+        <a ng-if="proj.languages.length" ui-sref="project({id:proj.id})">{{proj.name}}</a>
+        <span ng-if="!proj.languages.length">{{proj.name}}</span>
     </li>
 </ol>

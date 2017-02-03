@@ -72,6 +72,13 @@ var data = {
             current: true
         },
         {
+            id: "pl",
+            highlight: "perl",
+            name: "Perl",
+            link: "https://www.perl.org/",
+            current: true
+        },
+        {
             id: "rs",
             highlight: "rust",
             name: "Rust",
@@ -91,20 +98,6 @@ var data = {
             name: "Haskell",
             link: "https://www.haskell.org/",
             current: false
-        },
-        {
-            id: "lua",
-            highlight: "lua",
-            name: "Lua",
-            link: "https://www.lua.org/",
-            current: false
-        },
-        {
-            id: "pl",
-            highlight: "perl",
-            name: "Perl",
-            link: "https://www.perl.org/",
-            current: false
         }
     ],
     projects: [
@@ -112,7 +105,7 @@ var data = {
             id: "hello",
             name: "Hello World!",
             description: "Of course, the first project is a 'Hello, World'.",
-            languages: ["js", "cpp", "py", "fs", "go", "rb", "cs", "java"]
+            languages: ["js", "cpp", "py", "fs", "go", "rb", "cs", "java", "pl"]
         },
         {
             id: "loop",
