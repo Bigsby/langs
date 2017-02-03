@@ -87,7 +87,7 @@ var data = {
             id: "hello",
             name: "Hello World!",
             description: "Of course, the first project is a 'Hello, World'.",
-            languages: ["js"]
+            languages: ["js", "cpp"]
         },
         {
             id: "loop",
