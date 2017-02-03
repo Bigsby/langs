@@ -5,7 +5,7 @@ var data = {
             name: "JavaScript",
             link: "https://www.javascript.com/",
             runtimes: ["node"],
-            ides: ["vscode"],
+            ides: ["npp", "vscode"],
             current: true
         },
         {
@@ -87,19 +87,19 @@ var data = {
             id: "hello",
             name: "Hello World!",
             description: "Of course, the first project is a 'Hello, World'.",
-            langs: []
+            languages: ["js"]
         },
         {
             id: "loop",
             name: "Looping",
             description: "Repeating until...",
-            langs: []
+            languages: []
         },
         {
             id: "iterate",
             name: "Iterating a sequence",
             description: "Repeat for every item in a sequence.",
-            langs: []
+            languages: []
         }
     ],
     runtimes: [
@@ -134,6 +134,11 @@ var data = {
         }
     ],
     ides: [
+        {
+            id: "npp",
+            name: "Notepad++",
+            link: "https://notepad-plus-plus.org/"
+        },
         {
             id: "vs",
             name: "Visual Studio",
@@ -175,7 +180,7 @@ var data = {
         data.runtimes.forEach(function (rt) { rt.languages = []; });
         data.ides.forEach(function (ide) { ide.languages = []; });
 
-        function FindAndReplace(target, prop, list) {
+        function FindAndReplace(target, prop, list, addLanguage) {
             var result = [];
             var source = target[prop];
 
@@ -183,7 +188,10 @@ var data = {
                 source.forEach(function (id) {
                     var item = list.find(function (item) { return item.id === id });
                     if (item) {
-                        item.languages.push(target);
+
+                        if (addLanguage)
+                            item.languages.push(target);
+
                         result.push(item);
                     }
                 });
@@ -191,16 +199,22 @@ var data = {
             }
         }
         data.languages.forEach(function (lang) {
-            FindAndReplace(lang, "runtimes", data.runtimes);
-            FindAndReplace(lang, "ides", data.ides);
+            FindAndReplace(lang, "runtimes", data.runtimes, true);
+            FindAndReplace(lang, "ides", data.ides, true);
+        });
+        data.projects.forEach(function (project) {
+            FindAndReplace(project, "languages", data.languages);
         });
     })();
 
     var app = angular.module(appName, ["ngSanitize", "ui.router"]);
 
     function BuildController(onLoad) {
-        return function () {
+        return function ($http, $stateParams) {
             var vm = this;
+            vm.$http = $http;
+            vm.$stateParams = $stateParams;
+
             angular.extend(vm, data);
             if (onLoad)
                 onLoad(vm);
@@ -212,6 +226,31 @@ var data = {
         controller: BuildController()
     });
 
+    app.component("project", {
+        templateUrl: templatesRoot + "project.html",
+        controller: BuildController(function (vm) {
+            var project = data.projects.find(function (project) { return project.id === vm.$stateParams.id });
+            vm.project = project;
+            if (!project.implementations) {
+                project.implementations = [];
+
+                project.languages.forEach(function (lang) {
+                    var implementation = {
+                        language: lang,
+                        link: "https://github.com/Bigsby/HelloLanguages/tree/master/" + lang.id + "/" + project.id
+                    };
+
+                    project.implementations.push(implementation);
+
+                    vm.$http.get("https://raw.githubusercontent.com/Bigsby/HelloLanguages/master/" + lang.id + "/" + project.id + "/" + project.id + "." + lang.id)
+                    .then(function (response) {
+                        implementation.code = response.data;
+                    });
+                });
+            }
+        })
+    });
+
     app.config(["$httpProvider", "$sceProvider", "$stateProvider", "$urlRouterProvider",
         function ($httpProvider, $sceProvider, $stateProvider, $urlRouterProvider) {
             $httpProvider.defaults.useXDomain = true;
@@ -221,6 +260,12 @@ var data = {
                 name: "home",
                 url: "/",
                 component: "home"
+            });
+
+            $stateProvider.state({
+                name: "project",
+                url: "/project/:id",
+                component: "project"
             });
 
             $urlRouterProvider.otherwise("/");

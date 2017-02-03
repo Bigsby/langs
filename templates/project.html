@@ -1,0 +1,9 @@
+﻿<h1>{{$ctrl.project.name}}</h1>
+<p>{{$ctrl.project.description}}</p>
+<ul>
+    <li ng-repeat="imp in $ctrl.project.implementations">
+        <h2>{{imp.language.name}}</h2>
+        <p><a ng-href="{{imp.link}}" target=_blank>Link</a></p>
+        <pre>{{imp.code}}</pre>
+    </li>
+</ul>

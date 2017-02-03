@@ -17,5 +17,7 @@
 
 <p>Programs:</p>
 <ol>
-    <li ng-repeat="proj in $ctrl.projects">{{proj.name}}</li>
+    <li ng-repeat="proj in $ctrl.projects">
+        <a ui-sref="project({id:proj.id})">{{proj.name}}</a>
+    </li>
 </ol>
