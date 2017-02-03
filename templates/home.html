@@ -10,15 +10,15 @@
 
 <p>All source code can be found <a target="_blank" href="https://github.com/Bigsby/HelloLanguages">this GitHub Repository</a>.</p>
 
-<p>Programs:</p>
+<p>Projects:</p>
 <ol start="0">
     <li ng-repeat="proj in $ctrl.projects">
         <a ng-if="proj.isImplemented" ui-sref="project({id:proj.id})">{{proj.name}}</a>
-        <span ng-if="!proj.isImplemented">{{proj.name}}</span>
+        <span ng-if="!proj.isImplemented">{{proj.name}}</span> - {{proj.description}}
     </li>
 </ol>
 
-<p>To be included, one of these days:</p>
+<!--<p>To be included, one of these days:</p>
 <ul>
     <li ng-repeat="lang in $ctrl.languages | filter: {current:false}"><a ng-href="{{lang.link}}" target="_blank">{{lang.name}}</a></li>
-</ul>
+</ul>-->

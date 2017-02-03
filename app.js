@@ -115,6 +115,20 @@ var data = {
             languages: ["js", "cpp", "py", "fs", "go", "rb", "cs", "java", "pl"]
         },
         {
+            id: "variables",
+            name: "Variables",
+            description: "Holding in-memory values to be (re)used.",
+            type: "code",
+            languages: []
+        },
+        {
+            id: "binary_operators",
+            name: "Binary Operators",
+            description: "Comparing stuff.",
+            type: "code",
+            languages: []
+        },
+        {
             id: "if",
             name: "If/Else",
             description: "Evey language has, at least, one conditional statement.",
@@ -124,7 +138,7 @@ var data = {
         {
             id: "loop",
             name: "Looping",
-            description: "Repeating until...",
+            description: "Repeating until...or not.",
             type: "code",
             languages: []
         },
@@ -132,6 +146,34 @@ var data = {
             id: "iterate",
             name: "Iterating a sequence",
             description: "Repeat for every item in a sequence.",
+            type: "code",
+            languages: []
+        },
+        {
+            id: "file_read",
+            name: "Read from File",
+            description: "Reading from the File System",
+            type: "code",
+            languages: []
+        },
+        {
+            id: "file_write",
+            name: "Write to File",
+            description: "Writing to the File System",
+            type: "code",
+            languages: []
+        },
+        {
+            id: "web_call",
+            name: "Web Call",
+            description: "Making an HTTP request",
+            type: "code",
+            languages: []
+        },
+        {
+            id: "gui",
+            name: "GUI",
+            description: "Creating a Graphical User Interface",
             type: "code",
             languages: []
         }
