@@ -275,6 +275,8 @@ var data = {
                     });
                 });
             }
+            else
+                vm.$timeout(function () { Prism.highlightAll(); });
         })
     });
 

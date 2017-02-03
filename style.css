@@ -1,3 +1,7 @@
 a, a:visited, a:hover {
     color: blue;
 }
+
+ul.project_implementations {
+    list-style: none;
+}
