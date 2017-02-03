@@ -9,10 +9,7 @@
     </li>
 </ul>
 
-<p>To be included, one of these days:</p>
-<ul>
-    <li ng-repeat="lang in $ctrl.languages | filter: {current:false}"><a ng-href="{{lang.link}}" target="_blank">{{lang.name}}</a></li>
-</ul>
+<p>All source code can be found <a target="_blank" href="https://github.com/Bigsby/HelloLanguages">this GitHub Repository</a>.</p>
 
 <p>Programs:</p>
 <ol>
@@ -21,3 +18,8 @@
         <span ng-if="!proj.languages.length">{{proj.name}}</span>
     </li>
 </ol>
+
+<p>To be included, one of these days:</p>
+<ul>
+    <li ng-repeat="lang in $ctrl.languages | filter: {current:false}"><a ng-href="{{lang.link}}" target="_blank">{{lang.name}}</a></li>
+</ul>
