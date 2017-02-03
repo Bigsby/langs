@@ -254,3 +254,4 @@ paket-files/
 # Compiled files
 *.exe
 *.obj
+*.class
