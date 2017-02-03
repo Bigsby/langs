@@ -5,9 +5,7 @@
         <h3>{{imp.language.name}}</h3>
         <div ng-switch="$ctrl.project.type">
             <div ng-switch-when="code">
-                <a ng-href="{{imp.link}}" target="_blank" title="Source Code">
-                    {{$ctrl.project.id}}.{{imp.language.id}}
-                </a>
+                {{$ctrl.project.id}}.{{imp.language.id}}
                 <pre><code class="{{'language-' + imp.language.highlight}}">{{imp.code}}</code></pre>
             </div>
             <steps ng-switch-when="steps" steps="imp.steps"></steps>

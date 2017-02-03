@@ -509,12 +509,12 @@ var data = {
                         project.languages.forEach(function (lang) {
                             var implementation = {
                                 language: lang,
-                                link: "https://github.com/Bigsby/HelloLanguages/tree/master/" + lang.id + "/" + project.id
+                                link: "https://github.com/Bigsby/HelloLanguages/tree/master/" + lang.id
                             };
 
                             project.implementations.push(implementation);
 
-                            vm.$http.get("https://raw.githubusercontent.com/Bigsby/HelloLanguages/master/" + lang.id + "/" + project.id + "/" + project.id + "." + lang.id)
+                            vm.$http.get("https://raw.githubusercontent.com/Bigsby/HelloLanguages/master/" + lang.id + "/" + project.id + "." + lang.id)
                             .then(function (response) {
                                 implementation.code = response.data;
                                 vm.$timeout(function () { Prism.highlightElement(document.querySelector(".language-" + lang.highlight)); });
