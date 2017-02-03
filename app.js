@@ -119,7 +119,7 @@ var data = {
             name: "Variables",
             description: "Holding in-memory values to be (re)used.",
             type: "code",
-            languages: []
+            languages: ["js", "cpp", "py", "fs", "go", "rb", "cs", "java", "pl"]
         },
         {
             id: "binary_operators",
@@ -285,7 +285,7 @@ var data = {
                 },
                 {
                     type: "command",
-                    text: "Compile Code",
+                    text: "Compile code",
                     command: "cl filename.cpp"
                 },
                 {
@@ -327,7 +327,7 @@ var data = {
                 },
                 {
                     type: "command",
-                    text: "Compile Code",
+                    text: "Compile code",
                     command: "fsc filename.fs"
                 },
                 {
@@ -383,7 +383,7 @@ var data = {
                 },
                 {
                     type: "command",
-                    text: "Compile Code",
+                    text: "Compile code",
                     command: "csc filename.cs"
                 },
                 {
@@ -408,7 +408,7 @@ var data = {
                 },
                 {
                     type: "command",
-                    text: "Compile Code",
+                    text: "Compile code",
                     command: "javac filename.java"
                 },
                 {
@@ -420,7 +420,7 @@ var data = {
             pl: [
                 {
                     type: "install",
-                    program: "Pearl",
+                    program: "Perl",
                     link: "http://dwimperl.com/windows.html",
                     alternative: "https://www.perl.org/get.html#win32"
                 },
@@ -432,7 +432,7 @@ var data = {
                 {
                     type: "command",
                     text: "Run program",
-                    command: "pearl filename.pl"
+                    command: "perl filename.pl"
                 }
             ]
         }
