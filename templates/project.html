@@ -1,11 +1,15 @@
 ﻿<h2>{{$ctrl.project.name}}</h2>
 <p>{{$ctrl.project.description}}</p>
+<div ng-if="$ctrl.project.type==='code' && $ctrl.project.output">
+    <p>Expected Output:</p>
+<pre><code class="language-bash">{{$ctrl.project.output}}</code></pre>
+</div>
 <ul class="project_implementations">
     <li ng-repeat="imp in $ctrl.project.implementations">
         <h3>{{imp.language.name}}</h3>
         <div ng-switch="$ctrl.project.type">
             <div ng-switch-when="code">
-                {{$ctrl.project.id}}.{{imp.language.id}}
+                <a target="_blank" ng-href="{{imp.link}}">{{$ctrl.project.id}}.{{imp.language.id}}</a>
                 <pre><code class="{{'language-' + imp.language.highlight}}">{{imp.code}}</code></pre>
             </div>
             <steps ng-switch-when="steps" steps="imp.steps"></steps>

@@ -112,6 +112,7 @@ var data = {
             name: "Hello World!",
             description: "Of course, the first project is a 'Hello, World'.",
             type: "code",
+            output: "Hello, World!",
             languages: ["js", "cpp", "py", "fs", "go", "rb", "cs", "java", "pl"]
         },
         {
@@ -119,6 +120,7 @@ var data = {
             name: "Commenting",
             description: "Non-processed statements.",
             type: "code",
+            output: "Hello, Comments!",
             languages: ["js", "cpp", "py", "fs", "go", "rb", "cs", "java", "pl"]
         },
         {
@@ -126,6 +128,7 @@ var data = {
             name: "Variables",
             description: "Holding in-memory values to be (re)used.",
             type: "code",
+            output: "This is the sentence.\nThis is the sentence.",
             languages: ["js", "cpp", "py", "fs", "go", "rb", "cs", "java", "pl"]
         },
         {
@@ -541,12 +544,14 @@ var data = {
                                     });
                             });
                         }
-                        vm.$timeout(function () { Prism.highlightAll(document.querySelectorAll(".language-bash")); }, 50);
+                        //vm.$timeout(function () { Prism.highlightAll(document.querySelectorAll(".language-bash")); }, 50);
                         break;
                 }
             }
             else
                 vm.$timeout(function () { Prism.highlightAll(); });
+
+            vm.$timeout(function () { Prism.highlightAll(document.querySelectorAll(".language-bash")); }, 50);
         })
     });
 
