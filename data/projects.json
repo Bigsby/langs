@@ -44,6 +44,16 @@
         "dynamic": {
           "text": "Since <b>Perl</b> is a dynamic language <code>$x = ...</code> doesn't enforce a type on the variable and, as such, the variable can change type. Because of that, this code is totally valid and has the exact same output."
         }
+      },
+      "py": {
+        "dynamic": {
+          "text": "Since <b>Python</b> is a dynamic language <code>x = ...</code> doesn't enforce a type on the variable and, as such, the variable can change type. Because of that, this code is totally valid and has the exact same output."
+        }
+      },
+      "rb": {
+        "dynamic": {
+          "text": "Since <b>Ruby</b> is a dynamic language <code>$x = ...</code> doesn't enforce a type on the variable and, as such, the variable can change type. Because of that, this code is totally valid and has the exact same output."
+        }
       }
     }
   },
