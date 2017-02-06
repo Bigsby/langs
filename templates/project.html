@@ -1,5 +1,5 @@
 ﻿<h2>{{$ctrl.project.name}}</h2>
-<p>{{$ctrl.project.description}}</p>
+<div ng-bind-html="$ctrl.project.text"></div>
 <div ng-if="$ctrl.project.type==='code' && $ctrl.project.output">
     <p>Expected Output:</p>
 <pre><code class="language-bash">{{$ctrl.project.output}}</code></pre>

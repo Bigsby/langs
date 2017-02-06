@@ -2,80 +2,123 @@ var data = {
     languages: [
         {
             id: "js",
-            highlight: "javascript",
             name: "JavaScript",
+            description: "Mostly commonly used in internet web-pages and running within web browsers (e.g., Google Chrome, Mozilla Firefox, Microsoft Edge).",
+            tags: [
+                "dynamic",
+                "script"
+            ],
             link: "https://www.javascript.com/",
-            runtimes: ["node"],
+            highlight: "javascript",
+            runtimes: ["node", "web_browsers"],
             ides: ["npp", "vscode"],
             current: true
         },
         {
             id: "cpp",
-            highlight: "cpp",
             name: "C++",
+            description: "Compiles directly to processors native machine code and, as such, is highly optimized.",
+            tags: [
+                "dynamic",
+                "strongly_typed",
+                "native"
+            ],
             link: "http://www.cplusplus.com/",
+            highlight: "cpp",
             runtimes: ["native"],
-            ides: ["vscode", "vs"],
+            ides: ["npp", "vscode", "vs"],
             current: true
         },
         {
             id: "py",
-            highlight: "python",
             name: "Python",
+            description: "",
+            tags: [
+                "script",
+                "specific_runtime"
+            ],
             link: "https://www.python.org/",
+            highlight: "python",
             runtimes: ["python"],
             ides: ["vscode"],
             current: true
         },
         {
             id: "fs",
-            highlight: "fsharp",
             name: "F#",
+            tags: [
+                "strongly_typed",
+                "il",
+                "specific_runtime"
+            ],
             link: "http://fsharp.org/",
+            highlight: "fsharp",
             runtimes: ["net"],
             ides: ["vscode", "vs"],
             current: true
         },
         {
             id: "go",
-            highlight: "go",
             name: "Go",
+            tags: [
+                "script",
+                "specific_runtime"
+            ],
             link: "https://golang.org/",
+            highlight: "go",
             ides: ["vscode", "eclipse"],
             current: true
         },
         {
             id: "rb",
-            highlight: "ruby",
             name: "Ruby",
+            tags: [
+                "script",
+                "specific_runtime"
+            ],
             link: "https://www.ruby-lang.org/",
+            highlight: "ruby",
             runtimes: ["ruby"],
             ides: ["vscode", "rubyMine"],
             current: true
         },
         {
             id: "cs",
-            highlight: "csharp",
             name: "C#",
+            tags: [
+                "strongly_typed",
+                "il",
+                "specific_runtime"
+            ],
             link: "https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx",
+            highlight: "csharp",
             runtimes: ["net"],
             ides: ["vscode", "vs"],
             current: true
         },
         {
             id: "java",
-            highlight: "java",
             name: "Java",
+            tags: [
+                "strongly_typed",
+                "il",
+                "specific_runtime"
+            ],
             link: "https://www.java.com/",
+            highlight: "java",
             runtimes: ["java"],
             ides: ["vscode", "eclipse", "intelliJ", "netbeans"],
             current: true
         },
         {
             id: "pl",
-            highlight: "perl",
             name: "Perl",
+            tags: [
+                "script",
+                "specific_runtime"
+            ],
             link: "https://www.perl.org/",
+            highlight: "perl",
             current: true
         },
         {
@@ -105,20 +148,28 @@ var data = {
             id: "setup",
             name: "Setup & Run",
             type: "steps",
-            description: "What needs to be installed to get started on each language."
+            description: "What needs to be installed to get started on each language.",
+            text: "<p>Since the computer and the, already very high-level, Operating System that is running don't know much more than machine code, the code, of each language, needs to be compiled and/or have a runtime to run it.</p><p>Here are the steps required to run a program on each of the languages.</p>"
         },
         {
             id: "hello",
             name: "Hello World!",
             description: "Of course, the first project is a 'Hello, World'.",
+            text: "<p>Every tutorial of every language starts with an app that simply outputs \"Hello, World\". It serves the purposes of making sure everything (compile, runtime, etc.) is in place and, also, displaying the most simple structure of a program of a given language.</p>",
             type: "code",
             output: "Hello, World!",
-            languages: ["js", "cpp", "py", "fs", "go", "rb", "cs", "java", "pl"]
+            languages: ["js", "cpp", "py", "fs", "go", "rb", "cs", "java", "pl"],
+            notes: {
+                cpp: [
+                    "<code>cout</code> is the console output stream and <code><<</code> is the operator that \"means\" write to stream."
+                ]
+            }
         },
         {
             id: "comments",
             name: "Commenting",
             description: "Non-processed statements.",
+            text: "<p>The first thing to do after writing some code is writing non-code, i.e., comments. Most of the times to comment some code that is no longer needed.</p>",
             type: "code",
             output: "Hello, Comments!",
             languages: ["js", "cpp", "py", "fs", "go", "rb", "cs", "java", "pl"]
@@ -127,21 +178,36 @@ var data = {
             id: "variables",
             name: "Variables",
             description: "Holding in-memory values to be (re)used.",
+            text: "<p>One could always access the computer memory alocations by its number/position but it's way more practical to name them and use the name for future reference.</p>",
             type: "code",
             output: "This is the sentence.\nThis is the sentence.",
-            languages: ["js", "cpp", "py", "fs", "go", "rb", "cs", "java", "pl"]
+            languages: ["js", "cpp", "py", "fs", "go", "rb", "cs", "java", "pl"],
+            extraCode: {
+                js: {
+                    dynamic: {
+                        text: "Since <b>JavaScript</b> is a dynamic language, as oposed to strongly-typed, <code>var x = ...</code> doesn't enforce a type on the variable. Because of that, this code is totally valid and has the exact same output."
+                    }
+                }
+            }
         },
         {
             id: "binary_operators",
             name: "Binary Operators",
             description: "Comparing stuff.",
+            text: "",
             type: "code",
-            languages: []
+            languages: [],
+            notes: {
+                js: [
+                    ""
+                ]
+            }
         },
         {
             id: "if",
             name: "If/Else",
             description: "Evey language has, at least, one conditional statement.",
+            text: "",
             type: "code",
             languages: []
         },
@@ -149,6 +215,7 @@ var data = {
             id: "loop",
             name: "Looping",
             description: "Repeating until...or not.",
+            text: "",
             type: "code",
             languages: []
         },
@@ -156,6 +223,23 @@ var data = {
             id: "iterate",
             name: "Iterating a sequence",
             description: "Repeat for every item in a sequence.",
+            text: "",
+            type: "code",
+            languages: []
+        },
+        {
+            id: "dry",
+            name: "Don't Repeat Yourself",
+            description: "Wrapping functionality in a code block that can be reused.",
+            text: "",
+            type: "code",
+            languages: []
+        },
+        {
+            id: "scope",
+            name: "Access scope",
+            description: "Where and when are things accessible.",
+            text: "",
             type: "code",
             languages: []
         },
@@ -163,6 +247,7 @@ var data = {
             id: "file_read",
             name: "Read from File",
             description: "Reading from the File System",
+            text: "",
             type: "code",
             languages: []
         },
@@ -170,6 +255,7 @@ var data = {
             id: "file_write",
             name: "Write to File",
             description: "Writing to the File System",
+            text: "",
             type: "code",
             languages: []
         },
@@ -177,6 +263,7 @@ var data = {
             id: "web_call",
             name: "Web Call",
             description: "Making an HTTP request",
+            text: "",
             type: "code",
             languages: []
         },
@@ -184,6 +271,7 @@ var data = {
             id: "gui",
             name: "GUI",
             description: "Creating a Graphical User Interface",
+            text: "",
             type: "code",
             languages: []
         }
@@ -193,6 +281,10 @@ var data = {
             id: "node",
             name: "NodeJS",
             link: "https://nodejs.org/"
+        },
+        {
+            id: "web_browsers",
+            name: "Web-Browsers"
         },
         {
             id: "native",
@@ -219,6 +311,14 @@ var data = {
             link: "https://java.com/en/download/"
         }
     ],
+    tags: {
+        dynamic: "As opposed to strongly typed, i.e., any variable can \"change\" type and/or be used as another type.",
+        strongly_typed: "Enforces typed variables, at compile time or at runtime, so that a variable is not mis-used resulting in runtime inconsistencies.",
+        script: "The code is parsed at runtime.",
+        native: "The code is compiled to machine (processor) native code.",
+        il: "The code is compiled to an Intermediate Language read by the runtime.",
+        specific_runtime: "Requires a specific runtime (a program that runs the code) to be install on the computer"
+    },
     ides: [
         {
             id: "npp",
