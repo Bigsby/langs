@@ -26,5 +26,9 @@
   "oop": {
     "name": "Object Oriented Programming",
     "description": "Programming paradigm base on the concept of objects (classes, structures) where data and functionalilty is grouped (scoped) in object definitions."
+  },
+  "gc": {
+    "name": "Garbage Collection",
+    "description": "The process of the runtime of clearing un-used memory alocations."
   }
 }

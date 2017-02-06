@@ -1,4 +1,9 @@
-﻿<h2>{{$ctrl.project.name}}</h2>
+﻿<style>
+    .notes code{
+        background-color: #F5F2F0;
+    }
+</style>
+<h2>{{$ctrl.project.name}}</h2>
 <div ng-bind-html="$ctrl.project.text"></div>
 <div ng-if="$ctrl.project.type==='code' && $ctrl.project.output">
     <p style="text-decoration:underline">Expected Output:</p>
@@ -11,6 +16,12 @@
             <div ng-switch-when="code">
                 <a target="_blank" ng-href="{{imp.link}}">{{$ctrl.projectId}}.{{imp.languageId}}</a>
                 <pre><code class="{{'language-' + imp.language.highlight}}" ng-include="imp.code"></code></pre>
+                <div ng-if="$ctrl.project.notes[imp.languageId]" class="notes">
+                    <p><b>Notes:</b></p>
+                    <ul>
+                        <li ng-repeat="note in $ctrl.project.notes[imp.languageId]" ng-bind-html="note"></li>
+                    </ul>
+                </div>
             </div>
             <steps ng-switch-when="steps" steps="imp.steps"></steps>
         </div>

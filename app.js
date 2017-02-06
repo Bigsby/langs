@@ -58,10 +58,10 @@ Object.prototype.forEachValue = function (handler) {
             data.languages.forEachValue(function (languageId, language) {
                 FindAndReplace(language, "runtimes", data.runtimes, true);
                 FindAndReplace(language, "ides", data.ides, true);
+                FindAndReplace(language, "tags", data.tags);
             });
 
             data.projects.forEachValue(function (projectId, project) {
-                //FindAndReplace(project, "languages", data.languages);
                 project.isImplemented = project.type === 'steps' || (project.languages && project.languages.length);
             });
         }

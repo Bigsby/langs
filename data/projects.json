@@ -14,7 +14,8 @@
     "languages": [ "js", "cpp", "py", "fs", "go", "rb", "cs", "java", "pl" ],
     "notes": {
       "cpp": [
-        "<code>cout</code> is the console output stream and <code><<</code> is the operator that \"means\" write to stream."
+        "<code>cout</code> is the console output stream",
+        "<code>&lt;&lt;</code> is the operator that \"means\" write to stream."
       ]
     }
   },
@@ -84,6 +85,13 @@
   "scope": {
     "name": "Access scope",
     "description": "Where and when are things accessible.",
+    "text": "",
+    "type": "code",
+    "languages": []
+  },
+  "stream": {
+    "name": "Streaming",
+    "description": "Processing sequences of bytes.",
     "text": "",
     "type": "code",
     "languages": []

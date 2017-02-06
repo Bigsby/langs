@@ -31,7 +31,8 @@
     "description": "High-level scripting language with emphasis on readability and simplicity of coding general-purpose functionalilty.",
     "tags": [
       "script",
-      "specific_runtime"
+      "specific_runtime",
+      "gc"
     ],
     "link": "https://www.python.org/",
     "highlight": "python",
@@ -41,11 +42,12 @@
   },
   "fs": {
     "name": "F#",
-    "description": "",
+    "description": "Functional and imperative language that runs under .Net runtimes.",
     "tags": [
       "strongly_typed",
       "il",
-      "specific_runtime"
+      "specific_runtime",
+      "gc"
     ],
     "link": "http://fsharp.org/",
     "highlight": "fsharp",
@@ -55,9 +57,11 @@
   },
   "go": {
     "name": "Go",
+    "description": "Scalable and readable for networking and multiprocessing.",
     "tags": [
       "script",
-      "specific_runtime"
+      "specific_runtime",
+      "gc"
     ],
     "link": "https://golang.org/",
     "highlight": "go",
@@ -66,9 +70,13 @@
   },
   "rb": {
     "name": "Ruby",
+    "description": "Multi-paradigm language.",
     "tags": [
       "script",
-      "specific_runtime"
+      "specific_runtime",
+      "oop",
+      "dynamic",
+      "gc"
     ],
     "link": "https://www.ruby-lang.org/",
     "highlight": "ruby",
@@ -78,10 +86,12 @@
   },
   "cs": {
     "name": "C#",
+    "description": "General-purpose, object and component oriented declarative language that runs under .Net runtimes.",
     "tags": [
       "strongly_typed",
       "il",
-      "specific_runtime"
+      "specific_runtime",
+      "gc"
     ],
     "link": "https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx",
     "highlight": "csharp",
@@ -91,10 +101,12 @@
   },
   "java": {
     "name": "Java",
+    "description": "General-purpose and object-oriented language. Meant ot \"Write once, run anywhere\".",
     "tags": [
       "strongly_typed",
       "il",
-      "specific_runtime"
+      "specific_runtime",
+      "gc"
     ],
     "link": "https://www.java.com/",
     "highlight": "java",
@@ -104,9 +116,11 @@
   },
   "pl": {
     "name": "Perl",
+    "description": "General-purpose, high-level \"intended\" for easy text processing.",
     "tags": [
       "script",
-      "specific_runtime"
+      "specific_runtime",
+      "gc"
     ],
     "link": "https://www.perl.org/",
     "highlight": "perl",
