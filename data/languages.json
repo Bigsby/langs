@@ -119,6 +119,7 @@
     "description": "General-purpose, high-level \"intended\" for easy text processing.",
     "tags": [
       "script",
+      "dynamic",
       "specific_runtime",
       "gc"
     ],

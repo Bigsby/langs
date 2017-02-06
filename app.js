@@ -12,6 +12,8 @@ Object.prototype.forEachValue = function (handler) {
     "use strict";
     var appName = "hLangs";
     var templatesRoot = "templates/";
+    var codeRoot = "https://github.com/Bigsby/HelloLanguages/tree/master/";
+    var codeRawRoot = "https://raw.githubusercontent.com/Bigsby/HelloLanguages/master/";
     var app = angular.module(appName, ["ngSanitize", "ui.router"]);
 
     app.value("data", {});
@@ -89,6 +91,8 @@ Object.prototype.forEachValue = function (handler) {
     function BuildController(onLoad) {
         return function (data, $http, $stateParams, $timeout) {
             var vm = this;
+            vm.codeRoot = codeRoot;
+            vm.codeRawRoot = codeRawRoot;
             vm.$http = $http;
             vm.$stateParams = $stateParams;
             vm.$timeout = $timeout;
@@ -121,9 +125,7 @@ Object.prototype.forEachValue = function (handler) {
                         project.languages.forEach(function (langId) {
                             var implementation = {
                                 languageId: langId,
-                                language: data.languages[langId],
-                                link: "https://github.com/Bigsby/HelloLanguages/tree/master/" + langId,
-                                code: "https://raw.githubusercontent.com/Bigsby/HelloLanguages/master/" + langId + "/" + vm.projectId + "." + langId
+                                language: data.languages[langId]
                             };
 
                             project.implementations.push(implementation);

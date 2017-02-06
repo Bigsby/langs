@@ -37,7 +37,12 @@
     "extraCode": {
       "js": {
         "dynamic": {
-          "text": "Since <b>JavaScript</b> is a dynamic language, as oposed to strongly-typed, <code>var x = ...</code> doesn't enforce a type on the variable. Because of that, this code is totally valid and has the exact same output."
+          "text": "Since <b>JavaScript</b> is a dynamic language <code>var x = ...</code> doesn't enforce a type on the variable and, as such, the variable can change type. Because of that, this code is totally valid and has the exact same output."
+        }
+      },
+      "pl": {
+        "dynamic": {
+          "text": "Since <b>Perl</b> is a dynamic language <code>$x = ...</code> doesn't enforce a type on the variable and, as such, the variable can change type. Because of that, this code is totally valid and has the exact same output."
         }
       }
     }
