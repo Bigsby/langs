@@ -1,0 +1,20 @@
+﻿{
+  "rs": {
+    "highlight": "rust",
+    "name": "Rust",
+    "link": "https://www.rust-lang.org/",
+    "current": false
+  },
+  "scala": {
+    "highlight": "scala",
+    "name": "Scala",
+    "link": "https://www.scala-lang.org/",
+    "current": false
+  },
+  "hs": {
+    "highlight": "haskell",
+    "name": "Haskell",
+    "link": "https://www.haskell.org/",
+    "current": false
+  }
+}

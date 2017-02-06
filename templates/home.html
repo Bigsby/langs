@@ -3,8 +3,8 @@
 
 <p>The current list of languages is:</p>
 <ul>
-    <li ng-repeat="lang in $ctrl.languages | filter: {current: true}">
-        <a ng-href="{{lang.link}}" target="_blank">{{lang.name}}</a>
+    <li ng-repeat="(langId, lang) in $ctrl.languages">
+        <a ng-href="{{lang.link}}" target="_blank">{{lang.name}}</a> - {{lang.description}}
     </li>
 </ul>
 
@@ -12,8 +12,8 @@
 
 <p>Projects:</p>
 <ol start="0">
-    <li ng-repeat="proj in $ctrl.projects">
-        <a ng-if="proj.isImplemented" ui-sref="project({id:proj.id})">{{proj.name}}</a>
+    <li ng-repeat="(projId, proj) in $ctrl.projects">
+        <a ng-if="proj.isImplemented" ui-sref="project({id:projId})">{{proj.name}}</a>
         <span ng-if="!proj.isImplemented">{{proj.name}}</span> - {{proj.description}}
     </li>
 </ol>
