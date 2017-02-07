@@ -89,13 +89,14 @@ Object.prototype.forEachValue = function (handler) {
     });
 
     function BuildController(onLoad) {
-        return function (data, $http, $stateParams, $timeout) {
+        return function (data, $http, $stateParams, $timeout, $rootScope) {
             var vm = this;
             vm.codeRoot = codeRoot;
             vm.codeRawRoot = codeRawRoot;
             vm.$http = $http;
             vm.$stateParams = $stateParams;
             vm.$timeout = $timeout;
+            vm.$rootScope = $rootScope;
 
             if (onLoad)
                 onLoad(vm, data);
@@ -108,6 +109,18 @@ Object.prototype.forEachValue = function (handler) {
             vm.languages = data.languages;
             vm.projects = data.projects;
         })
+    });
+
+    app.directive("highlight", function ($http) {
+        return {
+            restrict: "A",
+            link: function ($scope, element, attrs) {
+                $http.get(attrs.highlight).then(function (response) {
+                    element.text(response.data);
+                    Prism.highlightElement(element[0]);
+                });
+            }
+        };
     });
 
     app.component("project", {
@@ -147,8 +160,6 @@ Object.prototype.forEachValue = function (handler) {
                         break;
                 }
             }
-            else
-                vm.$timeout(function () { Prism.highlightAll(); }, 500);
 
             vm.$timeout(function () { Prism.highlightAll(); }, 500);
         })

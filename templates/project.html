@@ -19,7 +19,7 @@
         <div ng-switch="$ctrl.project.type">
             <div ng-switch-when="code">
                 <a target="_blank" ng-href="{{$ctrl.codeRoot + imp.languageId + '/' + $ctrl.projectId + '.' + imp.languageId}}">{{$ctrl.projectId}}.{{imp.languageId}}</a>
-                <pre><code class="{{'language-' + imp.language.highlight}}" ng-include="$ctrl.codeRawRoot + imp.languageId + '/' + $ctrl.projectId + '.' + imp.languageId"></code></pre>
+                <pre ><code class="{{'language-' + imp.language.highlight}}" highlight="{{$ctrl.codeRawRoot + imp.languageId + '/' + $ctrl.projectId + '.' + imp.languageId}}"></code></pre>
                 <div ng-if="$ctrl.project.notes[imp.languageId]" class="notes">
                     <p><b>Notes:</b></p>
                     <ul>
