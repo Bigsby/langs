@@ -32,7 +32,7 @@
     "description": "Holding in-memory values to be (re)used.",
     "text": "<p>One could always access the computer memory alocations by its number/position but it's way more practical to name them and use the name for future reference.</p>",
     "type": "code",
-    "output": "This is the sentence.\nThis is the sentence.",
+    "output": "This is the sentence.\nThis is the sentence.\nThis is another sentence.",
     "languages": [ "js", "cpp", "py", "fs", "go", "rb", "cs", "java", "pl" ],
     "extraCode": {
       "js": {
@@ -55,19 +55,43 @@
           "text": "Since <b>Ruby</b> is a dynamic language <code>$x = ...</code> doesn't enforce a type on the variable and, as such, the variable can change type. Because of that, this code is totally valid and has the exact same output."
         }
       }
+    },
+    "notes": {
+      "fs": [
+        "<code>mutable</code> keyword is required for variables to have the ability to change its value.",
+        "Assigning on variable declaration uses <code>=</code> but reseting uses <code>&lt;-</code>."
+      ]
     }
   },
-  "binary_operators": {
-    "name": "Binary Operators",
+  "comparison_operators": {
+    "name": "Comparison Operators",
     "description": "Comparing stuff.",
-    "text": "",
+    "text": "<p>The ability to compare values is essential to, life and, every computer program. It allows the program to follow different paths if so state is verified.</p>",
     "type": "code",
+    "output": "1 equals 2 is false\n1 not equals 2 is true\n1 larger than 2 is false\n1 larger than or equals 2 is false\n1 less than 2 is true\n1 less than or equals 2 is true",
+    "alternativeOutputs": [
+      {
+        "text": "Some output booleans as 1 (one) for true and 0 (zero) for false.",
+        "output": "1 equals 2 is 0\n1 not equals 2 is 1\n1 larger than 2 is 0\n1 larger than or equals 2 is 0\n1 less than 2 is 1\n1 less than or equals 2 is 1"
+      },
+      {
+        "text": "Some output booleans with a first capital letter, i.e., True and False.",
+        "output": "1 equals 2 is False\n1 not equals 2 is True\n1 larger than 2 is False\n1 larger than or equals 2 is False\n1 less than 2 is True\n1 less than or equals 2 is True"
+      }
+    ],
     "languages": [],
     "notes": {
       "js": [
         ""
       ]
     }
+  },
+  "logical_operators": {
+    "name": "Logical Operators",
+    "description": "Joining comparision.",
+    "text": "",
+    "type": "code",
+    "languages": []
   },
   "if": {
     "name": "If/Else",
