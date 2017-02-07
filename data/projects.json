@@ -94,7 +94,7 @@
     "languages": [ "js", "cpp", "py", "fs", "go", "rb", "cs", "java", "pl" ],
     "notes": {
       "pl": [
-        "Since <b>Perlb/b> Perl does not have a constant string for boolean values, <code>result</code> needs to hold the string value."
+        "Since <b>Perl</b> Perl does not have a constant string for boolean values, <code>result</code> needs to hold the string value."
       ]
     },
     "todo": [

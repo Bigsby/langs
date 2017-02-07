@@ -148,7 +148,7 @@ Object.prototype.forEachValue = function (handler) {
                 }
             }
             else
-                vm.$timeout(function () { Prism.highlightAll(); });
+                vm.$timeout(function () { Prism.highlightAll(); }, 500);
 
             vm.$timeout(function () { Prism.highlightAll(); }, 500);
         })

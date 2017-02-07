@@ -7,10 +7,10 @@
 <div ng-bind-html="$ctrl.project.text"></div>
 <div ng-if="$ctrl.project.type==='code' && $ctrl.project.output">
     <p style="text-decoration:underline">Expected Output:</p>
-<pre><code class="language-bash">{{$ctrl.project.output}}</code></pre>
+<pre><code class="language-">{{$ctrl.project.output}}</code></pre>
 <div ng-repeat="altOutput in $ctrl.project.alternativeOutputs">
-    <p>Or:</p>
-    <pre><code class="language-bash">{{altOutput}}</code></pre>
+    <p>{{altOutput}}</p>
+    <pre><code class="language-">{{altOutput.output}}</code></pre>
 </div>
 </div>
 <ul class="project_implementations">
