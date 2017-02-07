@@ -91,20 +91,6 @@
         "output": "1 equals 2 is False\n1 not equals 2 is True\n1 larger than 2 is False\n1 larger than or equals 2 is False\n1 less than 2 is True\n1 less than or equals 2 is True"
       }
     ],
-    "extraCode": {
-      "js": {
-        "typeComparison": {
-          "text": "<b>JavaScript</b> makes an effort to compare different typed values that might mean the same thing, e.g., 1 (the number) is equal to \"1\" (the string). To make sure the values are the same and of the same type, <code>===</code> operator should be used.",
-          "output": "1 == \"1\" is true\n1 === \"1\" is false"
-        }
-      },
-      "rb": {
-        "typeComparison": {
-          "text": "When dealing with numeric values of different types, <b>Ruby</b> <code>==</code> returns true if the actual (practical) value is the same. To, also, make sure the values are of the same type, the <code>.eql?</code> operator (function) is used.",
-          "output": "1 == 1.0 is true\n1.eql?1.0 is false"
-        }
-      }
-    },
     "languages": [ "js", "cpp", "py", "fs", "go", "rb", "cs", "java", "pl" ],
     "notes": {
       "pl": [
@@ -112,7 +98,8 @@
       ]
     },
     "todo": [
-      "reference equals"
+      "reference equals",
+      "type comparison on dynamic languages"
     ]
   },
   "logical_operators": {
