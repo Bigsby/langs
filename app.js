@@ -100,6 +100,16 @@ Object.prototype.forEachValue = function (handler) {
 
             if (onLoad)
                 onLoad(vm, data);
+
+            vm.filteredProjects = function () {
+                var result = {};
+
+                for (var k in data.projects)
+                    if (data.projects[k] && data.projects[k].show)
+                        result[k] = data.projects[k];
+
+                return result;
+            }
         }
     }
 
@@ -107,7 +117,6 @@ Object.prototype.forEachValue = function (handler) {
         templateUrl: templatesRoot + "home.html",
         controller: BuildController(function (vm, data) {
             vm.languages = data.languages;
-            vm.projects = data.projects;
         })
     });
 

@@ -1,12 +1,14 @@
 ﻿{
   "setup": {
     "name": "Setup & Run",
+    "show": true,
     "type": "steps",
     "description": "What needs to be installed to get started on each language.",
     "text": "<p>Since the computer and the, already very high-level, Operating System that is running don't know much more than machine code, the code, of each language, needs to be compiled and/or have a runtime to run it.</p><p>Here are the steps required to run a program on each of the languages.</p>"
   },
   "hello": {
     "name": "Hello World!",
+    "show": true,
     "description": "Of course, the first project is a 'Hello, World'.",
     "text": "<p>Every tutorial of every language starts with an app that simply outputs \"Hello, World\". It serves the purposes of making sure everything (compile, runtime, etc.) is in place and, also, displaying the most simple structure of a program of a given language.</p>",
     "type": "code",
@@ -21,18 +23,52 @@
   },
   "comments": {
     "name": "Commenting",
+    "show": true,
     "description": "Non-processed statements.",
     "text": "<p>The first thing to do after writing some code is writing non-code, i.e., comments. Most of the times to comment some code that is no longer needed.</p>",
     "type": "code",
     "output": "Hello, Comments!",
     "languages": [ "js", "cpp", "py", "fs", "go", "rb", "cs", "java", "pl" ]
   },
+  "structure": {
+    "name": "Structure",
+    "show": true,
+    "description": "Spaces, simbols, seperators, termintators.",
+    "text": "",
+    "languages": []
+  },
+  "dry": {
+    "name": "Methods/Functions (Don't Repeat Yourself)",
+    "show": true,
+    "description": "Wrapping functionality in a code block that can be reused.",
+    "text": "Reusing code is one the finest arts in software development. For that, languages provide their ways to define, implement and call (invoke) these wrappers of sequences of instructions.",
+    "type": "code",
+    "output": "Doing stuff!\n2 + 1 = 3",
+    "languages": [ "js", "cpp", "py", "fs", "go", "rb", "cs", "java", "pl" ]
+  },
   "dataTypes": {
     "name": "Data Types",
-    "description": "The types of data know to the language."
+    "description": "The types of data know to the language.",
+    "text": "<p>Each language, even dynanmic ones, have defined types of data for simple (low-level) values. Since the computer only knows numbers, and only two of them (0 and 1), every language defines a set of data types that represent the most used value types that wrap these types writing (alocation) and reading (accessing/combining). The most common types that allow (almost) every computational needs, would be <b>booleans</b>, <b>numeric</b> (integer and not) and representations of <b>text characters</b> (alone or in sequences).</p>",
+    "type": "code",
+    "languages": [],
+    "extraCode": {
+      "js": {
+        "simple": {
+          "text": "The base types known to <b>JavaScript</b> are:"
+        },
+        "complex": {
+          "text": "Other types serve the object-oriented side of <b>JavaScript</b>."
+        }
+      },
+      "cpp": {
+        "simple": "The base types in <b>C++</b> are:"
+      }
+    }
   },
   "variables": {
     "name": "Variables",
+    "show": true,
     "description": "Holding in-memory values to be (re)used.",
     "text": "<p>One could always access the computer memory alocations by its number/position but it's way more practical to name them and use the name for future reference.</p>",
     "type": "code",
@@ -69,7 +105,8 @@
   },
   "strings": {
     "name": "Text | Strings",
-    "description": "Working with sequences of characters. Concatenating, fornating, etc.",
+    "show": true,
+    "description": "Working with sequences of characters. Concatenating, interpolation, etc.",
     "text": "",
     "type": "code",
     "output": "",
@@ -77,6 +114,7 @@
   },
   "comparison_operators": {
     "name": "Comparison Operators",
+    "show": true,
     "description": "Comparing stuff.",
     "text": "<p>The ability to compare values is essential to, life and, every computer program. It allows the program to follow different paths if so state is verified.</p>",
     "type": "code",
@@ -104,6 +142,7 @@
   },
   "logical_operators": {
     "name": "Logical Operators",
+    "show": true,
     "description": "And, Or, Not ...",
     "text": "",
     "type": "code",
@@ -111,6 +150,7 @@
   },
   "if": {
     "name": "If/Else",
+    "show": true,
     "description": "Evey language has, at least, one conditional statement.",
     "text": "",
     "type": "code",
@@ -118,6 +158,7 @@
   },
   "loop": {
     "name": "Looping",
+    "show": true,
     "description": "Repeating until...or not.",
     "text": "",
     "type": "code",
@@ -125,20 +166,15 @@
   },
   "iterate": {
     "name": "Iterating a sequence",
+    "show": true,
     "description": "Repeat for every item in a sequence.",
-    "text": "",
-    "type": "code",
-    "languages": []
-  },
-  "dry": {
-    "name": "Don't Repeat Yourself",
-    "description": "Wrapping functionality in a code block that can be reused.",
     "text": "",
     "type": "code",
     "languages": []
   },
   "scope": {
     "name": "Access scope",
+    "show": true,
     "description": "Where and when are things accessible.",
     "text": "",
     "type": "code",
@@ -146,6 +182,7 @@
   },
   "stream": {
     "name": "Streaming",
+    "show": true,
     "description": "Processing sequences of bytes.",
     "text": "",
     "type": "code",
@@ -153,6 +190,7 @@
   },
   "file_read": {
     "name": "Read from File",
+    "show": true,
     "description": "Reading from the File System",
     "text": "",
     "type": "code",
@@ -160,6 +198,7 @@
   },
   "file_write": {
     "name": "Write to File",
+    "show": true,
     "description": "Writing to the File System",
     "text": "",
     "type": "code",
@@ -167,6 +206,7 @@
   },
   "web_call": {
     "name": "Web Call",
+    "show": true,
     "description": "Making an HTTP request",
     "text": "",
     "type": "code",
@@ -174,6 +214,7 @@
   },
   "gui": {
     "name": "GUI",
+    "show": true,
     "description": "Creating a Graphical User Interface",
     "text": "",
     "type": "code",

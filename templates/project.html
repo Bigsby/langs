@@ -7,11 +7,11 @@
 <div ng-bind-html="$ctrl.project.text"></div>
 <div ng-if="$ctrl.project.type==='code' && $ctrl.project.output">
     <p style="text-decoration:underline">Expected Output:</p>
-<pre><code class="language-">{{$ctrl.project.output}}</code></pre>
-<div ng-repeat="altOutput in $ctrl.project.alternativeOutputs">
-    <p>{{altOutput}}</p>
-    <pre><code class="language-">{{altOutput.output}}</code></pre>
-</div>
+    <pre><code class="language-">{{$ctrl.project.output}}</code></pre>
+    <div ng-repeat="altOutput in $ctrl.project.alternativeOutputs">
+        <p>{{altOutput}}</p>
+        <pre><code class="language-">{{altOutput.output}}</code></pre>
+    </div>
 </div>
 <ul class="project_implementations">
     <li ng-repeat="imp in $ctrl.project.implementations">
@@ -19,7 +19,7 @@
         <div ng-switch="$ctrl.project.type">
             <div ng-switch-when="code">
                 <a target="_blank" ng-href="{{$ctrl.codeRoot + imp.languageId + '/' + $ctrl.projectId + '.' + imp.languageId}}">{{$ctrl.projectId}}.{{imp.languageId}}</a>
-                <pre ><code class="{{'language-' + imp.language.highlight}}" highlight="{{$ctrl.codeRawRoot + imp.languageId + '/' + $ctrl.projectId + '.' + imp.languageId}}"></code></pre>
+                <pre><code class="{{'language-' + imp.language.highlight}}" highlight="{{$ctrl.codeRawRoot + imp.languageId + '/' + $ctrl.projectId + '.' + imp.languageId}}"></code></pre>
                 <div ng-if="$ctrl.project.notes[imp.languageId]" class="notes">
                     <p><b>Notes:</b></p>
                     <ul>
@@ -31,6 +31,10 @@
                     <p class="notes" ng-bind-html="extra.text"></p>
                     <a target="_blank" ng-href="{{$ctrl.codeRoot + imp.languageId + '/' + $ctrl.projectId + '_' + id + '.' + imp.languageId}}">{{$ctrl.projectId + '_' + id + '.' + imp.languageId}}</a>
                     <pre><code class="{{'language-' + imp.language.highlight}}" ng-include="$ctrl.codeRawRoot + imp.languageId + '/' + $ctrl.projectId + '_' + id + '.' + imp.languageId"></code></pre>
+                    <div ng-if="extra.output">
+                        <p>Expected Output:</p>
+                        <pre><code class="language-">{{extra.output}}</code></pre>
+                    </div>
                 </div>
             </div>
             <steps ng-switch-when="steps" steps="imp.steps"></steps>

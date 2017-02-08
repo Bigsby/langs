@@ -12,7 +12,7 @@
 
 <p>Projects:</p>
 <ol start="0">
-    <li ng-repeat="(projId, proj) in $ctrl.projects">
+    <li ng-repeat="(projId, proj) in $ctrl.filteredProjects()">
         <a ng-if="proj.isImplemented" ui-sref="project({id:projId})">{{proj.name}}</a>
         <span ng-if="!proj.isImplemented">{{proj.name}}</span> - {{proj.description}};
     </li>
