@@ -32,7 +32,7 @@
   },
   "structure": {
     "name": "Structure",
-    "show": true,
+    "show": false,
     "description": "Spaces, simbols, seperators, termintators.",
     "text": "",
     "languages": []
