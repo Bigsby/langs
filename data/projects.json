@@ -37,15 +37,6 @@
     "text": "",
     "languages": []
   },
-  "dry": {
-    "name": "Methods/Functions (Don't Repeat Yourself)",
-    "show": true,
-    "description": "Wrapping functionality in a code block that can be reused.",
-    "text": "Reusing code is one the finest arts in software development. For that, languages provide their ways to define, implement and call (invoke) these wrappers of sequences of instructions.",
-    "type": "code",
-    "output": "Doing stuff!\n2 + 1 = 3",
-    "languages": [ "js", "cpp", "py", "fs", "go", "rb", "cs", "java", "pl" ]
-  },
   "dataTypes": {
     "name": "Data Types",
     "description": "The types of data know to the language.",
@@ -110,7 +101,16 @@
     "text": "",
     "type": "code",
     "output": "",
-    "languages": []
+    "languages": [ "js", "cpp" ]
+  },
+  "dry": {
+    "name": "Methods/Functions (Don't Repeat Yourself)",
+    "show": true,
+    "description": "Wrapping functionality in a code block that can be reused.",
+    "text": "Reusing code is one the finest arts in software development. For that, languages provide their ways to define, implement and call (invoke) these wrappers of sequences of instructions.",
+    "type": "code",
+    "output": "Doing stuff!\n2 + 1 = 3",
+    "languages": [ "js", "cpp", "py", "fs", "go", "rb", "cs", "java", "pl" ]
   },
   "comparison_operators": {
     "name": "Comparison Operators",
