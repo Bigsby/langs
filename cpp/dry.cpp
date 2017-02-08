@@ -5,18 +5,15 @@ void DoStuff()
 	std::cout << "Doing stuff!\n";
 }
 
-void DoStuffWithThis(char* value)
+int DoSum(int a, int b)
 {
-	std::cout << "Doing stuff whit " << value << "\n";
+	return a + b;
 }
 
 int main()
 {
 	DoStuff();
-	DoStuff();
-	
-	DoStuffWithThis("This");
-	DoStuffWithThis("That");
+	std::cout << "2 + 1 = " << DoSum(2, 1);
 	
 	return 0;
 }

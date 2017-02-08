@@ -3,12 +3,10 @@ function DoStuff() {
 }
 
 DoStuff();
-DoStuff();
 
-function DoStuffWithThis(value)
+function DoSum(a, b)
 {
-	console.log("Doing stuff with " + value);
+	return a + b;
 }
 
-DoStuffWithThis("This");
-DoStuffWithThis("That");
+console.log("2 + 1 = " + DoSum(2, 1));
