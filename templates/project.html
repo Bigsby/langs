@@ -1,16 +1,16 @@
 ﻿<style>
-    .notes code {
-        background-color: #F5F2F0;
+    .CodeMirror {
+        height: auto;
     }
 </style>
 <h2>{{$ctrl.project.name}}</h2>
 <div ng-bind-html="$ctrl.project.text"></div>
 <div ng-if="$ctrl.project.type==='code' && $ctrl.project.output">
     <p style="text-decoration:underline">Expected Output:</p>
-    <pre><code class="language-">{{$ctrl.project.output}}</code></pre>
+    <pre><code>{{$ctrl.project.output}}</code></pre>
     <div ng-repeat="altOutput in $ctrl.project.alternativeOutputs">
         <p>{{altOutput}}</p>
-        <pre><code class="language-">{{altOutput.output}}</code></pre>
+        <pre><code>{{altOutput.output}}</code></pre>
     </div>
 </div>
 <ul class="project_implementations">
@@ -19,7 +19,7 @@
         <div ng-switch="$ctrl.project.type">
             <div ng-switch-when="code">
                 <a target="_blank" ng-href="{{$ctrl.codeRoot + imp.languageId + '/' + $ctrl.projectId + '.' + imp.languageId}}">{{$ctrl.projectId}}.{{imp.languageId}}</a>
-                <pre><code class="{{'language-' + imp.language.highlight}}" highlight="{{$ctrl.codeRawRoot + imp.languageId + '/' + $ctrl.projectId + '.' + imp.languageId}}"></code></pre>
+                <code-highlight language="{{imp.language.mime}}" src="{{$ctrl.codeRawRoot + imp.languageId + '/' + $ctrl.projectId + '.' + imp.languageId}}"></code-highlight>
                 <div ng-if="$ctrl.project.notes[imp.languageId]" class="notes">
                     <p><b>Notes:</b></p>
                     <ul>
@@ -30,7 +30,7 @@
                 <div ng-if="$ctrl.project.extraCode[imp.languageId]" ng-repeat="(id, extra) in $ctrl.project.extraCode[imp.languageId]">
                     <p class="notes" ng-bind-html="extra.text"></p>
                     <a target="_blank" ng-href="{{$ctrl.codeRoot + imp.languageId + '/' + $ctrl.projectId + '_' + id + '.' + imp.languageId}}">{{$ctrl.projectId + '_' + id + '.' + imp.languageId}}</a>
-                    <pre><code class="{{'language-' + imp.language.highlight}}" ng-include="$ctrl.codeRawRoot + imp.languageId + '/' + $ctrl.projectId + '_' + id + '.' + imp.languageId"></code></pre>
+                    <code-highlight language="{{imp.language.mime}}" src="{{$ctrl.codeRawRoot + imp.languageId + '/' + $ctrl.projectId + '_' + id + '.' + imp.languageId}}"></code-highlight>
                     <div ng-if="extra.output">
                         <p>Expected Output:</p>
                         <pre><code class="language-">{{extra.output}}</code></pre>

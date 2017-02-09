@@ -21,6 +21,7 @@ Object.prototype.forEachValue = function (handler) {
     app.run(function (data, $http) {
 
         var dataToLoad = [
+            "libraries",
             "languages",
             "projects",
             "tags",
@@ -68,6 +69,42 @@ Object.prototype.forEachValue = function (handler) {
             });
         }
 
+        function LoadLibraries(libraries) {
+            var head = document.getElementsByTagName("head")[0];
+
+            function LoadScript(fileName) {
+                var fileref = document.createElement('script')
+                fileref.setAttribute("type", "text/javascript")
+                fileref.setAttribute("src", fileName);
+
+                head.appendChild(fileref);
+            }
+
+            function LoadStyle(fileName) {
+                var fileref = document.createElement("link")
+                fileref.setAttribute("rel", "stylesheet")
+                fileref.setAttribute("type", "text/css")
+                fileref.setAttribute("href", fileName);
+
+                head.appendChild(fileref);
+            }
+
+            for (var id in libraries)
+            {
+                var library = libraries[id];
+
+                if (library.css)
+                    library.css.forEach(function (css) {
+                        LoadStyle(library.baseUrl + css + ".css");
+                    });
+
+                if (library.script)
+                    library.script.forEach(function (js) {
+                        LoadScript(library.baseUrl + js + ".js");
+                    });
+            }
+        }
+
         var loaded = 0;
         function GetData(dataName, callback) {
             $http.get("data/" + dataName + ".json")
@@ -79,11 +116,12 @@ Object.prototype.forEachValue = function (handler) {
             });
         }
 
-
         for (var dataIndex = 0; dataIndex < dataToLoad.length; dataIndex++) {
             GetData(dataToLoad[dataIndex], function () {
-                if (loaded == dataToLoad.length)
+                if (loaded == dataToLoad.length) {
+                    LoadLibraries(data.libraries);
                     ProcessData(data);
+                }
             });
         }
     });
@@ -120,16 +158,22 @@ Object.prototype.forEachValue = function (handler) {
         })
     });
 
-    app.directive("highlight", function ($http) {
+    app.directive("codeHighlight", function ($http) {
         return {
-            restrict: "A",
+            restrict: "E",
             link: function ($scope, element, attrs) {
-                $http.get(attrs.highlight).then(function (response) {
-                    element.text(response.data);
-                    Prism.highlightElement(element[0]);
+                $http.get(attrs.src)
+                .then(function (response) {
+                    CodeMirror(element[0], {
+                        mode: attrs.language,
+                        value: response.data,
+                        lineNumbers: true,
+                        theme: "ttcn",
+                        readOnly: "nocursor"
+                    });
                 });
             }
-        };
+        }
     });
 
     app.component("project", {
@@ -170,7 +214,7 @@ Object.prototype.forEachValue = function (handler) {
                 }
             }
 
-            vm.$timeout(function () { Prism.highlightAll(); }, 500);
+            //vm.$timeout(function () { hljs.initHighlightingOnLoad(); }, 1000);
         })
     });
 
@@ -179,12 +223,6 @@ Object.prototype.forEachValue = function (handler) {
         bindings: {
             steps: "<"
         }
-    });
-
-    app.component("specific", {
-        templateUrl: templatesRoot + "specific.html",
-        controller: BuildController(function (vm) {
-        })
     });
 
     app.config(["$httpProvider", "$sceProvider", "$stateProvider", "$urlRouterProvider",
@@ -202,12 +240,6 @@ Object.prototype.forEachValue = function (handler) {
                 name: "project",
                 url: "/project/:id",
                 component: "project"
-            });
-
-            $stateProvider.state({
-                name: "specific",
-                url: "/project/:id/:lang",
-                component: "specific"
             });
 
             $urlRouterProvider.otherwise("/");

@@ -8,6 +8,7 @@
     ],
     "link": "https://www.javascript.com/",
     "highlight": "javascript",
+    "mime": "text/javascript",
     "runtimes": [ "node", "web_browsers" ],
     "ides": [ "npp", "vscode" ],
     "current": true
@@ -22,6 +23,7 @@
     ],
     "link": "http://www.cplusplus.com/",
     "highlight": "cpp",
+    "mime": "text/x-c++src",
     "runtimes": [ "native" ],
     "ides": [ "npp", "vscode", "vs" ],
     "current": true
@@ -37,6 +39,7 @@
     ],
     "link": "https://www.python.org/",
     "highlight": "python",
+    "mime": "text/x-python",
     "runtimes": [ "python" ],
     "ides": [ "vscode" ],
     "current": true
@@ -52,6 +55,7 @@
     ],
     "link": "http://fsharp.org/",
     "highlight": "fsharp",
+    "mime": "text/x-fsharp",
     "runtimes": [ "net" ],
     "ides": [ "vscode", "vs" ],
     "current": true
@@ -66,6 +70,7 @@
     ],
     "link": "https://golang.org/",
     "highlight": "go",
+    "mime": "text/x-go",
     "ides": [ "vscode", "eclipse" ],
     "current": true
   },
@@ -81,6 +86,7 @@
     ],
     "link": "https://www.ruby-lang.org/",
     "highlight": "ruby",
+    "mime": "text/x-ruby",
     "runtimes": [ "ruby" ],
     "ides": [ "vscode", "rubyMine" ],
     "current": true
@@ -96,6 +102,7 @@
     ],
     "link": "https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx",
     "highlight": "csharp",
+    "mime": "text/x-csharp",
     "runtimes": [ "net" ],
     "ides": [ "vscode", "vs" ],
     "current": true
@@ -110,7 +117,8 @@
       "gc"
     ],
     "link": "https://www.java.com/",
-    "highlight": "java",
+    "highlight": "jsp",
+    "mime": "text/x-java",
     "runtimes": [ "java" ],
     "ides": [ "vscode", "eclipse", "intelliJ", "netbeans" ],
     "current": true
@@ -126,6 +134,7 @@
     ],
     "link": "https://www.perl.org/",
     "highlight": "perl",
+    "mime": "text/x-perl",
     "current": true
   }
 }

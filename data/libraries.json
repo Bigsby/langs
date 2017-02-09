@@ -1,0 +1,18 @@
+﻿{
+  "codeMirror": {
+    "baseUrl": "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.23.0/",
+    "css": [
+      "codemirror.min",
+      "theme/ttcn.min"
+    ],
+    "script": [
+      "mode/javascript/javascript.min",
+      "mode/python/python.min",
+      "mode/mllike/mllike.min",
+      "mode/go/go.min",
+      "mode/ruby/ruby.min",
+      "mode/clike/clike.min",
+      "mode/perl/perl.min"
+    ]
+  }
+}
