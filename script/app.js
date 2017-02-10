@@ -143,7 +143,7 @@ Object.prototype.forEachValue = function (handler) {
                 var result = {};
 
                 for (var k in data.projects)
-                    if (data.projects[k] && data.projects[k].show)
+                    if (data.projects[k] && data.projects[k].show && data.projects[k].isImplemented)
                         result[k] = data.projects[k];
 
                 return result;

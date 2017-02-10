@@ -5,6 +5,11 @@ html, body {
     font-size: 20px;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 a, a:visited, a:hover {
     color: blue;
 }
@@ -19,6 +24,7 @@ header {
     position: fixed;
     top: 0;
     z-index: 100;
+    flex-grow: 0;
 }
 
     header h1 {
@@ -42,9 +48,8 @@ ul.project_implementations {
 
 ui-view {
     top: 150px;
-    position: relative;
-    margin: 10px;
-    display: block;
+    flex-grow: 1;
+    overflow-y: auto;
 }
 
 .language_title a, .language_title a:visited, .language_title a:hover {
@@ -62,3 +67,12 @@ code {
     padding: 5px 0;
 }
 
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}

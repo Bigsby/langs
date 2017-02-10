@@ -1,19 +1,86 @@
-<p>Explorations of basics, similarities and differences of some of the most used languages. Simple to complex examples will be implemented parallelly on each language
-    to outline its implementation of the intended funcitonalilty. It might also serve as a quick cheatsheet.</p>
+<style>
+    .listContainer {
+        display: flex;
+        flex-direction: row;
+    }
 
-<p>The current list of languages is:</p>
-<ul>
-    <li ng-repeat="(langId, lang) in $ctrl.languages">
-        <a ng-href="{{lang.link}}" target="_blank">{{lang.name}}</a> - {{lang.description}}
-    </li>
-</ul>
+        .listContainer > div {
+            flex-basis: 50%;
+        }
+
+        .listContainer .listTitle {
+            text-align: center;
+        }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .listItem {
+        display: block;
+        margin: 0 10px 10px 10px;
+    }
+
+        .listItem > .itemHeader {
+            display: flex;
+            flex-direction: row;
+            padding: 3px 5px;
+            justify-content: space-between;
+            background-color: lightgray;
+            font-size: 1.17em;
+            font-weight: bold;
+        }
+
+            .listItem > .itemHeader > .commandsContainer {
+                right: 0;
+            }
+
+                .listItem > .itemHeader > .commandsContainer > .command {
+                    cursor: pointer;
+                    margin: 0 10px;
+                    color: black;
+                    text-decoration: none;
+                }
+</style>
+<p>
+    Explorations of basics, similarities and differences of some of the most used languages. Simple to complex examples will be implemented parallelly on each language
+    to outline its implementation of the intended funcitonalilty. It might also serve as a quick cheatsheet.
+</p>
 
 <p>All source code can be found <a target="_blank" href="https://github.com/Bigsby/HelloLanguages">this GitHub Repository</a>.</p>
 
-<p>Projects:</p>
-<ol start="0">
-    <li ng-repeat="(projId, proj) in $ctrl.filteredProjects()">
-        <a ng-if="proj.isImplemented" ui-sref="project({id:projId})">{{proj.name}}</a>
-        <span ng-if="!proj.isImplemented">{{proj.name}}</span> - {{proj.description}};
-    </li>
-</ol>
+<div class="listContainer">
+    <div>
+        <h2 class="listTitle">Languages</h2>
+        <div class="list">
+            <div class="listItem" ng-repeat="(langId, lang) in $ctrl.languages">
+                <div class="itemHeader">
+                    <span target="_blank">{{lang.name}}</span>
+                    <div class="commandsContainer noselect">
+                        <i class="command fa" ng-class="{ 'fa-chevron-down': !lang.$$expanded, 'fa-chevron-up': lang.$$expanded }" ng-click="lang.$$expanded = !lang.$$expanded"></i>
+                        <a class="command" target="_blank" ng-href="{{lang.link}}">Page</a>
+                    </div>
+                </div>
+                <span ng-if="lang.$$expanded">{{lang.description}}</span>
+            </div>
+        </div>
+    </div>
+
+
+    <div>
+        <h2 class="listTitle">Projects</h2>
+        <div class="list">
+            <div class="listItem" ng-repeat="(projId, proj) in $ctrl.filteredProjects()">
+                <div class="itemHeader">
+                    <span>{{$index + '. ' + proj.name}}</span>
+                    <div class="commandsContainer noselect">
+                        <i class="command fa" ng-class="{ 'fa-chevron-down': !proj.$$expanded, 'fa-chevron-up': proj.$$expanded }" ng-click="proj.$$expanded = !proj.$$expanded"></i>
+                        <b class="command" ui-sref="project({id:projId})">Open</b>
+                    </div>
+                </div>
+                <span ng-if="proj.$$expanded">{{proj.description}}</span>
+            </div>
+        </div>
+    </div>
+</div>
