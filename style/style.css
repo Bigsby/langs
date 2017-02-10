@@ -3,6 +3,8 @@ html, body {
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px;
+    height: 100%;
+    width: 100%;
 }
 
 body {
@@ -15,14 +17,13 @@ a, a:visited, a:hover {
 }
 
 header {
-    width: 100%;
     background-color: #000010;
     color: #fff;
     text-align: center;
     padding: 2em;
     cursor: pointer;
-    position: fixed;
-    top: 0;
+    /*position: fixed;
+    top: 0;*/
     z-index: 100;
     flex-grow: 0;
 }
@@ -47,7 +48,7 @@ ul.project_implementations {
     }
 
 ui-view {
-    top: 150px;
+    padding: 15px;
     flex-grow: 1;
     overflow-y: auto;
 }
@@ -76,3 +77,48 @@ code {
     user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
 }
+
+
+.listContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+    .listContainer > div {
+        flex-basis: 50%;
+    }
+
+    .listContainer .listTitle {
+        text-align: center;
+    }
+
+.list {
+    display: flex;
+    flex-direction: column;
+}
+
+.listItem {
+    display: block;
+    margin: 0 10px 10px 10px;
+}
+
+    .listItem > .itemHeader {
+        display: flex;
+        flex-direction: row;
+        padding: 3px 5px;
+        justify-content: space-between;
+        background-color: lightgray;
+        font-size: 1.17em;
+        font-weight: bold;
+    }
+
+        .listItem > .itemHeader > .commandsContainer {
+            right: 0;
+        }
+
+            .listItem > .itemHeader > .commandsContainer > .command {
+                cursor: pointer;
+                margin: 0 10px;
+                color: black;
+                text-decoration: none;
+            }

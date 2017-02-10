@@ -13,10 +13,16 @@
         <pre><code>{{altOutput.output}}</code></pre>
     </div>
 </div>
-<ul class="project_implementations">
-    <li ng-repeat="imp in $ctrl.project.implementations">
-        <h3 class="language_title"><a target="_blank" ng-href="{{$ctrl.codeRoot + imp.languageId}}">{{imp.language.name}}</a></h3>
-        <div ng-switch="$ctrl.project.type">
+<div class="list">
+    <div class="listItem" ng-repeat="imp in $ctrl.project.implementations">
+        <div class="itemHeader">
+            <span class="language_title">{{imp.language.name}}</span>
+            <div class="commandsContainer">
+                <i class="command fa" ng-click="imp.$$expanded = !imp.$$expanded" ng-class="{ 'fa-chevron-down': !imp.$$expanded, 'fa-chevron-up': imp.$$expanded }"></i>
+                <a class="command" target="_blank" ng-href="{{$ctrl.codeRoot + imp.languageId}}">Code</a>
+            </div>
+        </div>
+        <div ng-switch="$ctrl.project.type" ng-if="imp.$$expanded">
             <div ng-switch-when="code">
                 <a target="_blank" ng-href="{{$ctrl.codeRoot + imp.languageId + '/' + $ctrl.projectId + '.' + imp.languageId}}">{{$ctrl.projectId}}.{{imp.languageId}}</a>
                 <code-highlight language="{{imp.language.mime}}" src="{{$ctrl.codeRawRoot + imp.languageId + '/' + $ctrl.projectId + '.' + imp.languageId}}"></code-highlight>
@@ -39,5 +45,5 @@
             </div>
             <steps ng-switch-when="steps" steps="imp.steps"></steps>
         </div>
-    </li>
-</ul>
+    </div>
+</div>
