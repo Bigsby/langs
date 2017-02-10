@@ -29,12 +29,12 @@
 
                 <div ng-if="$ctrl.project.extraCode[imp.languageId]" ng-repeat="(id, extra) in $ctrl.project.extraCode[imp.languageId]">
                     <p class="notes" ng-bind-html="extra.text"></p>
-                    <a target="_blank" ng-href="{{$ctrl.codeRoot + imp.languageId + '/' + $ctrl.projectId + '_' + id + '.' + imp.languageId}}">{{$ctrl.projectId + '_' + id + '.' + imp.languageId}}</a>
-                    <code-highlight language="{{imp.language.mime}}" src="{{$ctrl.codeRawRoot + imp.languageId + '/' + $ctrl.projectId + '_' + id + '.' + imp.languageId}}"></code-highlight>
                     <div ng-if="extra.output">
                         <p>Expected Output:</p>
-                        <pre><code class="language-">{{extra.output}}</code></pre>
+                        <pre><code>{{extra.output}}</code></pre>
                     </div>
+                    <a target="_blank" ng-href="{{$ctrl.codeRoot + imp.languageId + '/' + $ctrl.projectId + '_' + id + '.' + imp.languageId}}">{{$ctrl.projectId + '_' + id + '.' + imp.languageId}}</a>
+                    <code-highlight language="{{imp.language.mime}}" src="{{$ctrl.codeRawRoot + imp.languageId + '/' + $ctrl.projectId + '_' + id + '.' + imp.languageId}}"></code-highlight>
                 </div>
             </div>
             <steps ng-switch-when="steps" steps="imp.steps"></steps>

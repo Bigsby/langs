@@ -101,7 +101,7 @@
     "text": "",
     "type": "code",
     "output": "Joining strings.\nThe value 3 in interpolated",
-    "languages": [ "js", "cpp", "py" ],
+    "languages": [ "js", "cpp", "py", "fs" ],
     "notes": {
       "cpp": [
         "There is no actual string concatenation and intrapolation in <b>C++</b>. In fact, the \"simplest\" way to achieve that functionality is using the <code>std::string</code> class that encapsulates all the handling of the underlying <code>char*</code>."
@@ -111,6 +111,12 @@
       "py": {
         "interpolation": {
           "text": "The code above is only available in <b>Pythong 3.6</b>. These other options are still valid, each one, returning the same last line as before."
+        }
+      },
+      "fs": {
+        "types": {
+          "text": "There are more types known to <code>printfn</code>. Here are some examples, although there is way more to it...",
+          "output": "The string string in interpolated\nThe boolean true in interpolated\nThe integer 123 in interpolated\nThe float 12.300000 in interpolated\nThe list [|\"Joining \"; \"strings.\"|] in interpolated\nThe object 12.3 in interpolated"
         }
       }
     }
