@@ -100,8 +100,20 @@
     "description": "Working with sequences of characters. Concatenating, interpolation, etc.",
     "text": "",
     "type": "code",
-    "output": "",
-    "languages": [ "js", "cpp" ]
+    "output": "Joining strings.\nThe value 3 in interpolated",
+    "languages": [ "js", "cpp", "py" ],
+    "notes": {
+      "cpp": [
+        "There is no actual string concatenation and intrapolation in <b>C++</b>. In fact, the \"simplest\" way to achieve that functionality is using the <code>std::string</code> class that encapsulates all the handling of the underlying <code>char*</code>."
+      ]
+    },
+    "extraCode": {
+      "py": {
+        "interpolation": {
+          "text": "The code above is only available in <b>Pythong 3.6</b>. These other options are still valid, each one, returning the same last line as before."
+        }
+      }
+    }
   },
   "dry": {
     "name": "Methods/Functions (Don't Repeat Yourself)",
