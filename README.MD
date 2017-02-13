@@ -12,8 +12,5 @@ The current list of languages is:
 - Go
 - Ruby
 - C#
-
-To be included, one of these days:
-- Rust
-- Scala
-- Haskell
+- Java
+- Perl
