@@ -1,0 +1,25 @@
+﻿<h2>{{$ctrl.language.name}}</h2>
+<div ng-bind-html="$ctrl.language.description"></div>
+<div ng-if="$ctrl.project.type==='code' && $ctrl.project.output">
+    <p style="text-decoration:underline">Expected Output:</p>
+    <pre><code>{{$ctrl.project.output}}</code></pre>
+    <div ng-repeat="altOutput in $ctrl.project.alternativeOutputs">
+        <p>{{altOutput}}</p>
+        <pre><code>{{altOutput.output}}</code></pre>
+    </div>
+</div>
+<div class="list">
+    <div class="command listItem" ng-repeat="imp in $ctrl.language.implementations">
+        <div class="itemHeader" ng-click="imp.$$collapsed = !imp.$$collapsed">
+            <span class="language_title">{{$index + '. ' + imp.project.name}}</span>
+            <div class="commandsContainer">
+                <i class="command fa" ng-class="{ 'fa-chevron-down': imp.$$collapsed, 'fa-chevron-up': !imp.$$collapsed }"></i>
+            </div>
+        </div>
+        <div ng-switch="imp.project.type" ng-if="!imp.$$collapsed">
+            <p ng-bind-html="imp.project.text"></p>
+            <code-implementation ng-switch-when="code" implementation="imp"></code-implementation>
+            <steps-implementation ng-switch-when="steps" steps="imp.steps"></steps-implementation>
+        </div>
+    </div>
+</div>

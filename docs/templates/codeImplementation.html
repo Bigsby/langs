@@ -1,0 +1,25 @@
+﻿<style>
+    .CodeMirror {
+        height: auto;
+    }
+</style>
+<div>
+    <a target="_blank" ng-href="{{$ctrl.codeRoot + $ctrl.languageId + '/' + $ctrl.projectId + '.' + $ctrl.languageId}}">{{$ctrl.projectId}}.{{$ctrl.languageId}}</a>
+    <code-highlight language="{{$ctrl.language.mime}}" src="{{$ctrl.codeRawRoot + $ctrl.languageId + '/' + $ctrl.projectId + '.' + $ctrl.languageId}}"></code-highlight>
+    <div ng-if="$ctrl.project.notes[$ctrl.languageId]" class="notes">
+        <p><b>Notes:</b></p>
+        <ul>
+            <li ng-repeat="note in $ctrl.project.notes[$ctrl.languageId]" ng-bind-html="note"></li>
+        </ul>
+    </div>
+
+    <div ng-if="$ctrl.project.extraCode[$ctrl.languageId]" ng-repeat="(id, extra) in $ctrl.project.extraCode[$ctrl.languageId]">
+        <p class="notes" ng-bind-html="extra.text"></p>
+        <div ng-if="extra.output">
+            <p>Expected Output:</p>
+            <pre><code>{{extra.output}}</code></pre>
+        </div>
+        <a target="_blank" ng-href="{{$ctrl.codeRoot + $ctrl.languageId + '/' + $ctrl.projectId + '_' + id + '.' + $ctrl.languageId}}">{{$ctrl.projectId + '_' + id + '.' + $ctrl.languageId}}</a>
+        <code-highlight language="{{$ctrl.language.mime}}" src="{{$ctrl.codeRawRoot + $ctrl.languageId + '/' + $ctrl.projectId + '_' + id + '.' + $ctrl.languageId}}"></code-highlight>
+    </div>
+</div>

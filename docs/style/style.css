@@ -1,0 +1,128 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+a, a:visited, a:hover {
+    color: blue;
+}
+
+header {
+    background-color: #000010;
+    color: #fff;
+    text-align: center;
+    padding: 2em;
+    cursor: pointer;
+    /*position: fixed;
+    top: 0;*/
+    z-index: 100;
+    flex-grow: 0;
+}
+
+    header h1 {
+        margin: 0;
+    }
+
+ul.project_implementations {
+    list-style: none;
+}
+
+    ul.project_implementations h3 {
+        background-color: lightgray;
+        padding: 5px 20px;
+    }
+
+    ul.project_implementations > li {
+        margin-top: 35px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid black;
+    }
+
+ui-view {
+    padding: 15px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.language_title a, .language_title a:visited, .language_title a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+pre {
+    background-color: #F5F2F0;
+    padding: 5px;
+}
+
+code {
+    background-color: #F5F2F0;
+    padding: 5px 0;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.listContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+    .listContainer > div {
+        flex-basis: 50%;
+    }
+
+    .listContainer .listTitle {
+        text-align: center;
+    }
+
+.list {
+    display: flex;
+    flex-direction: column;
+}
+
+.listItem {
+    display: block;
+    margin: 5px;
+}
+
+    .listItem > .itemHeader {
+        display: flex;
+        margin: 5px 0;
+        flex-direction: row;
+        padding: 3px 5px;
+        justify-content: space-between;
+        background-color: lightgray;
+        font-size: 1.17em;
+        font-weight: bold;
+    }
+
+        .listItem > .itemHeader > .commandsContainer {
+            right: 0;
+        }
+
+.command, a.command:visited, a.command:hover {
+    cursor: pointer;
+    margin-right: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+code-implementation {
+    margin-bottom: 20px;
+}

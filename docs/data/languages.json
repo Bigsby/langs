@@ -1,0 +1,140 @@
+﻿{
+  "js": {
+    "name": "JavaScript",
+    "description": "Mostly commonly used in internet web-pages and running within web browsers (e.g., Google Chrome, Mozilla Firefox, Microsoft Edge).",
+    "tags": [
+      "dynamic",
+      "script"
+    ],
+    "link": "https://www.javascript.com/",
+    "highlight": "javascript",
+    "mime": "text/javascript",
+    "runtimes": [ "node", "web_browsers" ],
+    "ides": [ "npp", "vscode" ],
+    "current": true
+  },
+  "cpp": {
+    "name": "C++",
+    "description": "Low-level language that compiles directly to processors native machine code and, as such, is highly optimized.",
+    "tags": [
+      "dynamic",
+      "strongly_typed",
+      "native"
+    ],
+    "link": "http://www.cplusplus.com/",
+    "highlight": "cpp",
+    "mime": "text/x-c++src",
+    "runtimes": [ "native" ],
+    "ides": [ "npp", "vscode", "vs" ],
+    "current": true
+  },
+  "py": {
+    "name": "Python",
+    "description": "High-level scripting language with emphasis on readability and simplicity of coding general-purpose functionalilty.",
+    "tags": [
+      "script",
+      "dynamic",
+      "specific_runtime",
+      "gc"
+    ],
+    "link": "https://www.python.org/",
+    "highlight": "python",
+    "mime": "text/x-python",
+    "runtimes": [ "python" ],
+    "ides": [ "vscode" ],
+    "current": true
+  },
+  "fs": {
+    "name": "F#",
+    "description": "Functional and imperative language that runs under .Net runtimes.",
+    "tags": [
+      "strongly_typed",
+      "il",
+      "specific_runtime",
+      "gc"
+    ],
+    "link": "http://fsharp.org/",
+    "highlight": "fsharp",
+    "mime": "text/x-fsharp",
+    "runtimes": [ "net" ],
+    "ides": [ "vscode", "vs" ],
+    "current": true
+  },
+  "go": {
+    "name": "Go",
+    "description": "Scalable and readable for networking and multiprocessing.",
+    "tags": [
+      "script",
+      "specific_runtime",
+      "gc"
+    ],
+    "link": "https://golang.org/",
+    "highlight": "go",
+    "mime": "text/x-go",
+    "ides": [ "vscode", "eclipse" ],
+    "current": true
+  },
+  "rb": {
+    "name": "Ruby",
+    "description": "Multi-paradigm language.",
+    "tags": [
+      "script",
+      "specific_runtime",
+      "oop",
+      "dynamic",
+      "gc"
+    ],
+    "link": "https://www.ruby-lang.org/",
+    "highlight": "ruby",
+    "mime": "text/x-ruby",
+    "runtimes": [ "ruby" ],
+    "ides": [ "vscode", "rubyMine" ],
+    "current": true
+  },
+  "cs": {
+    "name": "C#",
+    "description": "General-purpose, object and component oriented declarative language that runs under .Net runtimes.",
+    "tags": [
+      "strongly_typed",
+      "il",
+      "specific_runtime",
+      "gc"
+    ],
+    "link": "https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx",
+    "highlight": "csharp",
+    "mime": "text/x-csharp",
+    "runtimes": [ "net" ],
+    "ides": [ "vscode", "vs" ],
+    "current": true
+  },
+  "java": {
+    "name": "Java",
+    "description": "General-purpose and object-oriented language. Meant ot \"Write once, run anywhere\".",
+    "tags": [
+      "strongly_typed",
+      "il",
+      "specific_runtime",
+      "gc"
+    ],
+    "link": "https://www.java.com/",
+    "highlight": "jsp",
+    "mime": "text/x-java",
+    "runtimes": [ "java" ],
+    "ides": [ "vscode", "eclipse", "intelliJ", "netbeans" ],
+    "current": true
+  },
+  "pl": {
+    "name": "Perl",
+    "description": "General-purpose, high-level \"intended\" for easy text processing.",
+    "tags": [
+      "script",
+      "dynamic",
+      "specific_runtime",
+      "gc"
+    ],
+    "link": "https://www.perl.org/",
+    "highlight": "perl",
+    "mime": "text/x-perl",
+    "current": true
+  }
+}
