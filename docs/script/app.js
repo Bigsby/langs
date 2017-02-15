@@ -13,7 +13,7 @@ Object.prototype.forEachValue = function (handler) {
     var appName = "hLangs";
     var templatesRoot = "templates/";
     var codeRoot = "https://github.com/Bigsby/HelloLanguages/tree/master/";
-    var codeRawRoot = "https://raw.githubusercontent.com/Bigsby/HelloLanguages/master/";
+    var codeRawRoot = "https://raw.githubusercontent.com/Bigsby/HelloLanguages/master/src/";
     var app = angular.module(appName, ["ngSanitize", "ui.router"]);
 
     function Implementation(type, languageId, language, projectId, project) {

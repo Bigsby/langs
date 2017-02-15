@@ -136,5 +136,18 @@
     "highlight": "perl",
     "mime": "text/x-perl",
     "current": true
+  },
+  "ps1": {
+    "name": "PowerShell",
+    "description": "Cros-platform language for system automation and configuration.",
+    "tags": [
+      "script",
+      "dynamic",
+      "specific_runtime"
+    ],
+    "link": "https://github.com/PowerShell/PowerShell",
+    "highlight": "powershell",
+    "mime": "application/x-powershell",
+    "current": true
   }
 }

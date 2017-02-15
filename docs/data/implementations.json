@@ -187,5 +187,22 @@
         "command": "perl filename.pl"
       }
     ]
-  }
+  },
+  "ps1": [
+    {
+        "type": "install",
+        "program": "PwerShell",
+        "link": "https://github.com/PowerShell/PowerShell"
+      },
+    {
+      "type": "open",
+      "name": "Windows PowerShell",
+      "program": "powershell.exe"
+    },
+    {
+      "type": "command",
+      "text": "Run program",
+      "command": "> .\filename.ps1"
+    }
+  ]
 }

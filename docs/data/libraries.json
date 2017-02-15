@@ -12,7 +12,8 @@
       "mode/go/go.min",
       "mode/ruby/ruby.min",
       "mode/clike/clike.min",
-      "mode/perl/perl.min"
+      "mode/perl/perl.min",
+      "mode/powershell/powershell.min"
     ]
   }
 }
