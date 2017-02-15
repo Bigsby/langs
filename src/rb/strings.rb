@@ -1,5 +1,5 @@
 puts "Joining " + "strings."
 
-$value = 3
+value = 3
 
-puts "The value #{$value} is interpolated"
+puts "The value #{value} is interpolated"

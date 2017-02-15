@@ -143,7 +143,8 @@
     "tags": [
       "script",
       "dynamic",
-      "specific_runtime"
+      "specific_runtime",
+      "oop"
     ],
     "link": "https://github.com/PowerShell/PowerShell",
     "highlight": "powershell",

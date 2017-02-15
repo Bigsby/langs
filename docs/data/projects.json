@@ -276,13 +276,14 @@
       ]
     }
   },
-  "if": {
+  "ifelse": {
     "name": "If/Else",
     "show": true,
     "description": "Evey language has, at least, one conditional statement.",
     "text": "",
     "type": "code",
-    "languages": []
+    "output": "Got true\nGot else\nGot if else",
+    "languages": [ "js", "cpp", "py", "fs", "go", "rb", "cs", "java", "pl", "ps1" ]
   },
   "loop": {
     "name": "Looping",

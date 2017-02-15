@@ -1,4 +1,5 @@
 {
     "go.gopath": "c:/go/bin",
-    "python.linting.pylintEnabled": false
+    "python.linting.pylintEnabled": false,
+    "python.formatting.provider": "yapf"
 }
