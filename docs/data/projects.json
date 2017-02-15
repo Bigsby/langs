@@ -101,7 +101,7 @@
     "text": "",
     "type": "code",
     "output": "Joining strings.\nThe value 3 in interpolated",
-    "languages": [ "js", "cpp", "py", "fs", "go", "rb", "cs", "java", "pl" ],
+    "languages": [ "js", "cpp", "py", "fs", "go", "rb", "cs", "java", "pl", "ps1" ],
     "notes": {
       "cpp": [
         "There is no actual string concatenation and intrapolation in <b>C++</b>. In fact, the \"simplest\" way to achieve that functionality is using the <code>std::string</code> class that encapsulates all the handling of the underlying <code>char*</code>."

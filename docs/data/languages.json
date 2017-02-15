@@ -139,7 +139,7 @@
   },
   "ps1": {
     "name": "PowerShell",
-    "description": "Cros-platform language for system automation and configuration.",
+    "description": "Cross-platform language for system automation and configuration.",
     "tags": [
       "script",
       "dynamic",

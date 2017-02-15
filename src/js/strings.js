@@ -1,5 +1,4 @@
-var result = "Joining " + "strings.";
-console.log(result);
+console.log("Joining " + "strings.");
 
 console.log("First line\nSecond line");
 
