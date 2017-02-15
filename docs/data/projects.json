@@ -229,23 +229,13 @@
       "type comparison on dynamic languages"
     ]
   },
-  "logical_operators": {
-    "name": "Logical Operators",
+  "ifelse": {
+    "name": "If/Else",
     "show": true,
-    "description": "And, Or, Not ...",
-    "text": "<p>Like comparing values it is also essential in, life and, every computer program to be \"join\" logical values (true and false)</p>",
+    "description": "Evey language has, at least, one conditional statement.",
+    "text": "",
     "type": "code",
-    "output": "true and false is false\ntrue or false is true\nnot true is false",
-    "alternativeOutputs": [
-      {
-        "text": "Some output booleans as 1 (one) for true and 0 (zero) for false.",
-        "output": "true and false is 0\ntrue or false is 1\nnot true is 0"
-      },
-      {
-        "text": "Some output booleans with a first capital letter, i.e., True and False.",
-        "output": "true and false is False\ntrue or false is True\nnot true is False"
-      }
-    ],
+    "output": "Got true\nGot else\nGot if else",
     "languages": [
       "js",
       "cpp",
@@ -258,32 +248,67 @@
       "pl",
       "ps1"
     ],
-    "extraCode": {
-      "rb": {
-        "spell":{
-          "text": "Logical operators can also be spelled with the exact same result."
+    "logical_operators": {
+      "name": "Logical Operators",
+      "show": true,
+      "description": "And, Or, Not ...",
+      "text": "<p>Like comparing values it is also essential in, life and, every computer program to be \"join\" logical values (true and false)</p>",
+      "type": "code",
+      "output": "true and false is false\ntrue or false is true\nnot true is false",
+      "alternativeOutputs": [
+        {
+          "text": "Some output booleans as 1 (one) for true and 0 (zero) for false.",
+          "output": "true and false is 0\ntrue or false is 1\nnot true is 0"
+        },
+        {
+          "text": "Some output booleans with a first capital letter, i.e., True and False.",
+          "output": "true and false is False\ntrue or false is True\nnot true is False"
+        }
+      ],
+      "languages": [
+        "js",
+        "cpp",
+        "py",
+        "fs",
+        "go",
+        "rb",
+        "cs",
+        "java",
+        "pl",
+        "ps1"
+      ],
+      "extraCode": {
+        "rb": {
+          "spell": {
+            "text": "Logical operators can also be spelled with the exact same result."
+          }
+        },
+        "pl": {
+          "spell": {
+            "text": "Logical operators can also be spelled with the exact same result."
+          }
         }
       },
-      "pl": {
-        "spell":{
-          "text": "Logical operators can also be spelled with the exact same result."
-        }
+      "notes": {
+        "pl": [
+          "Since <b>Perl</b> Perl does not have a constant string for false value (resolving \"1\" for <code>true</code>), <code>result</code> needs to hold the string value."
+        ]
       }
     },
     "notes": {
-      "pl": [
-        "Since <b>Perl</b> Perl does not have a constant string for false value (resolving \"1\" for <code>true</code>), <code>result</code> needs to hold the string value."
+      "js": [
+        "As a <b>C-based</b> language, single statement blocks (like in the second if/else) are possible."
+      ],
+      "cpp": [
+        "As a <b>C-based</b> language, single statement blocks (like in the second if/else) are possible."
+      ],
+      "cs": [
+        "As a <b>C-based</b> language, single statement blocks (like in the second if/else) are possible."
+      ],
+      "java": [
+        "As a <b>C-based</b> language, single statement blocks (like in the second if/else) are possible."
       ]
     }
-  },
-  "ifelse": {
-    "name": "If/Else",
-    "show": true,
-    "description": "Evey language has, at least, one conditional statement.",
-    "text": "",
-    "type": "code",
-    "output": "Got true\nGot else\nGot if else",
-    "languages": [ "js", "cpp", "py", "fs", "go", "rb", "cs", "java", "pl", "ps1" ]
   },
   "loop": {
     "name": "Looping",
