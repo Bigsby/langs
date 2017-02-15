@@ -83,6 +83,12 @@ code {
     flex-direction: row;
 }
 
+@media only screen and (max-width: 768px) {
+    .listContainer {
+        flex-direction: column;
+    }
+}
+
     .listContainer > div {
         flex-basis: 50%;
     }
