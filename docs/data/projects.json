@@ -314,9 +314,10 @@
     "name": "Looping",
     "show": true,
     "description": "Repeating until...or not.",
-    "text": "",
+    "text": "<p>The ability to repeat a set of operations until a state is valid.</p>",
     "type": "code",
-    "languages": []
+    "output": "1\n2\n3\n4\n5\n6\n7\n8\n9",
+    "languages": [ "js", "cpp", "py", "fs", "go", "rb", "cs", "java", "pl", "ps1" ]
   },
   "iterate": {
     "name": "Iterating a sequence",
