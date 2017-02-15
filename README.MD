@@ -4,7 +4,7 @@ Explorations in some of the most common languages. Simple to complex examples im
 
 Follow it [here](http://bigsbyspot.org/hellolanguages).
 
-The current list of languages is:
+List of languages is:
 - JavaScript
 - C++
 - Python
@@ -14,3 +14,4 @@ The current list of languages is:
 - C#
 - Java
 - Perl
+- PowerShell
