@@ -1,3 +1,4 @@
 {
-    "go.gopath": "c:/go/bin"
+    "go.gopath": "c:/go/bin",
+    "python.linting.pylintEnabled": false
 }
