@@ -152,7 +152,7 @@
         "output": "1 equals 2 is False\n1 not equals 2 is True\n1 larger than 2 is False\n1 larger than or equals 2 is False\n1 less than 2 is True\n1 less than or equals 2 is True"
       }
     ],
-    "languages": [ "js", "cpp", "py", "fs", "go", "rb", "cs", "java", "pl" ],
+    "languages": [ "js", "cpp", "py", "fs", "go", "rb", "cs", "java", "pl", "ps1" ],
     "notes": {
       "pl": [
         "Since <b>Perl</b> Perl does not have a constant string for boolean values, <code>result</code> needs to hold the string value."
