@@ -317,14 +317,34 @@
     "text": "<p>The ability to repeat a set of operations until a state is valid.</p>",
     "type": "code",
     "output": "1\n2\n3\n4\n5\n6\n7\n8\n9",
-    "languages": [ "js", "cpp", "py", "fs", "go", "rb", "cs", "java", "pl", "ps1" ]
+    "languages": [
+      "js",
+      "cpp",
+      "py",
+      "fs",
+      "go",
+      "rb",
+      "cs",
+      "java",
+      "pl",
+      "ps1"
+    ]
+  },
+  "sets": {
+    "name": "Lists/Arrays",
+    "show": false,
+    "description": "Sets of, not necessarily but usually similar, items.",
+    "text": "Creating a sequence to be iterated is the first step of \"advanced\" programming.",
+    "type": "code",
+    "languages": [ "js", "cpp" ]
   },
   "iterate": {
-    "name": "Iterating a sequence",
+    "name": "Iterating",
     "show": true,
-    "description": "Repeat for every item in a sequence.",
-    "text": "",
+    "description": "Repeat for every item in a set.",
+    "text": "Repeating a set of operations for every item in a set.",
     "type": "code",
+    "output": "1\n2\n3",
     "languages": []
   },
   "scope": {
