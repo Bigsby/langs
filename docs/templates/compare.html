@@ -1,10 +1,10 @@
 <div class="list">
     <div class="side_by_side">
-        <div>
+        <div class="devided_first">
             <h2 class="listTitle">{{$ctrl.first.name}}</h2>
             <div ng-bind-html="$ctrl.first.description"></div>
         </div>
-        <div>
+        <div class="devided_second">
             <h2 class="listTitle">{{$ctrl.second.name}}</h2>
             <div ng-bind-html="$ctrl.second.description"></div>
         </div>
@@ -14,28 +14,29 @@
         <div class="itemHeader" ng-click="project.$$collapsed = !project.$$collapsed">
             <span class="language_title">{{$index + '. ' + project.name}}</span>
             <div class="commandsContainer">
-                <i class="command fa" ng-class="{ 'fa-chevron-down': imp.$$collapsed, 'fa-chevron-up': !imp.$$collapsed }"></i>
+                <i class="command fa" ng-class="{ 'fa-chevron-down': project.$$collapsed, 'fa-chevron-up': !project.$$collapsed }"></i>
             </div>
         </div>
-
-        <p ng-bind-html="project.text"></p>
-        <div ng-if="project.type==='code' && project.output">
-            <p style="text-decoration:underline">Expected Output:</p>
-            <pre><code>{{project.output}}</code></pre>
-            <div ng-repeat="altOutput in project.alternativeOutputs">
-                <p>{{altOutput}}</p>
-                <pre><code>{{altOutput.output}}</code></pre>
+        <div ng-if="!project.$$collapsed">
+            <p ng-bind-html="project.text"></p>
+            <div ng-if="project.type==='code' && project.output">
+                <p style="text-decoration:underline">Expected Output:</p>
+                <pre><code>{{project.output}}</code></pre>
+                <div ng-repeat="altOutput in project.alternativeOutputs">
+                    <p>{{altOutput}}</p>
+                    <pre><code>{{altOutput.output}}</code></pre>
+                </div>
             </div>
-        </div>
 
-        <div class="side_by_side" ng-re>
-            <div ng-switch="project.type" ng-if="!project.$$collapsed" class="devided-left">
-                <code-implementation ng-switch-when="code" implementation="project.firstImplementation"></code-implementation>
-                <steps-implementation ng-switch-when="steps" steps="project.firstImplementation.steps"></steps-implementation>
-            </div>
-            <div ng-switch="project.type" ng-if="!project.$$collapsed"  class="devided-right">
-                <code-implementation ng-switch-when="code" implementation="project.secondImplementation"></code-implementation>
-                <steps-implementation ng-switch-when="steps" steps="project.secondImplementation.steps"></steps-implementation>
+            <div class="side_by_side" ng-re>
+                <div ng-switch="project.type" class="devided_first">
+                    <code-implementation ng-switch-when="code" implementation="project.firstImplementation"></code-implementation>
+                    <steps-implementation ng-switch-when="steps" steps="project.firstImplementation.steps"></steps-implementation>
+                </div>
+                <div ng-switch="project.type" class="devided_second">
+                    <code-implementation ng-switch-when="code" implementation="project.secondImplementation"></code-implementation>
+                    <steps-implementation ng-switch-when="steps" steps="project.secondImplementation.steps"></steps-implementation>
+                </div>
             </div>
         </div>
     </div>

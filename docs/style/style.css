@@ -127,17 +127,29 @@ code-implementation {
     margin-bottom: 20px;
 }
 
-.devided-left {
+.devided_first {
     border-right: 1px solid black;
     padding-right: 5px;
 }
 
-.devided-right {
+.devided_second {
     border-left: 1px solid black;
     padding-left: 5px;
 }
 
-compare-selector{
+@media only screen and (max-width: 767px){
+    .devided_first {
+        border-right: none;
+        border-bottom: 1px solid black;
+    }
+
+    .devided_second {
+        border-left: none;
+        border-top: 1px solid black;
+    }
+}
+
+compare-selector {
     display: flex;
     flex-direction: row;
     justify-content: center;
