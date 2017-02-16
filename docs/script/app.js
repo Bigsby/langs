@@ -130,12 +130,12 @@ Object.prototype.forEachValue = function (handler) {
         var loaded = 0;
         function GetData(dataName, callback) {
             $http.get("data/" + dataName + ".json")
-            .then(function (response) {
-                loaded++;
-                data[dataName] = response.data;
-                if (callback)
-                    callback();
-            });
+                .then(function (response) {
+                    loaded++;
+                    data[dataName] = response.data;
+                    if (callback)
+                        callback();
+                });
         }
 
         for (var dataIndex = 0; dataIndex < dataToLoad.length; dataIndex++) {
@@ -149,7 +149,7 @@ Object.prototype.forEachValue = function (handler) {
     });
 
     function BuildController(onLoad) {
-        return function (data, $http, $stateParams, $timeout, $rootScope) {
+        return function (data, $http, $stateParams, $timeout, $rootScope, $state) {
             var vm = this;
             vm.codeRoot = codeRoot;
             vm.codeRawRoot = codeRawRoot;
@@ -157,6 +157,7 @@ Object.prototype.forEachValue = function (handler) {
             vm.$stateParams = $stateParams;
             vm.$timeout = $timeout;
             vm.$rootScope = $rootScope;
+            vm.$state = $state;
 
             if (onLoad)
                 onLoad(vm, data);
@@ -185,15 +186,15 @@ Object.prototype.forEachValue = function (handler) {
             restrict: "E",
             link: function ($scope, element, attrs) {
                 $http.get(attrs.src)
-                .then(function (response) {
-                    var cm = CodeMirror(element[0], {
-                        mode: attrs.language,
-                        value: response.data,
-                        lineNumbers: true,
-                        theme: "ttcn",
-                        readOnly: true
+                    .then(function (response) {
+                        var cm = CodeMirror(element[0], {
+                            mode: attrs.language,
+                            value: response.data,
+                            lineNumbers: true,
+                            theme: "ttcn",
+                            readOnly: true
+                        });
                     });
-                });
             }
         }
     });
@@ -299,6 +300,95 @@ Object.prototype.forEachValue = function (handler) {
         }
     });
 
+    app.component("compareSelector", {
+        templateUrl: templatesRoot + "compareSelector.html",
+        controller: BuildController(function (vm, data) {
+            vm.languages = data.languages;
+            vm.projects = data.projects;
+        })
+    });
+
+    app.component("languageSelector", {
+        templateUrl: templatesRoot + "languageSelector.html",
+        bindings: {
+            language: "=",
+            languages: "<"
+        }
+    });
+
+    app.component("compare", {
+        templateUrl: templatesRoot + "compare.html",
+        controller: BuildController(function (vm, data) {
+            vm.firstId = vm.$stateParams.first;
+            vm.secondId = vm.$stateParams.second;
+            vm.first = data.languages[vm.firstId];
+            vm.second = data.languages[vm.secondId];
+
+            if (!vm.first || !vm.second)
+                vm.$state.go("home");
+
+            vm.projects = [];
+
+            data.projects.forEachValue(function (projectId, project) {
+                if (!project.show)
+                    return;
+
+                switch (project.type) {
+                    case "code":
+                        if (!project.languages
+                            ||
+                            project.languages.indexOf(vm.firstId) == -1
+                            ||
+                            project.languages.indexOf(vm.secondId) == -1)
+                            return;
+
+                        project.firstImplementation = new CodeImplementation(
+                            vm.firstId,
+                            data.languages[vm.firstId],
+                            projectId,
+                            project,
+                            vm.codeRoot,
+                            vm.codeRawRoot);
+                        project.secondImplementation = new CodeImplementation(
+                            vm.secondId,
+                            data.languages[vm.secondId],
+                            projectId,
+                            project,
+                            vm.codeRoot,
+                            vm.codeRawRoot);
+
+                        vm.projects.push(project);
+                        break;
+                    case "steps":
+                        var projectDefinition = data.implementations[projectId];
+                        if (!projectDefinition)
+                            return;
+
+                        var firstDefinition = projectDefinition[vm.firstId];
+                        var secondDefinition = projectDefinition[vm.secondId];
+                        if (!firstDefinition || !secondDefinition)
+                            return;
+
+                        project.firstImplementation = new StepsImplementation(
+                            vm.firstId,
+                            vm.first,
+                            projectId,
+                            project,
+                            firstDefinition);
+                        project.secondImplementation = new StepsImplementation(
+                            vm.secondId,
+                            vm.second,
+                            projectId,
+                            project,
+                            secondDefinition);
+
+                        vm.projects.push(project);
+                        break;
+                }
+            });
+        })
+    });
+
     app.config(["$httpProvider", "$sceProvider", "$stateProvider", "$urlRouterProvider",
         function ($httpProvider, $sceProvider, $stateProvider, $urlRouterProvider) {
             $httpProvider.defaults.useXDomain = true;
@@ -320,6 +410,16 @@ Object.prototype.forEachValue = function (handler) {
                 name: "language",
                 url: "/language/:id",
                 component: "language"
+            });
+
+            $stateProvider.state({
+                name: "compare",
+                url: "/compare/:first/:second",
+                component: "compare",
+                params: {
+                    first: null,
+                    second: null
+                }
             });
 
             $urlRouterProvider.otherwise("/");

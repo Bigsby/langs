@@ -1,0 +1,4 @@
+<language-selector languages="$ctrl.languages" language="$ctrl.language1"></language-selector>
+<language-selector languages="$ctrl.languages" language="$ctrl.language2"></language-selector>
+
+<button ng-disabled="(!$ctrl.language1 || !$ctrl.language2) || $ctrl.language1 == $ctrl.language2" ui-sref="compare({first:$ctrl.language1,second:$ctrl.language2})">Compare</button>

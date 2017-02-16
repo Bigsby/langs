@@ -22,8 +22,6 @@ header {
     text-align: center;
     padding: 2em;
     cursor: pointer;
-    /*position: fixed;
-    top: 0;*/
     z-index: 100;
     flex-grow: 0;
 }
@@ -63,11 +61,6 @@ pre {
     padding: 5px;
 }
 
-code {
-    background-color: #F5F2F0;
-    padding: 5px 0;
-}
-
 .noselect {
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -78,22 +71,23 @@ code {
                                   supported by Chrome and Opera */
 }
 
-.listContainer {
+.side_by_side {
     display: flex;
     flex-direction: row;
 }
 
-@media only screen and (max-width: 768px) {
-    .listContainer {
+@media only screen and (max-width: 767px) {
+    .side_by_side {
         flex-direction: column;
     }
 }
 
-    .listContainer > div {
+    .side_by_side > div {
         flex-basis: 50%;
+        flex-shrink: 0;
     }
 
-    .listContainer .listTitle {
+    .listTitle {
         text-align: center;
     }
 
@@ -131,4 +125,39 @@ code {
 
 code-implementation {
     margin-bottom: 20px;
+}
+
+.devided-left {
+    border-right: 1px solid black;
+    padding-right: 5px;
+}
+
+.devided-right {
+    border-left: 1px solid black;
+    padding-left: 5px;
+}
+
+compare-selector{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center; 
+}
+
+compare-selector select {
+    font-size: 1.3em;
+    margin: 10px;
+}
+
+compare-selector button {
+    font-weight: bold;
+    font-size: 1.3em;
+    margin: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+    compare-selector{
+        flex-direction: column;
+    }
 }
