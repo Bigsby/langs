@@ -136,7 +136,7 @@
     "name": "Text | Strings",
     "show": true,
     "description": "Working with sequences of characters. Concatenating, interpolation, etc.",
-    "text": "",
+    "text": "Handling text (or sequences of characters) to be able to display (meaningful) messages.",
     "type": "code",
     "output": "Joining strings.\nThe value 3 in interpolated",
     "languages": [
@@ -250,16 +250,16 @@
     ],
     "notes": {
       "js": [
-        "As a <b>C-based</b> language, single statement blocks (like in the second if/else) are possible."
+        "As a <b>C-based</b> language, single statement blocks (like in the second if/else) are possible without brackets <code>{ ... }</code>."
       ],
       "cpp": [
-        "As a <b>C-based</b> language, single statement blocks (like in the second if/else) are possible."
+        "As a <b>C-based</b> language, single statement blocks (like in the second if/else) are possible without brackets <code>{ ... }</code>."
       ],
       "cs": [
-        "As a <b>C-based</b> language, single statement blocks (like in the second if/else) are possible."
+        "As a <b>C-based</b> language, single statement blocks (like in the second if/else) are possible without brackets <code>{ ... }</code>."
       ],
       "java": [
-        "As a <b>C-based</b> language, single statement blocks (like in the second if/else) are possible."
+        "As a <b>C-based</b> language, single statement blocks (like in the second if/else) are possible without brackets <code>{ ... }</code>."
       ]
     }
   },
@@ -310,6 +310,12 @@
       ]
     }
   },
+  "parsing":{
+    "name":"Parsing",
+    "show": false,
+    "description":"Convert text into other typed values.",
+    "type": "code"
+  },
   "loop": {
     "name": "Looping",
     "show": true,
@@ -336,7 +342,10 @@
     "description": "Sets of, not necessarily but usually similar, items.",
     "text": "Creating a sequence to be iterated is the first step of \"advanced\" programming.",
     "type": "code",
-    "languages": [ "js", "cpp" ]
+    "languages": [
+      "js",
+      "cpp"
+    ]
   },
   "iterate": {
     "name": "Iterating",
@@ -345,15 +354,38 @@
     "text": "Repeating a set of operations for every item in a set.",
     "type": "code",
     "output": "1\n2\n3",
-    "languages": [ "js", "cpp", "py", "fs", "go", "rb", "cs", "java", "pl", "ps1" ]
+    "languages": [
+      "js",
+      "cpp",
+      "py",
+      "fs",
+      "go",
+      "rb",
+      "cs",
+      "java",
+      "pl",
+      "ps1"
+    ]
+  },
+  "sets_handling": {
+    "name": "Set Handling",
+    "show": false,
+    "description": "Manipulating sets of items. Add, remove, etc.",
+    "type": "code"
   },
   "scope": {
     "name": "Access scope",
-    "show": true,
-    "description": "Where and when are things accessible.",
+    "show": false,
+    "description": "Where and when things are accessible.",
     "text": "",
     "type": "code",
     "languages": []
+  },
+  "modularity": {
+    "name": "Modularity",
+    "show": false,
+    "description": "Devide and conquer. Separate code and inter-reference.",
+    "type": "code"
   },
   "stream": {
     "name": "Streaming",
