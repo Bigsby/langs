@@ -345,7 +345,7 @@
     "text": "Repeating a set of operations for every item in a set.",
     "type": "code",
     "output": "1\n2\n3",
-    "languages": []
+    "languages": [ "js", "cpp", "py", "fs", "go", "rb", "cs", "java", "pl", "ps1" ]
   },
   "scope": {
     "name": "Access scope",
