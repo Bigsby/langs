@@ -166,6 +166,7 @@ compare-selector button {
     font-weight: bold;
     font-size: 1.3em;
     margin: 10px;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 767px) {
