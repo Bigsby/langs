@@ -4,6 +4,7 @@ public class logical_operators {
 		
         System.out.println("true and false is " + (true && false));
         System.out.println("true or false is " + (true || false));
+        System.out.println("true xor false is " + (true ^ false));
         System.out.println("not true is " + !true);
 
     }

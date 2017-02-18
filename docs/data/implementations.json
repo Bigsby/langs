@@ -218,7 +218,7 @@
       {
         "type": "command",
         "text": "Add folder to path",
-        "command": "setx path \"%path%;c:\\theFolderFromPreviousStep\""
+        "command": "setx path \"c:\\theFolderFromPreviousStep;%path%\""
       },
       {
         "type": "command",
