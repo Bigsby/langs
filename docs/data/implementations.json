@@ -186,23 +186,45 @@
         "text": "Run program",
         "command": "perl filename.pl"
       }
-    ]
-  },
-  "ps1": [
-    {
+    ],
+    "ps1": [
+      {
         "type": "install",
         "program": "PwerShell",
         "link": "https://github.com/PowerShell/PowerShell"
       },
-    {
-      "type": "open",
-      "name": "Windows PowerShell",
-      "program": "powershell.exe"
-    },
-    {
-      "type": "command",
-      "text": "Run program",
-      "command": "> .\filename.ps1"
-    }
-  ]
+      {
+        "type": "open",
+        "name": "Windows PowerShell",
+        "program": "powershell.exe"
+      },
+      {
+        "type": "command",
+        "text": "Run program",
+        "command": ".\\filename.ps1"
+      }
+    ],
+    "php": [
+      {
+        "type": "download",
+        "program": "PHP",
+        "link": "http://windows.php.net/download/"
+      },
+      {
+        "type": "non",
+        "title": "UnZip",
+        "text": "UnZip the file to a folder on your file system."
+      },
+      {
+        "type": "command",
+        "text": "Add folder to path",
+        "command": "setx path \"%path%;c:\\theFolderFromPreviousStep\""
+      },
+      {
+        "type": "command",
+        "text": "Run program",
+        "command": "php filename.php"
+      }
+    ]
+  }
 }

@@ -13,7 +13,8 @@
       "mode/ruby/ruby.min",
       "mode/clike/clike.min",
       "mode/perl/perl.min",
-      "mode/powershell/powershell.min"
+      "mode/powershell/powershell.min",
+      "mode/php/php.min"
     ]
   }
 }

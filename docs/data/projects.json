@@ -23,7 +23,8 @@
       "cs",
       "java",
       "pl",
-      "ps1"
+      "ps1",
+      "php"
     ],
     "notes": {
       "cpp": [
@@ -49,7 +50,8 @@
       "cs",
       "java",
       "pl",
-      "ps1"
+      "ps1",
+      "php"
     ]
   },
   "structure": {
@@ -96,7 +98,8 @@
       "cs",
       "java",
       "pl",
-      "ps1"
+      "ps1",
+      "php"
     ],
     "extraCode": {
       "js": {
@@ -122,6 +125,11 @@
       "ps1": {
         "dynamic": {
           "text": "Since <b>PowerShell</b> is a dynamic language <code>$x = ...</code> doesn't enforce a type on the variable and, as such, the variable can change type. Because of that, this code is totally valid and has the exact same output."
+        }
+      },
+      "php": {
+        "dynamic": {
+          "text": "Since <b>PHP</b> is a dynamic language <code>var $x = ...</code> doesn't enforce a type on the variable and, as such, the variable can change type. Because of that, this code is totally valid and has the exact same output."
         }
       }
     },
@@ -149,7 +157,8 @@
       "cs",
       "java",
       "pl",
-      "ps1"
+      "ps1",
+      "php"
     ],
     "notes": {
       "cpp": [
@@ -166,6 +175,12 @@
         "types": {
           "text": "There are more types known to <code>printfn</code>. Here are some examples, although there is way more to it...",
           "output": "The string string in interpolated\nThe boolean true in interpolated\nThe integer 123 in interpolated\nThe float 12.300000 in interpolated\nThe list [|\"Joining \"; \"strings.\"|] in interpolated\nThe object 12.3 in interpolated"
+        }
+      },
+      "php": {
+        "heredoc": {
+          "text": "<b>Heredoc</b> allow for string to be read <span style='font-style: italic'>as is</span>, i.e., keep new lines.",
+          "output": "First line\nSecond line\nThis is a\nmultiline string"
         }
       }
     }
@@ -187,7 +202,8 @@
       "cs",
       "java",
       "pl",
-      "ps1"
+      "ps1",
+      "php"
     ]
   },
   "comparison_operators": {
@@ -217,16 +233,45 @@
       "cs",
       "java",
       "pl",
-      "ps1"
+      "ps1",
+      "php"
     ],
     "notes": {
       "pl": [
-        "Since <b>Perl</b> Perl does not have a constant string for false value (resolving \"1\" for <code>true</code>), <code>result</code> needs to hold the string value."
+        "Since <b>Perl</b> does not have a constant string for false value (resolving \"1\" for <code>true</code>), <code>result</code> needs to hold the string value."
+      ],
+      "php": [
+        "Since <b>PHP</b> does not have a constant string for false value (resolving \"1\" for <code>true</code>), <code>result</code> needs to hold the string value."
       ]
+    },
+    "extraCode": {
+      "js": {
+        "typeComparison": {
+          "text":"Being a dynamic language, it's useful to also be able to tell if the values also share type.",
+          "output": "1 == \"1\" is true\n1 === \"1\" is false"
+        }
+      },
+      "php": {
+        "typeComparison": {
+          "text":"Being a dynamic language, it's useful to also be able to tell if the values also share type.",
+          "output": "1 == \"1\" is true\n1 === \"1\" is false"
+        },
+        "alternative": {
+          "text": "There is an alternative operator for inequality.",
+          "output": "1 not equals 2 is true"
+        }
+      },
+      "rb": {
+        "typeComparison": {
+          "text":"Being a dynamic language, it's useful to also be able to tell if the values also share type.",
+          "output": "1 == 1.0 is true\n1.eql?1.0 is false"
+        }
+      }
     },
     "todo": [
       "reference equals",
-      "type comparison on dynamic languages"
+      "type comparison on dynamic languages",
+      "alternative operatores in PHP https://www.w3schools.com/php/php_operators.asp"
     ]
   },
   "ifelse": {
@@ -246,7 +291,8 @@
       "cs",
       "java",
       "pl",
-      "ps1"
+      "ps1",
+      "php"
     ],
     "notes": {
       "js": [
@@ -310,10 +356,10 @@
       ]
     }
   },
-  "parsing":{
-    "name":"Parsing",
+  "parsing": {
+    "name": "Parsing",
     "show": false,
-    "description":"Convert text into other typed values.",
+    "description": "Convert text into other typed values.",
     "type": "code"
   },
   "loop": {

@@ -9,8 +9,14 @@
     "link": "https://www.javascript.com/",
     "highlight": "javascript",
     "mime": "text/javascript",
-    "runtimes": [ "node", "web_browsers" ],
-    "ides": [ "npp", "vscode" ],
+    "runtimes": [
+      "node",
+      "web_browsers"
+    ],
+    "ides": [
+      "npp",
+      "vscode"
+    ],
     "current": true
   },
   "cpp": {
@@ -24,8 +30,14 @@
     "link": "http://www.cplusplus.com/",
     "highlight": "cpp",
     "mime": "text/x-c++src",
-    "runtimes": [ "native" ],
-    "ides": [ "npp", "vscode", "vs" ],
+    "runtimes": [
+      "native"
+    ],
+    "ides": [
+      "npp",
+      "vscode",
+      "vs"
+    ],
     "current": true
   },
   "py": {
@@ -40,8 +52,12 @@
     "link": "https://www.python.org/",
     "highlight": "python",
     "mime": "text/x-python",
-    "runtimes": [ "python" ],
-    "ides": [ "vscode" ],
+    "runtimes": [
+      "python"
+    ],
+    "ides": [
+      "vscode"
+    ],
     "current": true
   },
   "fs": {
@@ -56,8 +72,13 @@
     "link": "http://fsharp.org/",
     "highlight": "fsharp",
     "mime": "text/x-fsharp",
-    "runtimes": [ "net" ],
-    "ides": [ "vscode", "vs" ],
+    "runtimes": [
+      "net"
+    ],
+    "ides": [
+      "vscode",
+      "vs"
+    ],
     "current": true
   },
   "go": {
@@ -71,7 +92,10 @@
     "link": "https://golang.org/",
     "highlight": "go",
     "mime": "text/x-go",
-    "ides": [ "vscode", "eclipse" ],
+    "ides": [
+      "vscode",
+      "eclipse"
+    ],
     "current": true
   },
   "rb": {
@@ -87,8 +111,13 @@
     "link": "https://www.ruby-lang.org/",
     "highlight": "ruby",
     "mime": "text/x-ruby",
-    "runtimes": [ "ruby" ],
-    "ides": [ "vscode", "rubyMine" ],
+    "runtimes": [
+      "ruby"
+    ],
+    "ides": [
+      "vscode",
+      "rubyMine"
+    ],
     "current": true
   },
   "cs": {
@@ -103,8 +132,13 @@
     "link": "https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx",
     "highlight": "csharp",
     "mime": "text/x-csharp",
-    "runtimes": [ "net" ],
-    "ides": [ "vscode", "vs" ],
+    "runtimes": [
+      "net"
+    ],
+    "ides": [
+      "vscode",
+      "vs"
+    ],
     "current": true
   },
   "java": {
@@ -119,8 +153,15 @@
     "link": "https://www.java.com/",
     "highlight": "jsp",
     "mime": "text/x-java",
-    "runtimes": [ "java" ],
-    "ides": [ "vscode", "eclipse", "intelliJ", "netbeans" ],
+    "runtimes": [
+      "java"
+    ],
+    "ides": [
+      "vscode",
+      "eclipse",
+      "intelliJ",
+      "netbeans"
+    ],
     "current": true
   },
   "pl": {
@@ -149,6 +190,18 @@
     "link": "https://github.com/PowerShell/PowerShell",
     "highlight": "powershell",
     "mime": "application/x-powershell",
+    "current": true
+  },
+  "php": {
+    "name": "PHP",
+    "description": "Scripting languge for web pages.",
+    "tags": [
+      "script",
+      "dynamic",
+      "specific_runtime"
+    ],
+    "link": "http://php.net/",
+    "mime": "text/x-php",
     "current": true
   }
 }

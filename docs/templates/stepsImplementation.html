@@ -12,7 +12,14 @@
                 <h4>{{step.text}} running:</h4>
                 <pre><code class="language-bash">> {{step.command}}</code></pre>
             </div>
-            <div ng-switch-default>not defined!</div>
+            <div ng-switch-when="download">
+                <h4>Download {{step.program}}</h4>
+                <p>Get it <a target="_blank" ng-href="{{step.link}}">here</a>.</p>
+            </div>
+            <div ng-switch-default>
+                <h4>{{step.title}}</h4>
+                <div ng-bind-html="{{step.text}}"></div>
+            </div>
         </div>
     </li>
 </ol>
