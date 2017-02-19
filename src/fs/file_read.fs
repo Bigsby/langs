@@ -1,5 +1,7 @@
-System.IO.File.ReadAllText "../files/content.txt" 
+open System.IO
+
+File.ReadAllText "../files/content.txt" 
     |> printfn "%s"
 
-System.IO.File.ReadAllLines "../files/multipleLines.txt" 
+File.ReadAllLines "../files/multipleLines.txt" 
     |> Seq.iter (fun line -> printfn "- %s" line)

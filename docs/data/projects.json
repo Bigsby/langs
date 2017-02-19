@@ -449,7 +449,64 @@
     "name": "Modularity",
     "show": false,
     "description": "Devide and conquer. Separate code and inter-reference.",
-    "type": "code"
+    "type": "code",
+    "languagues":[
+      "js",
+      "cpp",
+      "py",
+      "fs",
+      "go",
+      "rb",
+      "cs",
+      "java",
+      "pl",
+      "ps1",
+      "php"
+    ],
+    "notes":{
+      "js":[
+        "Simply run <code>node modularity.js</code>"
+      ],
+      "cpp":[
+        "Build one program file, i.e., <code>cl modularity.cpp</code>"
+      ],
+      "py":[
+        "Simply run <code>py modularity.py</code>"
+      ],
+      "fs":[
+        "Order of build is <b>very</b> relevant for the program to run needs to be the last file referenced and, as such, can omit module declaration, i.e., <code>fsc anotherModule.fs modularity.fs</code> "
+      ],
+      "go":[
+        "Run both files, i.e., <code>go run modularity.go anotherModule.go</code>"
+      ],
+      "rb":[
+        "Simply run <code>ruby modularity.rb</code>"
+      ],
+      "cs":[
+        "Build both files, i.e., <code>csc modularity.cs anotherModule.cs</code> but run only <code>modularity.exe</code>"
+      ],
+      "java":[
+        "Build and run only program file, i.e., <code>javac modularity.java</code> and <code>java modularity</code>"
+      ]
+    }
+  },
+  "usings": {
+    "name": "Using",
+    "show": false,
+    "description": "Making code cleaner by adding referal scopes.",
+    "text": "Some languages organize definitions in packages or named scopes. To cater for that, it's useful to be able to allow for referal scopes to be added.",
+    "type": "code",
+    "languages": [
+      "cpp",
+      "cs"
+    ],
+    "extraCode": {
+      "cs": {
+        "static": {
+          "text": "<b>C#</b> allows types to be statically refered in usings making their static methods to be globally available."
+        }
+      }
+    }
   },
   "stream": {
     "name": "Streaming",
@@ -479,12 +536,12 @@
       "ps1",
       "php"
     ],
-    "notes":{
-      "js":[
+    "notes": {
+      "js": [
         "<code>fs</code> is the core module that handles File System operations.",
         "<code>readline</code> is a core module that allows some specific stream reading, like line by line reading."
       ],
-      "py":[
+      "py": [
         "<code>end=\"\"</code> is used to prevent print outputing a new line."
       ]
     }

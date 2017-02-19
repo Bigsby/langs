@@ -1,0 +1,3 @@
+from anotherModule import *
+
+DoOtherStuff()
