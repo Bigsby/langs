@@ -14,5 +14,8 @@
         "**/*.exe": true,
         "**/*.obj": true,
         "**/*.class": true
+    },
+    "files.associations": {
+        "iostream": "cpp"
     }
 }

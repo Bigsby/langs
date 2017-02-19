@@ -463,9 +463,31 @@
     "name": "Read from File",
     "show": true,
     "description": "Reading from the File System",
-    "text": "",
+    "text": "Working with the File System (local files) is, at least, kinda handy.",
+    "output": "This from a file in the File System\nThis is the second line\n- Line 1\n- Line 2\n- Line 3",
     "type": "code",
-    "languages": []
+    "languages": [
+      "js",
+      "cpp",
+      "py",
+      "fs",
+      "go",
+      "rb",
+      "cs",
+      "java",
+      "pl",
+      "ps1",
+      "php"
+    ],
+    "notes":{
+      "js":[
+        "<code>fs</code> is the core module that handles File System operations.",
+        "<code>readline</code> is a core module that allows some specific stream reading, like line by line reading."
+      ],
+      "py":[
+        "<code>end=\"\"</code> is used to prevent print outputing a new line."
+      ]
+    }
   },
   "file_write": {
     "name": "Write to File",
