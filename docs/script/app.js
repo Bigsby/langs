@@ -191,6 +191,7 @@ Object.prototype.forEachValue = function (handler) {
                             mode: attrs.language,
                             value: response.data,
                             lineNumbers: true,
+                            lineWrapping: true,
                             theme: "ttcn",
                             readOnly: true
                         });
