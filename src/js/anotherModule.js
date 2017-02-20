@@ -1,3 +1,6 @@
-exports.DoOtherStuff = function () {
-    console.log("Doing other stuff!");
+var anotherModule = {
+    DoOtherStuff: function () {
+        console.log("Doing other stuff!");
+    }
 };
+module.exports = anotherModule;
