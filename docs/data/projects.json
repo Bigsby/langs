@@ -431,6 +431,13 @@
       "php"
     ]
   },
+  "consoleInput": {
+    "name": "User Console Input",
+    "show": false,
+    "description": "Receiving user input in console.",
+    "type": "code",
+    "languages": []
+  },
   "sets_handling": {
     "name": "Set Handling",
     "show": false,
@@ -450,7 +457,7 @@
     "show": false,
     "description": "Devide and conquer. Separate code and inter-reference.",
     "type": "code",
-    "languagues":[
+    "languagues": [
       "js",
       "cpp",
       "py",
@@ -463,29 +470,32 @@
       "ps1",
       "php"
     ],
-    "notes":{
-      "js":[
+    "modulesFiles": [
+      "anotherModule"
+    ],
+    "notes": {
+      "js": [
         "Simply run <code>node modularity.js</code>"
       ],
-      "cpp":[
+      "cpp": [
         "Build one program file, i.e., <code>cl modularity.cpp</code>"
       ],
-      "py":[
+      "py": [
         "Simply run <code>py modularity.py</code>"
       ],
-      "fs":[
+      "fs": [
         "Order of build is <b>very</b> relevant for the program to run needs to be the last file referenced and, as such, can omit module declaration, i.e., <code>fsc anotherModule.fs modularity.fs</code> "
       ],
-      "go":[
+      "go": [
         "Run both files, i.e., <code>go run modularity.go anotherModule.go</code>"
       ],
-      "rb":[
+      "rb": [
         "Simply run <code>ruby modularity.rb</code>"
       ],
-      "cs":[
+      "cs": [
         "Build both files, i.e., <code>csc modularity.cs anotherModule.cs</code> but run only <code>modularity.exe</code>"
       ],
-      "java":[
+      "java": [
         "Build and run only program file, i.e., <code>javac modularity.java</code> and <code>java modularity</code>"
       ]
     }
@@ -558,9 +568,11 @@
     "name": "Web Call",
     "show": true,
     "description": "Making an HTTP request",
-    "text": "",
+    "text": "The ability to make web calls is paramount for almost every application.",
     "type": "code",
-    "languages": []
+    "languages": [
+      "js"
+    ]
   },
   "gui": {
     "name": "GUI",

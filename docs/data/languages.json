@@ -176,7 +176,8 @@
     "link": "https://www.perl.org/",
     "highlight": "perl",
     "mime": "text/x-perl",
-    "current": true
+    "current": true,
+    "moduleExtension": "pm"
   },
   "ps1": {
     "name": "PowerShell",
