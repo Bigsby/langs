@@ -497,8 +497,19 @@
     "languages":[
       "js",
       "cpp",
-      "py"
-    ]
+      "py",
+      "go",
+      "rb",
+      "cs",
+      "java",
+      "pl"
+    ],
+    "notes":{
+      "java":[
+        "<code>matches.find();</code> is required so that the groups are populated on the <code>Matcher</code> object.",
+        "<code>Matcher.groupCount()</code> does not include group of index <code>0</code> containing the complete matched text, containing the captured groups."
+      ]
+    }
   },
   "modularity": {
     "name": "Modularity",
