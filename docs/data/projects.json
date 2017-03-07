@@ -33,6 +33,27 @@
       ]
     }
   },
+  "exit": {
+    "name": "Exit",
+    "show": true,
+    "description": "Exit the running program",
+    "text": "<p>The most important thing after stafting a computer program is, by far, exiting it. <cite>The user doesn't want to use your software. The user wants to have used your software.</cite></p>",
+    "type": "code",
+    "output": "Exiting...",
+    "languages": [
+      "js",
+      "cpp",
+      "py",
+      "fs",
+      "go",
+      "rb",
+      "cs",
+      "java",
+      "pl",
+      "ps1",
+      "php"
+    ]
+  },
   "comments": {
     "name": "Commenting",
     "show": true,
