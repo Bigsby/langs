@@ -38,7 +38,10 @@
       {
         "type": "command",
         "text": "Compile code",
-        "command": "cl filename.cpp"
+        "command": "cl /EHsc filename.cpp",
+        "notes":[
+          "The <code>/EHsc</code> command-line option instructs the compiler to enable C++ exception handling."
+        ]
       },
       {
         "type": "command",
