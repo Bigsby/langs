@@ -454,7 +454,7 @@
   },
   "consoleInput": {
     "name": "User Input",
-    "show": false,
+    "show": true,
     "description": "Receiving and handling user input.",
     "text": "<p>Interacting with the user is frightening but necessary.</p>",
     "type": "code",
