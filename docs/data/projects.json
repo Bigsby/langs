@@ -453,11 +453,25 @@
     ]
   },
   "consoleInput": {
-    "name": "User Console Input",
+    "name": "User Input",
     "show": false,
-    "description": "Receiving user input in console.",
+    "description": "Receiving and handling user input.",
+    "text": "<p>Interacting with the user is frightening but necessary.</p>",
     "type": "code",
-    "languages": []
+    "output": "What do say you?\nHello, computer\nYou said: Hello, computer",
+    "languages": [
+      "js",
+      "cpp",
+      "py",
+      "fs",
+      "go",
+      "rb",
+      "cs",
+      "java",
+      "pl",
+      "ps1",
+      "php"
+    ]
   },
   "sets_handling": {
     "name": "Set Handling",
