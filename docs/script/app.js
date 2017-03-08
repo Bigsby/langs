@@ -393,7 +393,7 @@ Object.prototype.forEachValue = function (handler) {
     app.config(["$httpProvider", "$sceProvider", "$stateProvider", "$urlRouterProvider", "$locationProvider",
         function ($httpProvider, $sceProvider, $stateProvider, $urlRouterProvider, $locationProvider) {
             $httpProvider.defaults.useXDomain = true;
-            $locationProvider.html5Mode(true);
+            //$locationProvider.html5Mode(true);
             $sceProvider.enabled(false);
 
             $stateProvider.state({
