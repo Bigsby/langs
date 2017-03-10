@@ -8,4 +8,6 @@ else printfn "no"
 printfn "Groups of '^([a-z]+)\\-(\\d+)$' found in 'abcdef-12345'"
 let codeRegexp = Regex "^([a-z]+)\\-(\\d+)$"
 let matches = codeRegexp.Match("abcdef-12345")
-printfn "Found %i groups." matches.Groups.Length
+printfn "Found %i groups." matches.Groups.Count
+for groupIndex in [0..matches.Groups.Count - 1] do
+    printfn "[%i] = %s" groupIndex matches.Groups.[groupIndex].Value
