@@ -502,7 +502,9 @@
       "rb",
       "cs",
       "java",
-      "pl"
+      "pl",
+      "ps1",
+      "php"
     ],
     "notes":{
       "java":[

@@ -1,4 +1,4 @@
-puts "Is '^\\d+$' mathed by '123456'?"
+puts "Is '^[0-9]+$' mathed by '123456'?"
 if "123456" =~ /^[0-9]+$/
     puts "yes"
 else

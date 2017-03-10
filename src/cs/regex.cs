@@ -5,7 +5,7 @@ class Program
 {
 	public static void Main()
 	{
-		WriteLine("Is '^\\d+$' mathed by '123456'?");
+		WriteLine("Is '^[0-9]+$' mathed by '123456'?");
         if (new Regex("^[0-9]+$").IsMatch("123456"))
         {
             WriteLine("yes");

@@ -4,7 +4,7 @@ import "fmt"
 import "regexp"
 
 func main() {
-	fmt.Println("Is '^\\d+$' mathed by '123456'?")
+	fmt.Println("Is '^[0-9]+$' mathed by '123456'?")
 	matched, err := regexp.MatchString("^[0-9]+$", "1234567")
 	if matched && err == nil {
 		fmt.Println("yes")

@@ -1,6 +1,6 @@
 import re
 
-print("Is '^\\d+$' mathed by '123456'?")
+print("Is '^[0-9]+$' mathed by '123456'?")
 if re.compile("^[0-9]+$").match("123456"):
     print("yes")
 else:

@@ -1,4 +1,4 @@
-console.log("Is '^\\d+$' mathed by '123456'?");
+console.log("Is '^[0-9]+$' mathed by '123456'?");
 if (/^[0-9]+$/.test("123456")) {
     console.log("yes");
 }

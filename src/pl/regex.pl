@@ -1,4 +1,4 @@
-print "Is '^\\d+\$' mathed by '123456'?\n";
+print "Is '^[0-9]+\$' mathed by '123456'?\n";
 if ("123456" =~ /^[0-9]+$/){
     print "yes";
 }else{

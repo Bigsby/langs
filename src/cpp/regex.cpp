@@ -4,7 +4,7 @@
 
 int main()
 {
-    std::cout << "Is '^\\d+$' mathed by '123456'?" << std::endl;
+    std::cout << "Is '^[0-9]+$' mathed by '123456'?" << std::endl;
     if (std::regex_match("123456", std::regex("^[0-9]+$")))
     {
         std::cout << "yes" << std::endl;
