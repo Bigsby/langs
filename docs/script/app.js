@@ -185,8 +185,10 @@ Object.prototype.forEachValue = function (handler) {
         return {
             restrict: "E",
             link: function ($scope, element, attrs) {
+                element.html("<br/><img src='images/loading.gif'></img>");
                 $http.get(attrs.src)
                     .then(function (response) {
+                        element.html("");
                         var cm = CodeMirror(element[0], {
                             mode: attrs.language,
                             value: response.data,
