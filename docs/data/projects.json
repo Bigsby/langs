@@ -473,6 +473,25 @@
       "php"
     ]
   },
+  "exceptions": {
+    "name": "Exceptions",
+    "show": false,
+    "description": "Raising and catching errors.",
+    "text": "<p>Throwing exceptions when something is not right in runtime and, most importantly, having the ability to catch error to prevent craches. Some languages might raise instead of throw and some languages have errors instead of exceptions.</p>",
+    "type": "code",
+    "output": "Doing stuff!\nERROR: An error occured!",
+    "languages": [
+      "js",
+      "cpp",
+      "py",
+      "fs",
+      "go",
+      "rb",
+      "cs",
+      "ps1",
+      "php"
+    ]
+  },
   "sets_handling": {
     "name": "Set Handling",
     "show": false,
@@ -487,14 +506,14 @@
     "type": "code",
     "languages": []
   },
-  "regex":{
+  "regex": {
     "name": "Regular Expressions",
     "show": true,
     "description": "Using Regular Expressions to match text.",
     "text": "^\\d+$ ^([a-z]+)\\-(\\d+)$",
     "type": "code",
     "output": "Is '^\\d+$' mathed by '123456'?\nyes\nGroups of '^([a-z]+)\\-(\\d+)$' found in 'abcdef-12345'\nFound 3 groups.\n[0] = abcdef-12345\n[1] = abcdef\n[2] = 12345",
-    "languages":[
+    "languages": [
       "js",
       "cpp",
       "py",
@@ -507,8 +526,8 @@
       "ps1",
       "php"
     ],
-    "notes":{
-      "java":[
+    "notes": {
+      "java": [
         "<code>matches.find();</code> is required so that the groups are populated on the <code>Matcher</code> object.",
         "<code>Matcher.groupCount()</code> does not include group of index <code>0</code> containing the complete matched text, containing the captured groups."
       ]
