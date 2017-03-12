@@ -207,10 +207,10 @@
     }
   },
   "dry": {
-    "name": "Methods/Functions (Don't Repeat Yourself)",
+    "name": "Methods/Functions",
     "show": true,
     "description": "Wrapping functionality in a code block that can be reused.",
-    "text": "Reusing code is one the finest arts in software development. For that, languages provide their ways to define, implement and call (invoke) these wrappers of sequences of instructions.",
+    "text": "<b>Dont Repeat Yourself</b>. Reusing code is one the finest arts in software development. For that, languages provide their ways to define, implement and call (invoke) these wrappers of sequences of instructions.",
     "type": "code",
     "output": "Doing stuff!\n2 + 1 = 3",
     "languages": [
