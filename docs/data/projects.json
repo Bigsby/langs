@@ -475,7 +475,7 @@
   },
   "exceptions": {
     "name": "Exceptions",
-    "show": false,
+    "show": true,
     "description": "Raising and catching errors.",
     "text": "<p>Throwing exceptions when something is not right in runtime and, most importantly, having the ability to catch error to prevent craches. Some languages might raise instead of throw and some languages have errors instead of exceptions.</p>",
     "type": "code",
