@@ -79,7 +79,7 @@ char *readUrl2(long &bytesReturnedOut, char **headerOut)
     char readBuffer[bufSize], sendBuffer[bufSize], tmpBuffer[bufSize];
     char *tmpResult = NULL, *result;
     SOCKET conn;
-    string server = "langs.bigsbyspot.org", filepath = "/files/webcall.txt", filename;
+    string server = "langs.bigsbyspot.org", filepath = "/files/webcall.txt";
     long totalBytesRead, thisReadSize, headerLen;
 
     conn = connectToServer((char *)server.c_str(), 80);
