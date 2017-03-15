@@ -655,6 +655,7 @@
     "type": "code",
     "languages": [
       "js",
+      "cpp",
       "py",
       "fs",
       "go",
