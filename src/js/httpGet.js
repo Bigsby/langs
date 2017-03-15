@@ -1,9 +1,10 @@
 const http = require("http");
 
 http.get("http://langs.bigsbyspot.org/files/webcall.txt", (response) => {
-    var data = "";
-    response.on("data", (chunk) => data += chunk);
+    var content = "";
+    response.on("data", (data) => content += data);
+    
     response.on("end", () => {
-        console.log(data);
+        console.log(content);
     });
 });

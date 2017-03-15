@@ -10,12 +10,15 @@ public class httpGet {
         InputStreamReader streamReader = new InputStreamReader(inputStream);
         BufferedReader bufferedReader = new BufferedReader(streamReader);
 
+        String content = "";
         String contentLine;
         while ((contentLine = bufferedReader.readLine()) != null) {
-            System.out.println(contentLine);
+            content += contentLine;
         }
-
+        
         bufferedReader.close();
+
+        System.out.println(content);
     }
 
 }

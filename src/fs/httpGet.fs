@@ -2,8 +2,9 @@ open System.Net
 open System
 open System.IO
 
-let req = WebRequest.Create(Uri("http://langs.bigsbyspot.org/files/webcall.txt")) 
-let resp = req.GetResponse() 
-let stream = resp.GetResponseStream() 
-let reader = new IO.StreamReader(stream)
-printfn "%s" (reader.ReadToEnd())
+let request = WebRequest.Create(Uri("http://langs.bigsbyspot.org/files/webcall.txt")) 
+let response = request.GetResponse() 
+let responseStream = response.GetResponseStream() 
+let streamReader = new StreamReader(responseStream)
+
+printfn "%s" (streamReader.ReadToEnd())
