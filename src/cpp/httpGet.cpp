@@ -2,16 +2,13 @@
 #include <string>
 #include <iostream>
 
-using std::string;
-
 using namespace std;
 
 #pragma comment(lib, "ws2_32.lib")
 
-WSADATA wsaData;
-
 int main()
 {
+  WSADATA wsaData;
   if (WSAStartup(0x101, &wsaData) != 0)
   {
     cout << "Unable to open Winsock library.";
