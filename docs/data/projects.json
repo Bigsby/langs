@@ -647,14 +647,22 @@
     "type": "code",
     "languages": []
   },
-  "web_call": {
-    "name": "Web Call",
+  "httpGet": {
+    "name": "HTTP Get",
     "show": true,
     "description": "Making an HTTP request",
     "text": "The ability to make web calls is paramount for almost every application.",
     "type": "code",
     "languages": [
-      "js"
+      "js",
+      "py",
+      "fs",
+      "go",
+      "rb",
+      "cs",
+      "java",
+      "pl",
+      "ps1"
     ]
   },
   "gui": {
