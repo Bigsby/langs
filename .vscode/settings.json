@@ -18,6 +18,7 @@
     "files.associations": {
         "iostream": "cpp",
         "xutility": "cpp",
-        "regex": "cpp"
+        "regex": "cpp",
+        "xlocale": "cpp"
     }
 }
