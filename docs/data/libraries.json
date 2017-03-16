@@ -1,6 +1,6 @@
 ﻿{
   "codeMirror": {
-    "baseUrl": "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.23.0/",
+    "baseUrl": "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.24.0/",
     "css": [
       "codemirror.min",
       "theme/ttcn.min"
@@ -14,7 +14,8 @@
       "mode/clike/clike.min",
       "mode/perl/perl.min",
       "mode/powershell/powershell.min",
-      "mode/php/php.min"
+      "mode/php/php.min",
+      "mode/vb/vb.min"
     ]
   }
 }
