@@ -47,6 +47,7 @@ Object.prototype.forEachValue = function (handler) {
             "libraries",
             "languages",
             "projects",
+            "programs",
             "tags",
             "implementations",
             "runtimes",
@@ -178,6 +179,7 @@ Object.prototype.forEachValue = function (handler) {
         templateUrl: templatesRoot + "home.html",
         controller: BuildController(function (vm, data) {
             vm.languages = data.languages;
+            vm.programs = data.programs;
         })
     });
 

@@ -21,5 +21,11 @@
                 <div ng-bind-html="{{step.text}}"></div>
             </div>
         </div>
+        <div ng-if="step.notes.length"  class="notes">
+            <p class="title">Notes:</p>
+            <ul>
+                <li ng-repeat="note in step.notes" ng-bind-html="note"></li>
+            </ul>
+        </div>
     </li>
 </ol>

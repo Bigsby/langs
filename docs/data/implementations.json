@@ -27,7 +27,7 @@
         "link": "https://www.visualstudio.com/vs/cplusplus/#downloadvs",
         "alternative": "https://www.visualstudio.com/downloads/",
         "notes": [
-          "If installing Community/Professional/Enterprise, make sure to enable Features > Programming Languages > Visual C++ > Common Tools for Visual C++"
+          "If installing Community/Professional/Enterprise, make sure to enable Features > Programming Languages > Visual C++ > Common Tools for Visual C++."
         ]
       },
       {
@@ -40,7 +40,7 @@
         "text": "Compile code",
         "command": "cl /EHsc filename.cpp",
         "notes":[
-          "The <code>/EHsc</code> command-line option instructs the compiler to enable C++ exception handling."
+          "<code>/EHsc</code> command-line option instructs the compiler to enable C++ exception handling."
         ]
       },
       {
@@ -216,12 +216,10 @@
       {
         "type": "non",
         "title": "UnZip",
-        "text": "UnZip the file to a folder on your file system."
-      },
-      {
-        "type": "command",
-        "text": "Add folder to path",
-        "command": "setx path \"c:\\theFolderFromPreviousStep;%path%\""
+        "text": "UnZip the file to a folder on your file system.",
+        "notes": [
+          "Make sure php.exe is in System PATH"
+        ]
       },
       {
         "type": "command",

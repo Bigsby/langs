@@ -96,6 +96,10 @@ pre {
     flex-direction: column;
 }
 
+.clickable{
+    cursor: pointer;
+}
+
 .listItem {
     display: block;
     margin: 5px;
@@ -105,11 +109,13 @@ pre {
         display: flex;
         margin: 5px 0;
         flex-direction: row;
-        padding: 3px 5px;
+        padding: 3px 10px;
         justify-content: space-between;
-        background-color: lightgray;
+        background-color: #000010;
+        color: white;
         font-size: 1.17em;
         font-weight: bold;
+        border-radius: 10px;
     }
 
         .listItem > .itemHeader > .commandsContainer {
@@ -119,7 +125,7 @@ pre {
 .command, a.command:visited, a.command:hover {
     cursor: pointer;
     margin-right: 10px;
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
@@ -167,6 +173,14 @@ compare-selector button {
     font-size: 1.3em;
     margin: 10px;
     cursor: pointer;
+    background-color: #000010;
+    color: white;
+    border-radius: 10px;
+}
+
+.notes .title {
+    text-decoration: underline;
+    font-style: italic;
 }
 
 @media only screen and (max-width: 767px) {

@@ -7,7 +7,7 @@
     <a target="_blank" ng-href="{{$ctrl.codeRoot + $ctrl.languageId + '/' + $ctrl.projectId + '.' + $ctrl.languageId}}">{{$ctrl.projectId}}.{{$ctrl.languageId}}</a>
     <code-highlight language="{{$ctrl.language.mime}}" src="{{$ctrl.codeRawRoot + $ctrl.languageId + '/' + $ctrl.projectId + '.' + $ctrl.languageId}}">Loading...</code-highlight>
     <div ng-if="$ctrl.project.notes[$ctrl.languageId]" class="notes">
-        <p><b>Notes:</b></p>
+        <p class="title">Notes:</p>
         <ul>
             <li ng-repeat="note in $ctrl.project.notes[$ctrl.languageId]" ng-bind-html="note"></li>
         </ul>
