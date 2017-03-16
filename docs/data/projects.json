@@ -143,6 +143,16 @@
           "text": "Since <b>Ruby</b> is a dynamic language <code>$x = ...</code> doesn't enforce a type on the variable and, as such, the variable can change type. Because of that, this code is totally valid and has the exact same output."
         }
       },
+      "cs":{
+        "dynamic": {
+          "text": "Although <b>C#</b> is strongly-typed, one can treat variables dynamically be using the \"generic\" (base) type <code>object</code>. The following code will have the exact same output."
+        }
+      },
+      "java":{
+        "dynamic": {
+          "text": "Although <b>Java</b> is strongly-typed, one can treat variables dynamically be using the \"generic\" (base) type <code>Object</code>. The following code will have the exact same output."
+        }
+      },
       "ps1": {
         "dynamic": {
           "text": "Since <b>PowerShell</b> is a dynamic language <code>$x = ...</code> doesn't enforce a type on the variable and, as such, the variable can change type. Because of that, this code is totally valid and has the exact same output."
