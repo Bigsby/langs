@@ -5,7 +5,7 @@ public class strings {
         System.out.println("Joining " + "strings.");
 		
 		int value = 3;
-		System.out.println(java.lang.String.format("The value %d is interpolation", value));
+		System.out.println(String.format("The value %d is interpolation", value));
     }
 
 }
