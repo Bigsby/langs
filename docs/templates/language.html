@@ -2,7 +2,7 @@
 <div ng-bind-html="$ctrl.language.description"></div>
 
 <div class="list">
-    <div class="command listItem" ng-repeat="imp in $ctrl.language.implementations">
+    <div class="listItem" ng-repeat="imp in $ctrl.language.implementations">
         <div class="itemHeader" ng-click="imp.$$collapsed = !imp.$$collapsed">
             <span class="language_title">{{$index + '. ' + imp.project.name}}</span>
             <div class="commandsContainer">
