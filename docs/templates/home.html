@@ -6,10 +6,10 @@
     <li>Good implementations</li>
 </ul>
 <p>
-    The choice of the programming language is close to irrelevant to fulfill a requirement with the good implementation, i.e.,
-    algorithm. A particular language, most importantly, the runtime and its included libraries the code will, eventually,
+    The choice of the programming language is close to irrelevant to fulfill a requirement with a good implementation, i.e.,
+    algorithm. A particular language, most importantly, the runtime and its included libraries, the code will, eventually,
     run in, might help one get there faster or in a "nicer" way. One might have preferences over syntax, paradigma, etc.,
-    but all has little impact on end value. There is, virtually, nothing only one language "does" or one laguage "doesn't".
+    but all that has little impact on end value. There is, virtually, nothing only one language "does" or one laguage "doesn't".
 </p>
 <p>
     Having that in mind, here goes an exploration of basics, similarities and differences of some of the most used languages.
@@ -55,7 +55,7 @@
     <ul>
         <li ng-repeat="program in $ctrl.programs">
             <a target="_blank" ng-href="{{program.link}}"><h3>{{program.name}}</h3></a>
-            {{program.description}}
+            <span ng-bind-html="program.description"></span>
         </li>
     </ul>
 </div>

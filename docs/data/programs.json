@@ -2,6 +2,6 @@
     {
         "name": "Summing Matrices",
         "link": "http://matrix.bigsbyspot.org/",
-        "description": "Solving: \"Fill an x by x square with the numbers from 1 to x*x so that the sum of the numbers on each row, column and both diagonals are the same.\""
+        "description": "Solving: \"Fill an <code>x</code> by <code>x</code> square with the numbers from 1 to <code>x<sup>2</sup></code> so that the sum of the numbers on each row, column and both diagonals are the same.\""
     }
 ]
