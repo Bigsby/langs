@@ -62,7 +62,7 @@
   },
   "fs": {
     "name": "F#",
-    "description": "Functional and imperative language that runs under .Net runtimes.",
+    "description": "Functional and imperative language that runs on .Net runtimes.",
     "tags": [
       "strongly_typed",
       "il",
@@ -203,6 +203,20 @@
     ],
     "link": "http://php.net/",
     "mime": "text/x-php",
+    "current": true
+  },
+  "vb": {
+    "name": "VB.Net",
+    "description": "Visual Basic that runs on .Net runtimes.",
+    "tags": [
+      "oop",
+      "strongly_typed",
+      "gc",
+      "il",
+      "specific_runtime"
+    ],
+    "link": "https://msdn.microsoft.com/en-us/library/aa903378(v=vs.71).aspx",
+    "mime": "text/x-vb",
     "current": true
   }
 }

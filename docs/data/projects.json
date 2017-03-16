@@ -24,7 +24,8 @@
       "java",
       "pl",
       "ps1",
-      "php"
+      "php",
+      "vb"
     ],
     "notes": {
       "cpp": [
@@ -51,7 +52,8 @@
       "java",
       "pl",
       "ps1",
-      "php"
+      "php",
+      "vb"
     ]
   },
   "comments": {
@@ -72,7 +74,8 @@
       "java",
       "pl",
       "ps1",
-      "php"
+      "php",
+      "vb"
     ]
   },
   "structure": {
@@ -120,7 +123,8 @@
       "java",
       "pl",
       "ps1",
-      "php"
+      "php",
+      "vb"
     ],
     "extraCode": {
       "js": {
@@ -189,7 +193,8 @@
       "java",
       "pl",
       "ps1",
-      "php"
+      "php",
+      "vb"
     ],
     "notes": {
       "cpp": [
@@ -234,7 +239,8 @@
       "java",
       "pl",
       "ps1",
-      "php"
+      "php",
+      "vb"
     ]
   },
   "comparison_operators": {
@@ -265,7 +271,8 @@
       "java",
       "pl",
       "ps1",
-      "php"
+      "php",
+      "vb"
     ],
     "notes": {
       "pl": [
@@ -323,7 +330,8 @@
       "java",
       "pl",
       "ps1",
-      "php"
+      "php",
+      "vb"
     ],
     "notes": {
       "js": [
@@ -368,7 +376,8 @@
       "java",
       "pl",
       "ps1",
-      "php"
+      "php",
+      "vb"
     ],
     "extraCode": {
       "rb": {
@@ -427,7 +436,8 @@
       "java",
       "pl",
       "ps1",
-      "php"
+      "php",
+      "vb"
     ]
   },
   "sets": {
@@ -459,7 +469,8 @@
       "java",
       "pl",
       "ps1",
-      "php"
+      "php",
+      "vb"
     ]
   },
   "consoleInput": {
@@ -480,7 +491,8 @@
       "java",
       "pl",
       "ps1",
-      "php"
+      "php",
+      "vb"
     ]
   },
   "exceptions": {
@@ -501,7 +513,8 @@
       "java",
       "pl",
       "ps1",
-      "php"
+      "php",
+      "vb"
     ]
   },
   "sets_handling": {
