@@ -16,8 +16,17 @@
     Simple to complex examples implemented parallelly on each language to outline its implementation of the intended funcitonalilty.
     It might also serve as a quick cheatsheet.
 </p>
+<div class="notes">
+    <p class="title">Notes:</p>
+    <ul>
+        <li>No libraries other than the ones provided by the runtime or the operating system will be used.</li>
+        <li>As a consequence of the previous point, the implementations are not necessarily the common practice.</li>
+    </ul>
+</div>
 
 <p>All source code can be found <a target="_blank" href="https://github.com/Bigsby/HelloLanguages">this GitHub Repository</a>.</p>
+<p>If you have any suggestions of languages, features, etc., find any errors or corrections, feel free to <a target="_blank"
+        href="https://github.com/Bigsby/HelloLanguages/issues">create an issue</a>.</p>
 
 <h2 class="listTitle">Compare Languages</h2>
 <compare-selector></compare-selector>
@@ -54,7 +63,9 @@
     <p>Here are some example(s) of programs implemented in a variety of languages:</p>
     <ul>
         <li ng-repeat="program in $ctrl.programs">
-            <a target="_blank" ng-href="{{program.link}}"><h3>{{program.name}}</h3></a>
+            <a target="_blank" ng-href="{{program.link}}">
+                <h3>{{program.name}}</h3>
+            </a>
             <span ng-bind-html="program.description"></span>
         </li>
     </ul>
