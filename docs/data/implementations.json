@@ -17,7 +17,10 @@
       {
         "type": "command",
         "text": "Run program",
-        "command": "node filename.js"
+        "command": "node filename.js",
+        "notes": [
+          "If file extension is <code>.js</code> it can be omitted"
+        ]
       }
     ],
     "cpp": [
@@ -39,7 +42,7 @@
         "type": "command",
         "text": "Compile code",
         "command": "cl /EHsc filename.cpp",
-        "notes":[
+        "notes": [
           "<code>/EHsc</code> command-line option instructs the compiler to enable C++ exception handling."
         ]
       },
@@ -83,7 +86,10 @@
       {
         "type": "command",
         "text": "Compile code",
-        "command": "fsc filename.fs"
+        "command": "fsc [filename1.fs filename2.fs] filename.fs",
+        "notes": [
+          "The file containing the applicaiton entrypoint has to go in last."
+        ]
       },
       {
         "type": "command",
@@ -139,7 +145,10 @@
       {
         "type": "command",
         "text": "Compile code",
-        "command": "csc filename.cs"
+        "command": "csc [filename1.cs filename2.cs] filename.cs",
+        "notes": [
+          "The output file will be named after the file that contains the application entrypoint."
+        ]
       },
       {
         "type": "command",
@@ -164,12 +173,16 @@
       {
         "type": "command",
         "text": "Compile code",
-        "command": "javac filename.java"
+        "command": "javac [filename1.java filename2.java] filename.java"
       },
       {
         "type": "command",
         "text": "Run compiled program",
-        "command": "java filename"
+        "command": "java filename",
+        "notes":[
+          "Must be the filename containing the application entrypoint",
+          "Must not containe file extension (compile result <code>.class</code>)"
+        ]
       }
     ],
     "pl": [
@@ -225,6 +238,28 @@
         "type": "command",
         "text": "Run program",
         "command": "php filename.php"
+      }
+    ],
+    "vb": [
+      {
+        "type": "install",
+        "program": "Visual Studio Community/Professional/Enterprise",
+        "link": "https://www.visualstudio.com/downloads/"
+      },
+      {
+        "type": "open",
+        "name": "Visual Studio > Developmer Command Prompt",
+        "program": "VsDevCmd.bat"
+      },
+      {
+        "type": "command",
+        "text": "Compile code",
+        "command": "vbc filename.cs"
+      },
+      {
+        "type": "command",
+        "text": "Run compiled program",
+        "command": "filename.exe"
       }
     ]
   }

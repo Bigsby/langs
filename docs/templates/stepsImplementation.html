@@ -18,7 +18,7 @@
             </div>
             <div ng-switch-default>
                 <h4>{{step.title}}</h4>
-                <div ng-bind-html="{{step.text}}"></div>
+                <div ng-bind-html="step.text"></div>
             </div>
         </div>
         <div ng-if="step.notes.length"  class="notes">
