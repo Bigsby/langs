@@ -535,7 +535,7 @@
     "name": "Regular Expressions",
     "show": true,
     "description": "Using Regular Expressions to match text.",
-    "text": "^\\d+$ ^([a-z]+)\\-(\\d+)$",
+    "text": "Regular expressions are way, loved by some, hated by others, to find text in text.",
     "type": "code",
     "output": "Is '^\\d+$' mathed by '123456'?\nyes\nGroups of '^([a-z]+)\\-(\\d+)$' found in 'abcdef-12345'\nFound 3 groups.\n[0] = abcdef-12345\n[1] = abcdef\n[2] = 12345",
     "languages": [
