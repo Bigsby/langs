@@ -178,9 +178,18 @@ compare-selector button {
     border-radius: 10px;
 }
 
+compare-select button:disabled, button[disabled] {
+    background-color: #505050;
+}
+
 .notes .title {
     text-decoration: underline;
     font-style: italic;
+}
+
+.notes code{
+    background-color: lightgray;
+    padding: 2px 5px;
 }
 
 @media only screen and (max-width: 767px) {
