@@ -549,7 +549,8 @@
       "java",
       "pl",
       "ps1",
-      "php"
+      "php",
+      "vb"
     ],
     "notes": {
       "java": [
@@ -574,7 +575,8 @@
       "java",
       "pl",
       "ps1",
-      "php"
+      "php",
+      "vb"
     ],
     "modulesFiles": [
       "anotherModule"
@@ -650,7 +652,8 @@
       "java",
       "pl",
       "ps1",
-      "php"
+      "php",
+      "vb"
     ],
     "notes": {
       "js": [
@@ -687,7 +690,8 @@
       "java",
       "pl",
       "ps1",
-      "php"
+      "php",
+      "vb"
     ]
   },
   "gui": {

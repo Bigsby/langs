@@ -1,5 +1,6 @@
+Imports anotherModule
 Public Module Program
     Sub Main()
-        System.Console.WriteLine ("Hello, World!")
+        DoStuff()
     End Sub
 End Module
