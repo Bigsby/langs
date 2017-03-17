@@ -565,11 +565,12 @@
     }
   },
   "modularity": {
-    "name": "Modularity",
-    "show": false,
+    "name": "Modules",
+    "show": true,
     "description": "Devide and conquer. Separate code and inter-reference.",
+    "text": "When projects start to grow and/or get complex, it's, usually, good practise to spread the code through different files that contain different parts of the program. This helps not only in maintainability but also in seperating functionality concerns and, thus, the overall arquitecture of the whole solution.",
     "type": "code",
-    "languagues": [
+    "languages": [
       "js",
       "cpp",
       "py",
@@ -583,7 +584,7 @@
       "php",
       "vb"
     ],
-    "modulesFiles": [
+    "moduleFiles": [
       "anotherModule"
     ],
     "notes": {
@@ -610,6 +611,9 @@
       ],
       "java": [
         "Build and run only program file, i.e., <code>javac modularity.java</code> and <code>java modularity</code>"
+      ],
+      "pl":[
+        "Module files need to return a \"good\" value when parsed hence <code>1;</code> in the end of the module file."
       ]
     }
   },

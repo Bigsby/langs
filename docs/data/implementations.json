@@ -254,7 +254,10 @@
       {
         "type": "command",
         "text": "Compile code",
-        "command": "vbc filename.cs"
+        "command": "vbc filename.vb [filename1.vb filename2.vb]",
+        "notes":[
+          "The first file name will be used as the output <code>.exe</code> file."
+        ]
       },
       {
         "type": "command",

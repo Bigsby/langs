@@ -4,8 +4,14 @@
     }
 </style>
 <div>
+    <div ng-if="$ctrl.project.moduleFiles.length" ng-repeat="moduleFile in $ctrl.project.moduleFiles">
+        <a target="_blank" ng-href="{{$ctrl.codeRoot + $ctrl.languageId + '/' + moduleFile + '.' + ($ctrl.language.moduleExtension || $ctrl.languageId)}}">{{moduleFile}}.{{$ctrl.language.moduleExtension || $ctrl.languageId}}</a>
+        <code-highlight language="{{$ctrl.language.mime}}" src="{{$ctrl.codeRawRoot + $ctrl.languageId + '/' + moduleFile + '.' + ($ctrl.language.moduleExtension || $ctrl.languageId)}}"></code-highlight>
+    </div>
+
     <a target="_blank" ng-href="{{$ctrl.codeRoot + $ctrl.languageId + '/' + $ctrl.projectId + '.' + $ctrl.languageId}}">{{$ctrl.projectId}}.{{$ctrl.languageId}}</a>
-    <code-highlight language="{{$ctrl.language.mime}}" src="{{$ctrl.codeRawRoot + $ctrl.languageId + '/' + $ctrl.projectId + '.' + $ctrl.languageId}}">Loading...</code-highlight>
+    <code-highlight language="{{$ctrl.language.mime}}" src="{{$ctrl.codeRawRoot + $ctrl.languageId + '/' + $ctrl.projectId + '.' + $ctrl.languageId}}"></code-highlight>
+
     <div ng-if="$ctrl.project.notes[$ctrl.languageId]" class="notes">
         <p class="title">Notes:</p>
         <ul>
