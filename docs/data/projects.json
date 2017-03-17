@@ -166,6 +166,11 @@
         "dynamic": {
           "text": "Since <b>PHP</b> is a dynamic language <code>var $x = ...</code> doesn't enforce a type on the variable and, as such, the variable can change type. Because of that, this code is totally valid and has the exact same output."
         }
+      },
+      "vb":{
+        "dynamic": {
+          "text": "Although <b>VB.Net</b> is strongly-typed, one can treat variables dynamically be using the \"generic\" (base) type <code>Object</code>. The following code will have the exact same output."
+        }
       }
     },
     "notes": {
