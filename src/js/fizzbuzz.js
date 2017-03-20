@@ -7,8 +7,10 @@ for (var i = 1; i <= 100; i++) {
         process.stdout.write("Buzz");
     else
         process.stdout.write(i.toString());
-    
-    process.stdout.write(",");
+
+
     if (i % 10 == 0)
         process.stdout.write("\n");
+    else
+        process.stdout.write(",");
 }

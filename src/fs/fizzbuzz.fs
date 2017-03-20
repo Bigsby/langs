@@ -6,7 +6,9 @@
         | x when x % 5 = 0 -> "Buzz"
         | x -> string x
 
-    printf "%s," toPrint
+    printf "%s" toPrint
+
     if i % 10 = 0
     then printfn ""
+    else printf ","
 )

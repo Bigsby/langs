@@ -13,9 +13,10 @@ int main()
         else
             std::cout << i;
 
-        std::cout << ",";
         if (i % 10 == 0)
             std::cout << std::endl;
+        else
+            std::cout << ",";
     }
 
     return 0;

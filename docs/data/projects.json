@@ -741,7 +741,7 @@
   },
   "fizzbuzz": {
     "name": "FizzBuzz",
-    "show": false,
+    "show": true,
     "description": "Solving the children's game about division.",
     "text": "Count the numbers from 1 to 100 but saying \"Fizz\" instead of the number when the number is devidable by 3, \"Buzz\" when the number is dividable by 5 and \"FizzBuzz\" when the number is dividable by both 3 and 5.",
     "type": "code",
@@ -750,7 +750,15 @@
       "js",
       "cpp",
       "py",
-      "fs"
+      "fs",
+      "go",
+      "rb",
+      "cs",
+      "java",
+      "pl",
+      "ps1",
+      "php",
+      "vb"
     ]
   }
 }
