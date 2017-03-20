@@ -617,6 +617,34 @@
       ]
     }
   },
+  "classes": {
+    "name": "Classes",
+    "show": true,
+    "desctription": "Define custom object types.",
+    "text": "Define custom types to hold data and/or functionality",
+    "type": "code",
+    "languages": [
+      "js",
+      "cpp",
+      "py",
+      "fs",
+      "go",
+      "rb",
+      "cs",
+      "java",
+      "pl",
+      "ps1",
+      "php",
+      "vb"
+    ],
+    "notes": {
+      "pl": [
+        "<b>Perl</b> doesn't, actually, have classes in a \"type-defining\" sense. <code>package</code> serves the purpose of creating scope.",
+        "<code>bless</code> associates the reference (<code>$self</code>) with the package (class) name, i.e., <code>MontyPython</code>, and the remaining \"members\" of the package.",
+        "<code>shift</code> \"pops\" out the first value of the <code>sub</code> arguments and shifts the rest \"left\". The first value in the array in <code>sub</code> is what is on the left of <code>-&gt;</code>, i.e., the package name <code>MontyPython</code> in <code>MontyPython-&gt;new({...})</code> and a reference to <code>$montyPython</code> in <code>$montyPython-&gt;fullName()</code>."
+      ]
+    }
+  },
   "usings": {
     "name": "Using",
     "show": false,
@@ -721,7 +749,8 @@
     "languages": [
       "js",
       "cpp",
-      "py"
+      "py",
+      "fs"
     ]
   }
 }

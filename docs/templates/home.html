@@ -41,7 +41,7 @@
         <div class="list">
             <div class="listItem" ng-repeat="(langId, lang) in $ctrl.languages">
                 <div class="itemHeader clickable" ui-sref="language({id:langId})">
-                    <span target="_blank">{{lang.name}} ({{lang.version}})</span>
+                    <div><span>{{lang.name}}</span> <span class="languageVersion">({{lang.version}})</span></div>
                 </div>
                 <span ng-show="lang.$$expanded">{{lang.description}}</span>
             </div>

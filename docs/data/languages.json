@@ -44,7 +44,7 @@
   },
   "py": {
     "name": "Python",
-    "version": "3.6.0",
+    "version": "3.6",
     "description": "High-level scripting language with emphasis on readability and simplicity of coding general-purpose functionalilty.",
     "tags": [
       "script",
@@ -87,7 +87,7 @@
   },
   "go": {
     "name": "Go",
-    "version": "1.7.5",
+    "version": "1.8",
     "description": "Scalable and readable for networking and multiprocessing.",
     "tags": [
       "script",
@@ -105,7 +105,7 @@
   },
   "rb": {
     "name": "Ruby",
-    "version": "2.3.3p222",
+    "version": "2.3.3",
     "description": "Multi-paradigm language.",
     "tags": [
       "script",
@@ -128,7 +128,7 @@
   },
   "cs": {
     "name": "C#",
-    "version": "6.0",
+    "version": "7.0",
     "description": "General-purpose, object and component oriented declarative language that runs under .Net runtimes.",
     "tags": [
       "strongly_typed",
@@ -150,7 +150,7 @@
   },
   "java": {
     "name": "Java",
-    "version": "1.8.0_121",
+    "version": "1.8.0",
     "description": "General-purpose and object-oriented language. Meant ot \"Write once, run anywhere\".",
     "tags": [
       "strongly_typed",
@@ -218,7 +218,7 @@
   },
   "vb": {
     "name": "VB.Net",
-    "version": "14",
+    "version": "15",
     "description": "Visual Basic that runs on .Net runtimes.",
     "tags": [
       "oop",

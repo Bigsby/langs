@@ -122,6 +122,11 @@ pre {
             right: 0;
         }
 
+.listItem > .itemHeader .languageVersion{
+    font-weight: normal;
+    font-size: .7em;
+}
+
 .command, a.command:visited, a.command:hover {
     cursor: pointer;
     margin-right: 10px;

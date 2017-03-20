@@ -1,16 +1,12 @@
 [1..100] |> Seq.iter (fun i -> 
     let toPrint =
         match i with
-        |
-    if i % 3 = 0 && i % 5 = 0
-    then printf "FizzBuzz"
-    elif i % 3 = 0
-    then printf "Fizz"
-    elif i % 5 = 0
-    then printf "Buzz"
-    else printf "%d" i
+        | x when x % 3 = 0 && x % 5 = 0 -> "FizzBuzz"
+        | x when x % 3 = 0 -> "Fizz"
+        | x when x % 5 = 0 -> "Buzz"
+        | x -> string x
 
-    printf ","
+    printf "%s," toPrint
     if i % 10 = 0
     then printfn ""
 )
