@@ -1,6 +1,7 @@
 ﻿{
   "js": {
     "name": "JavaScript",
+    "version": "ES6",
     "description": "Mostly commonly used in internet web-pages and running within web browsers (e.g., Google Chrome, Mozilla Firefox, Microsoft Edge).",
     "tags": [
       "dynamic",
@@ -21,6 +22,7 @@
   },
   "cpp": {
     "name": "C++",
+    "version": "11",
     "description": "Low-level language that compiles directly to processors native machine code and, as such, is highly optimized.",
     "tags": [
       "dynamic",
@@ -42,6 +44,7 @@
   },
   "py": {
     "name": "Python",
+    "version": "3.6.0",
     "description": "High-level scripting language with emphasis on readability and simplicity of coding general-purpose functionalilty.",
     "tags": [
       "script",
@@ -62,6 +65,7 @@
   },
   "fs": {
     "name": "F#",
+    "version": "4.0",
     "description": "Functional and imperative language that runs on .Net runtimes.",
     "tags": [
       "strongly_typed",
@@ -83,6 +87,7 @@
   },
   "go": {
     "name": "Go",
+    "version": "1.7.5",
     "description": "Scalable and readable for networking and multiprocessing.",
     "tags": [
       "script",
@@ -100,6 +105,7 @@
   },
   "rb": {
     "name": "Ruby",
+    "version": "2.3.3p222",
     "description": "Multi-paradigm language.",
     "tags": [
       "script",
@@ -122,6 +128,7 @@
   },
   "cs": {
     "name": "C#",
+    "version": "6.0",
     "description": "General-purpose, object and component oriented declarative language that runs under .Net runtimes.",
     "tags": [
       "strongly_typed",
@@ -143,6 +150,7 @@
   },
   "java": {
     "name": "Java",
+    "version": "1.8.0_121",
     "description": "General-purpose and object-oriented language. Meant ot \"Write once, run anywhere\".",
     "tags": [
       "strongly_typed",
@@ -166,6 +174,7 @@
   },
   "pl": {
     "name": "Perl",
+    "version": "5.14.2",
     "description": "General-purpose, high-level \"intended\" for easy text processing.",
     "tags": [
       "script",
@@ -181,6 +190,7 @@
   },
   "ps1": {
     "name": "PowerShell",
+    "version": "5.1",
     "description": "Cross-platform language for system automation and configuration.",
     "tags": [
       "script",
@@ -195,6 +205,7 @@
   },
   "php": {
     "name": "PHP",
+    "version": "7.1.2",
     "description": "Scripting languge for web pages.",
     "tags": [
       "script",
@@ -207,6 +218,7 @@
   },
   "vb": {
     "name": "VB.Net",
+    "version": "14",
     "description": "Visual Basic that runs on .Net runtimes.",
     "tags": [
       "oop",
