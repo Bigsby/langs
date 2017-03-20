@@ -41,7 +41,12 @@ Object.prototype.forEachValue = function (handler) {
 
     app.value("data", {});
 
-    app.run(function (data, $http) {
+    app.run(function (data, $http, $window, $transitions, $location) {
+
+        $window.ga("create", "UA-94110702-1", "auto");
+        $transitions.onSuccess({}, () => {
+            $window.ga("send", "pageview", $location.path());
+        });
 
         var dataToLoad = [
             "libraries",
