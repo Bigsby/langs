@@ -147,12 +147,12 @@
           "text": "Since <b>Ruby</b> is a dynamic language <code>$x = ...</code> doesn't enforce a type on the variable and, as such, the variable can change type. Because of that, this code is totally valid and has the exact same output."
         }
       },
-      "cs":{
+      "cs": {
         "dynamic": {
           "text": "Although <b>C#</b> is strongly-typed, one can treat variables dynamically be using the \"generic\" (base) type <code>object</code>. The following code will have the exact same output."
         }
       },
-      "java":{
+      "java": {
         "dynamic": {
           "text": "Although <b>Java</b> is strongly-typed, one can treat variables dynamically be using the \"generic\" (base) type <code>Object</code>. The following code will have the exact same output."
         }
@@ -167,7 +167,7 @@
           "text": "Since <b>PHP</b> is a dynamic language <code>var $x = ...</code> doesn't enforce a type on the variable and, as such, the variable can change type. Because of that, this code is totally valid and has the exact same output."
         }
       },
-      "vb":{
+      "vb": {
         "dynamic": {
           "text": "Although <b>VB.Net</b> is strongly-typed, one can treat variables dynamically be using the \"generic\" (base) type <code>Object</code>. The following code will have the exact same output."
         }
@@ -612,7 +612,7 @@
       "java": [
         "Build and run only program file, i.e., <code>javac modularity.java</code> and <code>java modularity</code>"
       ],
-      "pl":[
+      "pl": [
         "Module files need to return a \"good\" value when parsed hence <code>1;</code> in the end of the module file."
       ]
     }
@@ -710,5 +710,18 @@
     "text": "",
     "type": "code",
     "languages": []
+  },
+  "fizzbuzz": {
+    "name": "FizzBuzz",
+    "show": false,
+    "description": "Solving the children's game about division.",
+    "text": "Count the numbers from 1 to 100 but saying \"Fizz\" instead of the number when the number is devidable by 3, \"Buzz\" when the number is dividable by 5 and \"FizzBuzz\" when the number is dividable by both 3 and 5.",
+    "type": "code",
+    "output": "1,2,Fizz,4,Buzz,Fizz,7,8,Fizz...",
+    "languages": [
+      "js",
+      "cpp",
+      "py"
+    ]
   }
 }

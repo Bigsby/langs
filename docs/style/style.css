@@ -129,6 +129,9 @@ pre {
     text-decoration: none;
 }
 
+.programsList{
+    list-style: none;
+}
 code-implementation {
     margin-bottom: 20px;
 }
