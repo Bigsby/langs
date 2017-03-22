@@ -26,9 +26,17 @@ header {
     flex-grow: 0;
 }
 
+@media only screen and (max-width: 767px) {
+    header {
+        padding: 1em;
+    }
+}
+
     header h1 {
         margin: 0;
     }
+
+
 
 ul.project_implementations {
     list-style: none;
@@ -163,7 +171,15 @@ code-implementation {
     }
 }
 
-compare-selector {
+.compareContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center; 
+}
+
+.compareContainer .options {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -171,14 +187,28 @@ compare-selector {
     align-items: center; 
 }
 
-compare-selector select {
-    font-size: 1.3em;
-    margin: 10px;
+@media only screen and (max-width: 767px) {
+    .compareContainer .options {
+        flex-direction: column;
+    }
 }
 
-compare-selector button {
+.compareContainer select {
+    font-size: 1.3em;
+    padding: .1em;
+    margin: 10px;
+    border: solid 1px  #000010;;
+    border-radius: 10px;
+}
+
+.compareContainer select:focus {
+    outline: none;
+}
+
+.compareContainer button {
     font-weight: bold;
     font-size: 1.3em;
+    padding: .1em;
     margin: 10px;
     cursor: pointer;
     background-color: #000010;
@@ -186,7 +216,7 @@ compare-selector button {
     border-radius: 10px;
 }
 
-compare-select button:disabled, button[disabled] {
+.compareContainer button:disabled, button[disabled] {
     background-color: #505050;
 }
 
@@ -198,10 +228,4 @@ compare-select button:disabled, button[disabled] {
 .notes code{
     background-color: lightgray;
     padding: 2px 5px;
-}
-
-@media only screen and (max-width: 767px) {
-    compare-selector{
-        flex-direction: column;
-    }
 }

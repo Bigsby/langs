@@ -4,7 +4,21 @@
     "show": true,
     "type": "steps",
     "description": "What needs to be installed to get started on each language.",
-    "text": "<p>Since the computer and the, already very high-level, Operating System that is running don't know much more than machine code, the code, of each language, needs to be compiled and/or have a runtime to run it.</p><p>Here are the steps required to run a program.</p>"
+    "text": "<p>Since the computer and the, already very high-level, Operating System that is running don't know much more than machine code, the code, of each language, needs to be compiled and/or have a runtime to run it.</p><p>Here are the steps required to run a program.</p>",
+    "languages": [
+      "js",
+      "cpp",
+      "py",
+      "fs",
+      "go",
+      "rb",
+      "cs",
+      "java",
+      "pl",
+      "ps1",
+      "php",
+      "vb"
+    ]
   },
   "hello": {
     "name": "Hello World!",

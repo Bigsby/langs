@@ -1,0 +1,3 @@
+<select ng-model="$ctrl.project" placeholder="Select ...">
+    <option ng-repeat="(projectId, project) in $ctrl.projects" value="{{projectId}}">{{project.name}}</option>
+</select>

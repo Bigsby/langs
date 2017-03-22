@@ -180,6 +180,34 @@ Object.prototype.forEachValue = function (handler) {
         }
     }
 
+    function GetImplementation(data, languageId, language, projectId, project, codeRoot, codeRawRoot) {
+        switch (project.type) {
+            case "code":
+                if (project.languages && project.languages.indexOf(languageId) != -1) {
+                    return new CodeImplementation(
+                        languageId,
+                        language,
+                        projectId,
+                        project,
+                        codeRoot,
+                        codeRawRoot);
+                }
+                break;
+
+            case "steps":
+                var definitions = data.implementations[projectId];
+                if (definitions && definitions[languageId]) {
+                    return new StepsImplementation(
+                        languageId,
+                        language,
+                        projectId,
+                        project,
+                        definitions[languageId]);
+                }
+                break;
+        }
+    }
+
     app.component("home", {
         templateUrl: templatesRoot + "home.html",
         controller: BuildController(function (vm, data) {
@@ -218,36 +246,19 @@ Object.prototype.forEachValue = function (handler) {
             if (!vm.project.implementations) {
                 vm.project.implementations = [];
 
-                switch (vm.project.type) {
-                    case "code":
-                        vm.project.languages.forEach(function (langId) {
-                            vm.project.implementations.push(new CodeImplementation(
-                                langId,
-                                data.languages[langId],
-                                vm.projectId,
-                                vm.project,
-                                vm.codeRoot,
-                                vm.codeRawRoot));
-                        });
-                        break;
+                vm.project.languages.forEach(function (languageId) {
+                    var implementation = GetImplementation(
+                        data,
+                        languageId,
+                        data.languages[languageId],
+                        vm.projectId,
+                        vm.project,
+                        vm.codeRoot,
+                        vm.codeRawRoot);
 
-                    case "steps":
-                        var definitions = data.implementations[vm.projectId];
-                        if (definitions) {
-                            data.languages.forEachValue(function (langId, lang) {
-                                var definition = definitions[langId];
-                                if (definition) {
-                                    vm.project.implementations.push(new StepsImplementation(
-                                        langId,
-                                        lang,
-                                        vm.projectId,
-                                        vm.project,
-                                        definition));
-                                }
-                            });
-                        }
-                        break;
-                }
+                    if (implementation)
+                        vm.project.implementations.push(implementation);
+                });
             }
         })
     });
@@ -262,31 +273,17 @@ Object.prototype.forEachValue = function (handler) {
                 vm.language.implementations = [];
 
                 data.projects.forEachValue(function (projectId, project) {
-                    switch (project.type) {
-                        case "code":
-                            if (project.languages && project.languages.indexOf(vm.languageId) != -1) {
-                                vm.language.implementations.push(new CodeImplementation(
-                                    vm.languageId,
-                                    vm.language,
-                                    projectId,
-                                    project,
-                                    vm.codeRoot,
-                                    vm.codeRawRoot));
-                            }
-                            break;
-
-                        case "steps":
-                            var definitions = data.implementations[projectId];
-                            if (definitions && definitions[vm.languageId]) {
-                                vm.language.implementations.push(new StepsImplementation(
-                                    vm.languageId,
-                                    vm.language,
-                                    projectId,
-                                    project,
-                                    definitions[vm.languageId]));
-                            }
-                            break;
-                    }
+                    var definitions = data.implementations[projectId];
+                    var implementation = GetImplementation(
+                        data,
+                        vm.languageId,
+                        vm.language,
+                        projectId,
+                        project,
+                        vm.codeRoot,
+                        vm.codeRawRoot);
+                    if (implementation)
+                        vm.language.implementations.push(implementation);
                 });
             }
         })
@@ -326,11 +323,20 @@ Object.prototype.forEachValue = function (handler) {
         }
     });
 
+    app.component("projectSelector",{
+        templateUrl: templatesRoot + "projectSelector.html",
+        bindings:{
+            project: "=",
+            projects: "<"
+        }
+    });
+
     app.component("compare", {
         templateUrl: templatesRoot + "compare.html",
         controller: BuildController(function (vm, data) {
             vm.firstId = vm.$stateParams.first;
             vm.secondId = vm.$stateParams.second;
+            vm.projectId = vm.$stateParams.project;
             vm.first = data.languages[vm.firstId];
             vm.second = data.languages[vm.secondId];
 
@@ -339,63 +345,42 @@ Object.prototype.forEachValue = function (handler) {
 
             vm.projects = [];
 
-            data.projects.forEachValue(function (projectId, project) {
+            function AddProject(projectId, project) {
                 if (!project.show)
                     return;
 
-                switch (project.type) {
-                    case "code":
-                        if (!project.languages
-                            ||
-                            project.languages.indexOf(vm.firstId) == -1
-                            ||
-                            project.languages.indexOf(vm.secondId) == -1)
-                            return;
+                var firstImplementation = GetImplementation(
+                    data,
+                    vm.firstId,
+                    vm.first,
+                    projectId,
+                    project,
+                    vm.codeRoot,
+                    vm.codeRawRoot);
 
-                        project.firstImplementation = new CodeImplementation(
-                            vm.firstId,
-                            data.languages[vm.firstId],
-                            projectId,
-                            project,
-                            vm.codeRoot,
-                            vm.codeRawRoot);
-                        project.secondImplementation = new CodeImplementation(
-                            vm.secondId,
-                            data.languages[vm.secondId],
-                            projectId,
-                            project,
-                            vm.codeRoot,
-                            vm.codeRawRoot);
+                var secondImplementation = GetImplementation(
+                    data,
+                    vm.secondId,
+                    vm.second,
+                    projectId,
+                    project,
+                    vm.codeRoot,
+                    vm.codeRawRoot);
 
-                        vm.projects.push(project);
-                        break;
-                    case "steps":
-                        var projectDefinition = data.implementations[projectId];
-                        if (!projectDefinition)
-                            return;
-
-                        var firstDefinition = projectDefinition[vm.firstId];
-                        var secondDefinition = projectDefinition[vm.secondId];
-                        if (!firstDefinition || !secondDefinition)
-                            return;
-
-                        project.firstImplementation = new StepsImplementation(
-                            vm.firstId,
-                            vm.first,
-                            projectId,
-                            project,
-                            firstDefinition);
-                        project.secondImplementation = new StepsImplementation(
-                            vm.secondId,
-                            vm.second,
-                            projectId,
-                            project,
-                            secondDefinition);
-
-                        vm.projects.push(project);
-                        break;
+                if (firstImplementation && secondImplementation) {
+                    project.firstImplementation = firstImplementation;
+                    project.secondImplementation = secondImplementation;
+                    vm.projects.push(project);
                 }
-            });
+            }
+
+            if (vm.projectId && data.projects[vm.projectId]) {
+                AddProject(vm.projectId, data.projects[vm.projectId]);
+            }
+            else
+                data.projects.forEachValue(function (projectId, project) {
+                    AddProject(projectId, project);
+                });
         })
     });
 
@@ -425,11 +410,12 @@ Object.prototype.forEachValue = function (handler) {
 
             $stateProvider.state({
                 name: "compare",
-                url: "/compare/:first/:second",
+                url: "/compare/:first/:second/:project",
                 component: "compare",
                 params: {
                     first: null,
-                    second: null
+                    second: null,
+                    project: null
                 }
             });
 
