@@ -1,14 +1,16 @@
-function MontyPython(firstName, lastName){
-    var me = this;
-    me.FirstName = firstName;
-    me.LastName = lastName;
-    
-    me.fullName = function(){
-        return `${me.FirstName} ${me.LastName}`;
-    };
+"use strict";
+class MontyPython{
+    constructor(firstName, lastName){
+        this.FirstName = firstName;
+        this.LastName = lastName;
+    }
+
+    fullName(){
+        return `${this.FirstName} ${this.LastName}`;
+    }
 }
 
-var montyPython = new MontyPython("John", "Cleese");
+let montyPython = new MontyPython("John", "Cleese");
 console.log(`Monty Python is ${montyPython.fullName()}.`);
 
 montyPython.FirstName = "Eric";
