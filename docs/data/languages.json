@@ -8,6 +8,9 @@
       "script"
     ],
     "link": "https://www.javascript.com/",
+    "links":[
+      "http://es6-features.org/#StringRepeating"
+    ],
     "highlight": "javascript",
     "mime": "text/javascript",
     "runtimes": [

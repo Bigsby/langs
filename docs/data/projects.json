@@ -564,6 +564,17 @@
       ]
     }
   },
+  "datetime":{
+    "name": "Date and Time",
+    "show": false,
+    "description": "Handling date and time units",
+    "text": "Handling date and time has been, since the beginning of computer programming, not that of a straight forward task.",
+    "type":"code",
+    "output":"",
+    "languages":[
+      
+    ]
+  },
   "modularity": {
     "name": "Modules",
     "show": true,
