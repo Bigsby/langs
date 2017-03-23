@@ -592,11 +592,15 @@
       "fs",
       "go",
       "rb",
-      "cs"
+      "cs",
+      "java"
     ],
     "notes":{
       "go":[
-        "<b>Go</b> does formatting, for parsing and transforming, \"by example\", following there sample values here <a target=\"_blank\" href=\"https://golang.org/src/time/format.go\">here.</a>. <code>2006-01-02T15:04:05</code> used to parse the date doesn't happen by chance."
+        "<b>Go</b> does formatting, for parsing and transforming, \"by example\", e.g., <code>2006-01-02T15:04:05</code>, following sample values defined <a target=\"_blank\" href=\"https://golang.org/src/time/format.go\">here.</a>."
+      ],
+      "java":[
+        "<code>DateTimeFormatter</code>'s, like <code>ISO_LOCAL_DATE_TIME</code> can be retrieved <a target=\"_blank\" href=\"https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html\">here</a>."
       ]
     }
   },
