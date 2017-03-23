@@ -590,7 +590,9 @@
       "cpp",
       "py",
       "fs",
-      "go"  
+      "go",
+      "rb",
+      "cs"
     ],
     "notes":{
       "go":[
