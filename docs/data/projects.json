@@ -594,7 +594,10 @@
       "rb",
       "cs",
       "java",
-      "pl"
+      "pl",
+      "ps1",
+      "php",
+      "vb"
     ],
     "notes":{
       "go":[
