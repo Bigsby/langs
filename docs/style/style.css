@@ -36,6 +36,23 @@ header {
         margin: 0;
     }
 
+footer{
+    background-color: #000010;
+    color: #fff;
+    font-size: .5em;
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 5px;
+}
+
+    footer .link, .link:visited, .link:hover {
+        color: #fff;
+    }
+
+
+
 ul.project_implementations {
     list-style: none;
 }
