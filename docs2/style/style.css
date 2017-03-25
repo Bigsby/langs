@@ -1,0 +1,214 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+a, a:visited, a:hover {
+    color: blue;
+}
+
+header {
+    background-color: #000010;
+    color: #fff;
+    text-align: center;
+    padding: 2em;
+    cursor: pointer;
+    z-index: 100;
+    flex-grow: 0;
+}
+
+@media only screen and (max-width: 767px) {
+    header {
+        padding: 1em;
+    }
+}
+
+    header h1 {
+        margin: 0;
+    }
+
+footer{
+    background-color: #000010;
+    color: #fff;
+    font-size: .5em;
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 5px;
+}
+
+    footer .link, .link:visited, .link:hover {
+        color: #fff;
+        overflow-y: auto;
+    }
+
+.content{
+    padding: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.innerContent{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.clickable{
+    cursor: pointer;
+}
+
+select {
+    font-size: 1.3em;
+    padding: .1em;
+    margin: 10px;
+    border: 2px solid #000010;;
+    border-radius: 10px;
+    overflow-y: auto;
+}
+
+input[type]:focus, select, button {
+    outline: none;
+}
+
+input[type]:focus, button:focus, select:focus{
+    border: 2px solid #2951BD;
+}
+
+button, input[type=button], input[type=submit] {
+    font-weight: bold;
+    font-size: 1.3em;
+    padding: .1em;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #000010;
+    color: white;
+    border-radius: 10px;
+}
+
+button:active, input[type=button]:active, input[type=submit]:active {
+    font-size: 1.2em;
+    padding: .1em .3em;
+}
+
+button:disabled, 
+button[disabled], 
+input[type=button], 
+input[type=submit][disabled], 
+input[type=button][disabled], 
+input[type=submit][disabled],
+input[type=submit][disabled], 
+input[type=button][disabled], 
+input[type=submit][disabled] {
+    background-color: #505050;
+}
+
+input[type=checkbox] {
+	-webkit-appearance: none;
+	background-color: #fff;
+	border: 2px solid #000010;
+	padding: 15px;
+	border-radius: 10px;
+	display: inline-block;
+	position: relative;
+    color: #000010;
+}
+
+input[type=checkbox]:checked:after {
+	content: '\2714';
+	font-size: 1.7em;
+	position: absolute;
+	top: 0px;
+	left: 6px;
+}
+
+input[type=color]{
+    height: 2.5em;
+    border-radius: 10px;
+    background-color: #fff;
+	border: 2px solid #000010;
+}
+
+code{
+    background-color: lightgray;
+    padding: 2px 5px;
+}
+
+.loader,
+.loader:before,
+.loader:after {
+  background: #000010;
+  -webkit-animation: load1 1s infinite ease-in-out;
+  animation: load1 1s infinite ease-in-out;
+  width: 1em;
+  height: 4em;
+}
+.loader {
+  color: #000010;
+  text-indent: -9999em;
+  margin: 88px auto;
+  position: relative;
+  font-size: 11px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+  position: absolute;
+  top: 0;
+  content: '';
+}
+.loader:before {
+  left: -1.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 1.5em;
+}
+@-webkit-keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+@keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}

@@ -1,0 +1,194 @@
+.innerContent{
+    max-width: 100%;
+}
+ul.project_implementations {
+    list-style: none;
+}
+
+    ul.project_implementations h3 {
+        background-color: lightgray;
+        padding: 5px 20px;
+    }
+
+    ul.project_implementations > li {
+        margin-top: 35px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid black;
+    }
+
+ui-view {
+    padding: 15px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.language_title a, .language_title a:visited, .language_title a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+pre {
+    background-color: #F5F2F0;
+    padding: 5px;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.side_by_side {
+    display: flex;
+    flex-direction: row;
+}
+
+@media only screen and (max-width: 767px) {
+    .side_by_side {
+        flex-direction: column;
+    }
+}
+
+    .side_by_side > div {
+        flex-basis: 50%;
+        flex-shrink: 0;
+    }
+
+    .listTitle {
+        text-align: center;
+    }
+
+.list {
+    display: flex;
+    flex-direction: column;
+}
+
+.clickable{
+    cursor: pointer;
+}
+
+.listItem {
+    display: block;
+    margin: 5px;
+}
+
+    .listItem > .itemHeader {
+        display: flex;
+        margin: 5px 0;
+        flex-direction: row;
+        padding: 3px 10px;
+        justify-content: space-between;
+        background-color: #000010;
+        color: white;
+        font-size: 1.17em;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+
+        .listItem > .itemHeader > .commandsContainer {
+            right: 0;
+        }
+
+.listItem > .itemHeader .languageVersion{
+    font-weight: normal;
+    font-size: .7em;
+}
+
+.command, a.command:visited, a.command:hover {
+    cursor: pointer;
+    margin-right: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.programsList{
+    list-style: none;
+}
+code-implementation {
+    margin-bottom: 20px;
+}
+
+.devided_first {
+    border-right: 1px solid black;
+    padding-right: 5px;
+}
+
+.devided_second {
+    border-left: 1px solid black;
+    padding-left: 5px;
+}
+
+@media only screen and (max-width: 767px){
+    .devided_first {
+        border-right: none;
+        border-bottom: 1px solid black;
+    }
+
+    .devided_second {
+        border-left: none;
+        border-top: 1px solid black;
+    }
+}
+
+.compareContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center; 
+}
+
+.compareContainer .options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center; 
+}
+
+@media only screen and (max-width: 767px) {
+    .compareContainer .options {
+        flex-direction: column;
+    }
+}
+
+.compareContainer select {
+    font-size: 1.3em;
+    padding: .1em;
+    margin: 10px;
+    border: solid 1px  #000010;;
+    border-radius: 10px;
+}
+
+.compareContainer select:focus {
+    outline: none;
+}
+
+.compareContainer button {
+    font-weight: bold;
+    font-size: 1.3em;
+    padding: .1em;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #000010;
+    color: white;
+    border-radius: 10px;
+}
+
+.compareContainer button:disabled, button[disabled] {
+    background-color: #505050;
+}
+
+.notes .title {
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.notes code{
+    background-color: lightgray;
+    padding: 2px 5px;
+}

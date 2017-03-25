@@ -10,4 +10,3 @@ try:
     DoStuff(False)
 except Exception as ex:
     print("Error: " + ex.args[0])
-
