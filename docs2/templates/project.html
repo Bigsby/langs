@@ -2,10 +2,10 @@
 <div ng-bind-html="$ctrl.project.text"></div>
 <div ng-if="$ctrl.project.type==='code' && $ctrl.project.output">
     <p style="text-decoration:underline">Expected Output:</p>
-    <pre><code>{{$ctrl.project.output}}</code></pre>
+    <code-highlight language="textile" code="{{$ctrl.project.output}}"></code-highlight>
     <div ng-repeat="altOutput in $ctrl.project.alternativeOutputs">
         <p>{{altOutput.text}}</p>
-        <pre><code>{{altOutput.output}}</code></pre>
+        <code-highlight language="textile" code="{{altOutput.output}}"></code-highlight>
     </div>
 </div>
 <div class="list">

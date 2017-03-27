@@ -13,8 +13,12 @@
     "dynamic": {
         "langs": {
             "css": [
-                "style/langs",
-                "style/prism"
+                "style/langs"
+            ]
+        },
+        "prism":{
+            "css":[
+                "style/prism_coy"
             ]
         },
         "fontAwsome": {

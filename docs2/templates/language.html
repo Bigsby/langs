@@ -14,10 +14,10 @@
             <p ng-bind-html="imp.project.text"></p>
             <div ng-if="imp.project.type==='code' && imp.project.output">
                 <p style="text-decoration:underline">Expected Output:</p>
-                <pre><code>{{imp.project.output}}</code></pre>
+                <code-highlight language="textfile" code="{{imp.project.output}}"></code-highlight>
                 <div ng-repeat="altOutput in imp.project.alternativeOutputs">
                     <p>{{altOutput.text}}</p>
-                    <pre><code>{{altOutput.output}}</code></pre>
+                    <code-highlight language="textfile" code="{{altOutput.output}}"></code-highlight>
                 </div>
             </div>
             <code-implementation ng-switch-when="code" implementation="imp"></code-implementation>

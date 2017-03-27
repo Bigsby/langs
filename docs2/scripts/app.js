@@ -1,6 +1,6 @@
 "use strict";
 requirejs.config({
-    waitSeconds: 10,
+    waitSeconds: 1000,
     paths: {
         text: "libs/text",
         json: "libs/json",
@@ -278,33 +278,36 @@ var appSpecifics = new (function () {
             return {
                 restrict: "E",
                 link: function ($scope, element, attrs) {
-                    element.html("<br/><img src='images/loading.gif'></img>");
-                    var codeElement =
+                    var pre = document.createElement("pre");
+                    if (attrs.lineNumbers)
+                        pre.className = "line-numbers";
+                    var code = document.createElement("code");
+                    code.className = "language-" + attrs.language;
+                    pre.appendChild(code);
+
+
+                    if (attrs.src) {
+                        element.html("<br/><img src='images/loading.gif'></img>");
+
                         $http.get(attrs.src)
                             .then(function (response) {
                                 element.html("");
+                                code.textContent = response.data;
                                 try {
-                                    var pre = document.createElement('pre');
-                                    pre.className = "line-numbers";
-                                    var code = document.createElement('code');
-                                    code.className = 'language-' + attrs.language;
-                                    pre.appendChild(code);
-                                    code.textContent = response.data;
                                     Prism.highlightElement(code);
-                                    element.html(pre.outerHTML);
                                 } catch (error) {
-                                    element.text = response.data;
+                                    console.log(error);
                                 }
-
-                                // var cm = CodeMirror(element[0], {
-                                //     mode: attrs.language,
-                                //     value: response.data,
-                                //     lineNumbers: true,
-                                //     lineWrapping: true,
-                                //     theme: "ttcn",
-                                //     readOnly: true
-                                // });
+                                element.html(pre.outerHTML);
                             });
+
+                    }
+                    else {
+                        code.textContent = attrs.code;
+                        Prism.highlightElement(code);
+                        element.html(pre.outerHTML);
+                    }
+
                 }
             }
         });

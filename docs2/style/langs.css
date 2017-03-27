@@ -54,7 +54,7 @@ pre {
 }
 
     .side_by_side > div {
-        flex-basis: 50%;
+        width: 49%;
         flex-shrink: 0;
     }
 

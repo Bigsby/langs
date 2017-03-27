@@ -10,7 +10,8 @@
             </div>
             <div ng-switch-when="command">
                 <h4>{{step.text}} running:</h4>
-                <pre><code class="language-bash">> {{step.command}}</code></pre>
+                <code-highlight language="bash" code="> {{step.command}}"></code-highlight>
+                <!--<pre><code class="language-bash">> {{step.command}}</code></pre>-->
             </div>
             <div ng-switch-when="download">
                 <h4>Download {{step.program}}</h4>
