@@ -12,12 +12,8 @@ body {
     flex-direction: column;
 }
 
-a, a:visited, a:hover {
-    color: blue;
-}
-
 header {
-    background-color: #000010;
+    background-color: #000030;
     color: #fff;
     text-align: center;
     padding: 2em;
@@ -32,12 +28,13 @@ header {
     }
 }
 
-    header h1 {
+    header h1, header h2, header h3, header h4, header h5, header h6 {
         margin: 0;
+        color: white;
     }
 
 footer{
-    background-color: #000010;
+    background-color: #000030;
     color: #fff;
     font-size: .5em;
     display: flex;
@@ -56,11 +53,48 @@ footer{
     padding: 20px;
     flex-grow: 1;
     overflow-y: auto;
+    display: flex;
 }
 
 .innerContent{
     max-width: 800px;
     margin: 0 auto;
+}
+
+.innerContent > *:last-child{
+    margin-bottom: 5em;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+a, a:visited, a:hover {
+    color: #2951BD;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: #995522;
+}
+
+.underlined{
+    text-decoration: underline;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.italic{
+    font-style: italic;
+}
+
+.noBulletList{
+    list-style: none;
 }
 
 .noselect {
@@ -81,7 +115,7 @@ select {
     font-size: 1.3em;
     padding: .1em;
     margin: 10px;
-    border: 2px solid #000010;;
+    border: 2px solid #000030;;
     border-radius: 10px;
     overflow-y: auto;
 }
@@ -100,7 +134,7 @@ button, input[type=button], input[type=submit] {
     padding: .1em;
     margin: 10px;
     cursor: pointer;
-    background-color: #000010;
+    background-color: #000030;
     color: white;
     border-radius: 10px;
 }
@@ -120,17 +154,18 @@ input[type=submit][disabled],
 input[type=button][disabled], 
 input[type=submit][disabled] {
     background-color: #505050;
+    cursor: default;
 }
 
 input[type=checkbox] {
 	-webkit-appearance: none;
 	background-color: #fff;
-	border: 2px solid #000010;
+	border: 2px solid #000030;
 	padding: 15px;
 	border-radius: 10px;
 	display: inline-block;
 	position: relative;
-    color: #000010;
+    color: #000030;
 }
 
 input[type=checkbox]:checked:after {
@@ -145,20 +180,25 @@ input[type=color]{
     height: 2.5em;
     border-radius: 10px;
     background-color: #fff;
-	border: 2px solid #000010;
+	border: 2px solid #000030;
+}
+
+.loaderContainer{
+    display: flex;
+    align-content: center;
 }
 
 .loader,
 .loader:before,
 .loader:after {
-  background: #000010;
+  background: #000030;
   -webkit-animation: load1 1s infinite ease-in-out;
   animation: load1 1s infinite ease-in-out;
   width: 1em;
   height: 4em;
 }
 .loader {
-  color: #000010;
+  color: #000030;
   text-indent: -9999em;
   margin: 88px auto;
   position: relative;

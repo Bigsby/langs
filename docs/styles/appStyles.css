@@ -1,57 +1,19 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 20px;
-    height: 100%;
-    width: 100%;
+.innerContent{
+    max-width: 100%;
+    flex-grow: 1;
 }
 
-body {
+ui-view {
     display: flex;
     flex-direction: column;
 }
 
-a, a:visited, a:hover {
-    color: blue;
-}
-
-header {
-    background-color: #000010;
-    color: #fff;
-    text-align: center;
-    padding: 2em;
-    cursor: pointer;
-    z-index: 100;
-    flex-grow: 0;
-}
-
-@media only screen and (max-width: 767px) {
-    header {
-        padding: 1em;
-    }
-}
-
-    header h1 {
-        margin: 0;
-    }
-
-footer{
-    background-color: #000010;
-    color: #fff;
-    font-size: .5em;
+project {
     display: flex;
-    flex-shrink: 0;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0px 5px;
+    flex-direction: column;
+    align-items: stretch;
+    flex-grow: 1;
 }
-
-    footer .link, .link:visited, .link:hover {
-        color: #fff;
-    }
-
-
 
 ul.project_implementations {
     list-style: none;
@@ -68,30 +30,15 @@ ul.project_implementations {
         border-bottom: 1px solid black;
     }
 
-ui-view {
-    padding: 15px;
-    flex-grow: 1;
-    overflow-y: auto;
-}
-
 .language_title a, .language_title a:visited, .language_title a:hover {
     text-decoration: none;
     color: black;
 }
 
 pre {
+    white-space: pre-wrap; 
     background-color: #F5F2F0;
     padding: 5px;
-}
-
-.noselect {
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome and Opera */
 }
 
 .side_by_side {
@@ -99,16 +46,17 @@ pre {
     flex-direction: row;
 }
 
+.side_by_side > div {
+    width: 49%;
+}
 @media only screen and (max-width: 767px) {
     .side_by_side {
         flex-direction: column;
     }
-}
-
-    .side_by_side > div {
-        flex-basis: 50%;
-        flex-shrink: 0;
+    .side_by_side > div{
+        width: 98%;
     }
+}
 
     .listTitle {
         text-align: center;
@@ -117,10 +65,6 @@ pre {
 .list {
     display: flex;
     flex-direction: column;
-}
-
-.clickable{
-    cursor: pointer;
 }
 
 .listItem {
@@ -134,7 +78,7 @@ pre {
         flex-direction: row;
         padding: 3px 10px;
         justify-content: space-between;
-        background-color: #000010;
+        background-color: #000030;
         color: white;
         font-size: 1.17em;
         font-weight: bold;
@@ -206,33 +150,6 @@ code-implementation {
     .compareContainer .options {
         flex-direction: column;
     }
-}
-
-.compareContainer select {
-    font-size: 1.3em;
-    padding: .1em;
-    margin: 10px;
-    border: solid 1px  #000010;;
-    border-radius: 10px;
-}
-
-.compareContainer select:focus {
-    outline: none;
-}
-
-.compareContainer button {
-    font-weight: bold;
-    font-size: 1.3em;
-    padding: .1em;
-    margin: 10px;
-    cursor: pointer;
-    background-color: #000010;
-    color: white;
-    border-radius: 10px;
-}
-
-.compareContainer button:disabled, button[disabled] {
-    background-color: #505050;
 }
 
 .notes .title {

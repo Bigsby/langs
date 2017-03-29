@@ -47,12 +47,11 @@
             </div>
         </div>
     </div>
-
-
+    
     <div>
         <h2 class="listTitle">Projects</h2>
         <div class="list">
-            <div class="listItem" ng-repeat="(projId, proj) in $ctrl.filteredProjects()">
+            <div class="listItem" ng-repeat="(projId, proj) in $ctrl.projects">
                 <div class="itemHeader clickable" ui-sref="project({id:projId})">
                     <span>{{$index + '. ' + proj.name}}</span>
                 </div>

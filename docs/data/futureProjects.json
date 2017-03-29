@@ -1,0 +1,95 @@
+{
+    "parsing": {
+        "name": "Parsing",
+        "show": false,
+        "description": "Convert text into other typed values.",
+        "type": "code"
+    },
+    "sets": {
+        "name": "Lists/Arrays",
+        "show": false,
+        "description": "Sets of, not necessarily but usually similar, items.",
+        "text": "Creating a sequence to be iterated is the first step of \"advanced\" programming.",
+        "type": "code",
+        "languages": [
+            "js",
+            "cpp"
+        ]
+    },
+    "sets_handling": {
+        "name": "Set Handling",
+        "show": false,
+        "description": "Manipulating sets of items. Add, remove, etc.",
+        "type": "code"
+    },
+    "scope": {
+        "name": "Access scope",
+        "show": false,
+        "description": "Where and when things are accessible.",
+        "text": "",
+        "type": "code",
+        "languages": []
+    },
+    "usings": {
+        "name": "Using",
+        "show": false,
+        "description": "Making code cleaner by adding referal scopes.",
+        "text": "Some languages organize definitions in packages or named scopes. To cater for that, it's useful to be able to allow for referal scopes to be added.",
+        "type": "code",
+        "languages": [
+            "cpp",
+            "cs"
+        ],
+        "extraCode": {
+            "cs": {
+                "static": {
+                    "text": "<b>C#</b> allows types to be statically refered in usings making their static methods to be globally available."
+                }
+            }
+        }
+    },
+    "stream": {
+        "name": "Streaming",
+        "show": true,
+        "description": "Processing sequences of bytes.",
+        "text": "",
+        "type": "code",
+        "languages": []
+    },
+    "file_write": {
+        "name": "Write to File",
+        "show": true,
+        "description": "Writing to the File System",
+        "text": "",
+        "type": "code",
+        "languages": []
+    },
+    "gui": {
+        "name": "GUI",
+        "show": true,
+        "description": "Creating a Graphical User Interface",
+        "text": "",
+        "type": "code",
+        "languages": []
+    },
+    "dataTypes": {
+        "name": "Data Types",
+        "description": "The types of data know to the language.",
+        "text": "<p>Each language, even dynanmic ones, have defined types of data for simple (low-level) values. Since the computer only knows numbers, and only two of them (0 and 1), every language defines a set of data types that represent the most used value types that wrap these types writing (alocation) and reading (accessing/combining). The most common types that allow (almost) every computational needs, would be <b>booleans</b>, <b>numeric</b> (integer and not) and representations of <b>text characters</b> (alone or in sequences).</p>",
+        "type": "code",
+        "languages": [],
+        "extraCode": {
+            "js": {
+                "simple": {
+                    "text": "The base types known to <b>JavaScript</b> are:"
+                },
+                "complex": {
+                    "text": "Other types serve the object-oriented side of <b>JavaScript</b>."
+                }
+            },
+            "cpp": {
+                "simple": "The base types in <b>C++</b> are:"
+            }
+        }
+    }
+}

@@ -11,7 +11,7 @@
     "links":[
       "http://es6-features.org"
     ],
-    "highlight": "javascript",
+    "hljs": "javascript",
     "mime": "text/javascript",
     "runtimes": [
       "node",
@@ -33,7 +33,7 @@
       "native"
     ],
     "link": "http://www.cplusplus.com/",
-    "highlight": "cpp",
+    "hljs": "cpp",
     "mime": "text/x-c++src",
     "runtimes": [
       "native"
@@ -56,7 +56,7 @@
       "gc"
     ],
     "link": "https://www.python.org/",
-    "highlight": "python",
+    "hljs": "python",
     "mime": "text/x-python",
     "runtimes": [
       "python"
@@ -77,7 +77,7 @@
       "gc"
     ],
     "link": "http://fsharp.org/",
-    "highlight": "fsharp",
+    "hljs": "fsharp",
     "mime": "text/x-fsharp",
     "runtimes": [
       "net"
@@ -98,7 +98,7 @@
       "gc"
     ],
     "link": "https://golang.org/",
-    "highlight": "go",
+    "hljs": "go",
     "mime": "text/x-go",
     "ides": [
       "vscode",
@@ -118,7 +118,7 @@
       "gc"
     ],
     "link": "https://www.ruby-lang.org/",
-    "highlight": "ruby",
+    "hljs": "ruby",
     "mime": "text/x-ruby",
     "runtimes": [
       "ruby"
@@ -140,7 +140,7 @@
       "gc"
     ],
     "link": "https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx",
-    "highlight": "csharp",
+    "hljs": "csharp",
     "mime": "text/x-csharp",
     "runtimes": [
       "net"
@@ -162,7 +162,7 @@
       "gc"
     ],
     "link": "https://www.java.com/",
-    "highlight": "jsp",
+    "hljs": "java",
     "mime": "text/x-java",
     "runtimes": [
       "java"
@@ -186,7 +186,7 @@
       "gc"
     ],
     "link": "https://www.perl.org/",
-    "highlight": "perl",
+    "hljs": "perl",
     "mime": "text/x-perl",
     "current": true,
     "moduleExtension": "pm"
@@ -202,7 +202,7 @@
       "oop"
     ],
     "link": "https://github.com/PowerShell/PowerShell",
-    "highlight": "powershell",
+    "hljs": "powershell",
     "mime": "application/x-powershell",
     "current": true
   },
@@ -216,6 +216,7 @@
       "specific_runtime"
     ],
     "link": "http://php.net/",
+    "hljs": "php",
     "mime": "text/x-php",
     "current": true
   },
@@ -231,6 +232,7 @@
       "specific_runtime"
     ],
     "link": "https://msdn.microsoft.com/en-us/library/aa903378(v=vs.71).aspx",
+    "hljs": "vbnet",
     "mime": "text/x-vb",
     "current": true
   }

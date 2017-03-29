@@ -1,0 +1,54 @@
+{
+    "config": {
+        "map": {
+            "css": "core/systemjs-plugin-css.js",
+            "angular": "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js",
+            "angular-sanitize": "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-sanitize.min.js",
+            "angular-ui-router": "https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.0-rc.1/angular-ui-router.min.js",
+            "ga": "https://www.google-analytics.com/analytics.js",
+            "appBuilder": "app/appBuilder.js"
+        },
+        "paths": {
+            "styles": "../styles"
+        },
+        "meta": {
+            "*.css": {
+                "loader": "css"
+            },
+            "angular-sanitize": {
+                "deps": [
+                    "angular"
+                ]
+            },
+            "angular-ui-router": {
+                "deps": [
+                    "angular"
+                ]
+            },
+            "ga": {
+                "scriptLoad": true,
+                "format": "global",
+                "exports": "ga"
+            },
+            "appBuilder": {
+                "deps": [
+                    "angular-sanitize",
+                    "angular-ui-router"
+                ]
+            }
+        }
+    },
+    "angular": {
+        "modules": [
+            "ngSanitize",
+            "ui.router"
+        ],
+        "configComponents": [
+            "$httpProvider",
+            "$sceProvider",
+            "$stateProvider",
+            "$urlRouterProvider"
+        ]
+    },
+    "angularAppName": "bigsbyApp"
+}

@@ -1,0 +1,40 @@
+{
+    "config": {
+        "map": {
+            "hljs": "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0"
+        },
+        "packages": {
+            "hljs": {
+                "main": "highlight.min.js"
+            }
+        },
+        "meta": {
+            "appBuilder": {
+                "deps": [
+                    "angular-sanitize",
+                    "angular-ui-router",
+                    "ga",
+                    "hljs/languages/go.min",
+                    "hljs/languages/fsharp.min",
+                    "hljs/languages/powershell.min",
+                    "hljs/languages/vbnet.min"
+                ]
+            }
+        }
+    },
+    "styles": [
+        "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
+        "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/magula.min.css",
+        "styles/appStyles.css"
+    ],
+    "initialData": [
+        "languages",
+        "projects",
+        "programs",
+        "tags",
+        "implementations",
+        "runtimes",
+        "ides"
+    ],
+    "ga": "UA-94110702-1"
+}

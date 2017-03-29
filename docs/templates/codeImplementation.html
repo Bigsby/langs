@@ -1,31 +1,26 @@
-﻿<style>
-    .CodeMirror {
-        height: auto;
-    }
-</style>
-<div>
-    <div ng-if="$ctrl.project.moduleFiles.length" ng-repeat="moduleFile in $ctrl.project.moduleFiles">
-        <a target="_blank" ng-href="{{$ctrl.codeRoot + $ctrl.languageId + '/' + moduleFile + '.' + ($ctrl.language.moduleExtension || $ctrl.languageId)}}">{{moduleFile}}.{{$ctrl.language.moduleExtension || $ctrl.languageId}}</a>
-        <code-highlight language="{{$ctrl.language.mime}}" src="{{$ctrl.codeRawRoot + $ctrl.languageId + '/' + moduleFile + '.' + ($ctrl.language.moduleExtension || $ctrl.languageId)}}"></code-highlight>
+﻿<div>
+    <div ng-if="$ctrl.implementation.project.moduleFiles.length" ng-repeat="moduleFile in $ctrl.implementation.project.moduleFiles">
+        <a target="_blank" ng-href="{{$ctrl.implementation.codeRoot + $ctrl.implementation.languageId + '/' + moduleFile + '.' + ($ctrl.implementation.language.moduleExtension || $ctrl.implementation.languageId)}}">{{moduleFile}}.{{$ctrl.implementation.language.moduleExtension || $ctrl.implementation.languageId}}</a>
+        <code-highlight language="{{$ctrl.implementation.language.hljs}}" src="{{$ctrl.implementation.codeRawRoot + $ctrl.implementation.languageId + '/' + moduleFile + '.' + ($ctrl.implementation.language.moduleExtension || $ctrl.implementation.languageId)}}"></code-highlight>
     </div>
 
-    <a target="_blank" ng-href="{{$ctrl.codeRoot + $ctrl.languageId + '/' + $ctrl.projectId + '.' + $ctrl.languageId}}">{{$ctrl.projectId}}.{{$ctrl.languageId}}</a>
-    <code-highlight language="{{$ctrl.language.mime}}" src="{{$ctrl.codeRawRoot + $ctrl.languageId + '/' + $ctrl.projectId + '.' + $ctrl.languageId}}"></code-highlight>
+    <a target="_blank" ng-href="{{$ctrl.implementation.codeRoot + $ctrl.implementation.languageId + '/' + $ctrl.implementation.projectId + '.' + $ctrl.implementation.languageId}}">{{$ctrl.implementation.projectId}}.{{$ctrl.implementation.languageId}}</a>
+    <code-highlight language="{{$ctrl.implementation.language.hljs}}" src="{{$ctrl.implementation.codeRawRoot + $ctrl.implementation.languageId + '/' + $ctrl.implementation.projectId + '.' + $ctrl.implementation.languageId}}"></code-highlight>
 
-    <div ng-if="$ctrl.project.notes[$ctrl.languageId]" class="notes">
+    <div ng-if="$ctrl.implementation.project.notes[$ctrl.implementation.languageId]" class="notes">
         <p class="title">Notes:</p>
         <ul>
-            <li ng-repeat="note in $ctrl.project.notes[$ctrl.languageId]" ng-bind-html="note"></li>
+            <li ng-repeat="note in $ctrl.implementation.project.notes[$ctrl.implementation.languageId]" ng-bind-html="note"></li>
         </ul>
     </div>
 
-    <div ng-if="$ctrl.project.extraCode[$ctrl.languageId]" ng-repeat="(id, extra) in $ctrl.project.extraCode[$ctrl.languageId]">
+    <div ng-if="$ctrl.implementation.project.extraCode[$ctrl.implementation.languageId]" ng-repeat="(id, extra) in $ctrl.implementation.project.extraCode[$ctrl.implementation.languageId]">
         <p class="notes" ng-bind-html="extra.text"></p>
         <div ng-if="extra.output">
             <p>Expected Output:</p>
             <pre><code>{{extra.output}}</code></pre>
         </div>
-        <a target="_blank" ng-href="{{$ctrl.codeRoot + $ctrl.languageId + '/' + $ctrl.projectId + '_' + id + '.' + $ctrl.languageId}}">{{$ctrl.projectId + '_' + id + '.' + $ctrl.languageId}}</a>
-        <code-highlight language="{{$ctrl.language.mime}}" src="{{$ctrl.codeRawRoot + $ctrl.languageId + '/' + $ctrl.projectId + '_' + id + '.' + $ctrl.languageId}}"></code-highlight>
+        <a target="_blank" ng-href="{{$ctrl.implementation.codeRoot + $ctrl.implementation.languageId + '/' + $ctrl.implementation.projectId + '_' + id + '.' + $ctrl.implementation.languageId}}">{{$ctrl.implementation.projectId + '_' + id + '.' + $ctrl.implementation.languageId}}</a>
+        <code-highlight language="{{$ctrl.implementation.language.hljs}}" src="{{$ctrl.implementation.codeRawRoot + $ctrl.implementation.languageId + '/' + $ctrl.implementation.projectId + '_' + id + '.' + $ctrl.implementation.languageId}}"></code-highlight>
     </div>
 </div>

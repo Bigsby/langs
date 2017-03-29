@@ -26,11 +26,11 @@
     "cpp": [
       {
         "type": "install",
-        "program": "Visual C++ or Visual Studio Community/Professional/Enterprise",
+        "program": "Visual C++ or Visual Studio (any version)",
         "link": "https://www.visualstudio.com/vs/cplusplus/#downloadvs",
         "alternative": "https://www.visualstudio.com/downloads/",
         "notes": [
-          "If installing Community/Professional/Enterprise, make sure to enable Features > Programming Languages > Visual C++ > Common Tools for Visual C++."
+          "If installing Visual Studio, make sure to enable Features > Programming Languages > Visual C++ > Common Tools for Visual C++."
         ]
       },
       {
@@ -72,7 +72,7 @@
     "fs": [
       {
         "type": "install",
-        "program": "Visual Studio Community/Professional/Enterprise",
+        "program": "Visual Studio (any version)",
         "link": "https://www.visualstudio.com/downloads/",
         "notes": [
           "Make sure to enable Features > Programming Languages > Visual F#"
@@ -134,7 +134,7 @@
     "cs": [
       {
         "type": "install",
-        "program": "Visual Studio Community/Professional/Enterprise",
+        "program": "Visual Studio (any version)",
         "link": "https://www.visualstudio.com/downloads/"
       },
       {

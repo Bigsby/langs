@@ -19,8 +19,11 @@ exports.mimeTypes = {
     "image/jpg": [
         ".jpg",
         ".jpeg"
+    ],
+    "image/gif": [
+        ".gif"
     ]
 };
 
-exports.root = "./docs2";
+exports.root = "./docs";
 exports.defaultDocument = "index.html";
