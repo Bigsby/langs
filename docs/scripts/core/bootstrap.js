@@ -29,17 +29,23 @@
 
         var appBuilderDeps = coreConfig.config.meta.appBuilder.deps;
 
-        if (appConfig.useRouting){
+        if (appConfig.useRouting) {
             appBuilderDeps.push("angular-ui-router");
             coreConfig.angular.modules.push("ui.router");
             coreConfig.angular.configComponents.push("$stateProvider");
             coreConfig.angular.configComponents.push("$urlRouterProvider");
         }
+
         if (appConfig.ga)
             appBuilderDeps.push("ga");
 
         if (appConfig.appBuilderDeps && appConfig.appBuilderDeps.length)
             appBuilderDeps = appBuilderDeps.concat(appConfig.appBuilderDeps);
+
+        coreConfig.config.meta.appBuilder.deps = appBuilderDeps;
+
+        if (appConfig.angular && appConfig.angular.modules && appConfig.angular.modules.length)
+            coreConfig.angular.modules = coreConfig.angular.modules.concat(appConfig.angular.modules);
 
         const builderInvokerDeps = coreConfig.builderInvokerDeps;
         if (appConfig.initialData)
@@ -65,6 +71,33 @@
             SystemJS.import("appBuilder").then(function (appBuilder) {
                 const app = angular.module(coreConfig.angularAppName, coreConfig.angular.modules);
                 app.value("data", data);
+
+                app.directive("url", function () {
+                    return {
+                        restrict: "E",
+                        link: function link(scope, element, attrs) {
+                            element[0].outerHTML = "<a target='_blank' href='" + (attrs.href || attrs.link) + "'>" + (attrs.text || element.text() || attrs.link) + "</a>";
+                        }
+                    };
+                });
+
+                app.directive('bindHtmlCompile', ['$compile', function ($compile) {
+                    return {
+                        restrict: 'A',
+                        link: function (scope, element, attrs) {
+                            scope.$watch(function () {
+                                return scope.$eval(attrs.bindHtmlCompile);
+                            }, function (value) {
+                                element.html(value && value.toString());
+                                var compileScope = scope;
+                                if (attrs.bindHtmlScope) {
+                                    compileScope = scope.$eval(attrs.bindHtmlScope);
+                                }
+                                $compile(element.contents())(compileScope);
+                            });
+                        }
+                    };
+                }]);
 
                 if (appConfig.ga)
                     app.run(function ($window, $transitions, $location) {
