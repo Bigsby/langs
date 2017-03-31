@@ -31,23 +31,20 @@
                 "exports": "ga"
             },
             "appBuilder": {
-                "deps": [
-                    "angular-sanitize",
-                    "angular-ui-router"
-                ]
+                "deps": [ "angular-sanitize" ]
             }
         }
     },
+    "builderInvokerDeps":[
+        "angular"
+    ],
     "angular": {
         "modules": [
-            "ngSanitize",
-            "ui.router"
+            "ngSanitize"
         ],
         "configComponents": [
             "$httpProvider",
-            "$sceProvider",
-            "$stateProvider",
-            "$urlRouterProvider"
+            "$sceProvider"
         ]
     },
     "angularAppName": "bigsbyApp"
