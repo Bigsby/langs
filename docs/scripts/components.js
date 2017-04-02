@@ -4,16 +4,6 @@ const hljs = require("hljs");
 const codeRoot = "https://github.com/Bigsby/HelloLanguages/blob/master/src/";
 const codeRawRoot = "https://raw.githubusercontent.com/Bigsby/HelloLanguages/master/src/";
 
-Object.prototype.forEachValue = function (handler) {
-    if (!handler)
-        return;
-
-    for (var p in this) {
-        if (typeof this[p] === "object")
-            handler(p, this[p]);
-    }
-};
-
 function Implementation(type, languageId, language, projectId, project) {
     return {
         type: type,
@@ -38,7 +28,7 @@ function StepsImplementation(languageId, language, projectId, project, steps) {
 }
 
 function BuildController(onLoad) {
-    return function (data, $http, $stateParams, $timeout, $rootScope, $state) {
+    return function (data, $http, $stateParams, $timeout, $rootScope, $state, metadata) {
         var vm = this;
         vm.codeRoot = codeRoot;
         vm.codeRawRoot = codeRawRoot;
@@ -47,6 +37,7 @@ function BuildController(onLoad) {
         vm.$timeout = $timeout;
         vm.$rootScope = $rootScope;
         vm.$state = $state;
+        vm.$metadata = metadata;
 
         if (onLoad)
             onLoad(vm, data);
@@ -81,42 +72,15 @@ function GetImplementation(data, languageId, language, projectId, project, codeR
     }
 }
 
+function addToKeywords(keywords, list, addId) {
+    for (var id in list){
+        keywords.push(list[id].name);
+        if (addId)
+            keywords.push(id);
+    }
+}
+
 module.exports = function (app) {
-    // app.directive("codeHighlight", function ($http) {
-    //     return {
-    //         restrict: "E",
-    //         link: function ($scope, element, attrs) {
-    //             var pre = document.createElement("pre");
-    //             if (attrs.linenumbers && attrs.linenumbers != "false")
-    //                 pre.className = "line-numbers";
-    //             var code = document.createElement("code");
-    //             code.className = attrs.hljs;
-    //             pre.appendChild(code);
-
-    //             if (attrs.src) {
-    //                 element.html("<br/><img src=\"images/loading.gif\"/>");
-
-    //                 $http.get(attrs.src)
-    //                     .then(function (response) {
-    //                         element.html("");
-    //                         code.textContent = response.data;
-    //                         try {
-    //                             hljs.highlightBlock(code);
-    //                         } catch (error) {
-    //                             console.log(error);
-    //                         }
-    //                         element.html(pre.outerHTML);
-    //                     });
-
-    //             }
-    //             else {
-    //                 code.textContent = attrs.code;
-    //                 hljs.highlightBlock(code);
-    //                 element.html(pre.outerHTML);
-    //             }
-    //         }
-    //     }
-    // });
 
     app.component("home", {
         templateUrl: templatePath("home"),
@@ -124,6 +88,20 @@ module.exports = function (app) {
             vm.languages = data.languages;
             vm.programs = data.programs;
             vm.projects = data.projects;
+
+            var keywords = [
+                "programming languages",
+                "programming language compare",
+                "compare"
+            ];
+
+            addToKeywords(keywords, vm.languages, true);
+            addToKeywords(keywords, vm.projects);
+
+            vm.$metadata.set({
+                title: "Home",
+                keywords: keywords
+            });
         })
     });
 
@@ -150,6 +128,22 @@ module.exports = function (app) {
                         vm.project.implementations.push(implementation);
                 });
             }
+           
+            var keywords = [
+                "how to",
+                vm.project.name
+            ];
+
+             vm.project.implementations.forEach(function (implementation) {
+                keywords.push(implementation.languageId);
+                keywords.push(implementation.language.name);
+            });
+
+            vm.$metadata.set({
+                title: vm.project.name,
+                description: "How to handle " + vm.project.name + " in various programming languages.",
+                keywords: keywords
+            });
         })
     });
 
@@ -162,7 +156,8 @@ module.exports = function (app) {
             if (!vm.language.implementations) {
                 vm.language.implementations = [];
 
-                data.projects.forEachValue(function (projectId, project) {
+                for (var projectId in data.projects) {
+                    var project = data.projects[projectId];
                     var definitions = data.implementations[projectId];
                     var implementation = GetImplementation(
                         data,
@@ -174,8 +169,25 @@ module.exports = function (app) {
                         vm.codeRawRoot);
                     if (implementation)
                         vm.language.implementations.push(implementation);
-                });
+                }
             }
+
+            var keywords = [
+                "how to",
+                vm.languageId,
+                vm.language.name
+            ];
+
+
+            vm.language.implementations.forEach(function (implementation) {
+                keywords.push(implementation.project.name);
+            });
+
+            vm.$metadata.set({
+                title: vm.language.name,
+                description: "Implementing various features in " + vm.language.name,
+                keywords: keywords
+            });
         })
     });
 
@@ -260,13 +272,29 @@ module.exports = function (app) {
                 }
             }
 
+            var keywords = [
+                "how to",
+                vm.firstId,
+                vm.first.name,
+                vm.secondId,
+                vm.second.name,
+                "compare"
+            ];
+
             if (vm.projectId && data.projects[vm.projectId]) {
+                keywords.push(data.projects[vm.projectId].name);
                 AddProject(vm.projectId, data.projects[vm.projectId]);
             }
             else
-                data.projects.forEachValue(function (projectId, project) {
-                    AddProject(projectId, project);
-                });
+                for (var projectId in data.projects) {
+                    AddProject(projectId, data.projects[projectId]);
+                }
+
+            vm.$metadata.set({
+                title: vm.first.name + " vs " + vm.second.name,
+                description: "Comparing " + vm.first.name + " and " + vm.second.name + " programming languages",
+                keywords: keywords
+            });
         })
     });
 }

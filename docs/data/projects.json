@@ -92,13 +92,6 @@
             "vb"
         ]
     },
-    "structure": {
-        "name": "Structure",
-        "show": false,
-        "description": "Spaces, simbols, seperators, termintators.",
-        "text": "",
-        "languages": []
-    },
     "variables": {
         "name": "Variables",
         "show": true,

@@ -20,5 +20,11 @@
         "runtimes",
         "ides"
     ],
-    "ga": "UA-94110702-1"
+    "ga": "UA-94110702-1",
+    "metadata":{
+        "titlePrefix": "Hello Languages!",
+        "properties": {
+            "newKey": "newvalue"
+        }
+    }
 }

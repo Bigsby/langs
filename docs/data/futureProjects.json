@@ -91,5 +91,11 @@
                 "simple": "The base types in <b>C++</b> are:"
             }
         }
+    },    "structure": {
+        "name": "Structure",
+        "show": false,
+        "description": "Spaces, simbols, seperators, termintators.",
+        "text": "",
+        "languages": []
     }
 }
