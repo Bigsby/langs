@@ -18,7 +18,7 @@
         <p class="notes" ng-bind-html="extra.text"></p>
         <div ng-if="extra.output">
             <p>Expected Output:</p>
-            <pre><code>{{extra.output}}</code></pre>
+            <output>{{extra.output}}</output>
         </div>
         <a target="_blank" ng-href="{{$ctrl.implementation.codeRoot + $ctrl.implementation.languageId + '/' + $ctrl.implementation.projectId + '_' + id + '.' + $ctrl.implementation.languageId}}">{{$ctrl.implementation.projectId + '_' + id + '.' + $ctrl.implementation.languageId}}</a>
         <code-highlight language="{{$ctrl.implementation.language.hljs}}" src="{{$ctrl.implementation.codeRawRoot + $ctrl.implementation.languageId + '/' + $ctrl.implementation.projectId + '_' + id + '.' + $ctrl.implementation.languageId}}"></code-highlight>

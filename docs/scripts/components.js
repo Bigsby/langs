@@ -82,41 +82,41 @@ function GetImplementation(data, languageId, language, projectId, project, codeR
 }
 
 module.exports = function (app) {
-    app.directive("codeHighlight", function ($http) {
-        return {
-            restrict: "E",
-            link: function ($scope, element, attrs) {
-                var pre = document.createElement("pre");
-                if (attrs.linenumbers && attrs.linenumbers != "false")
-                    pre.className = "line-numbers";
-                var code = document.createElement("code");
-                code.className = attrs.hljs;
-                pre.appendChild(code);
+    // app.directive("codeHighlight", function ($http) {
+    //     return {
+    //         restrict: "E",
+    //         link: function ($scope, element, attrs) {
+    //             var pre = document.createElement("pre");
+    //             if (attrs.linenumbers && attrs.linenumbers != "false")
+    //                 pre.className = "line-numbers";
+    //             var code = document.createElement("code");
+    //             code.className = attrs.hljs;
+    //             pre.appendChild(code);
 
-                if (attrs.src) {
-                    element.html("<br/><img src=\"images/loading.gif\"/>");
+    //             if (attrs.src) {
+    //                 element.html("<br/><img src=\"images/loading.gif\"/>");
 
-                    $http.get(attrs.src)
-                        .then(function (response) {
-                            element.html("");
-                            code.textContent = response.data;
-                            try {
-                                hljs.highlightBlock(code);
-                            } catch (error) {
-                                console.log(error);
-                            }
-                            element.html(pre.outerHTML);
-                        });
+    //                 $http.get(attrs.src)
+    //                     .then(function (response) {
+    //                         element.html("");
+    //                         code.textContent = response.data;
+    //                         try {
+    //                             hljs.highlightBlock(code);
+    //                         } catch (error) {
+    //                             console.log(error);
+    //                         }
+    //                         element.html(pre.outerHTML);
+    //                     });
 
-                }
-                else {
-                    code.textContent = attrs.code;
-                    hljs.highlightBlock(code);
-                    element.html(pre.outerHTML);
-                }
-            }
-        }
-    });
+    //             }
+    //             else {
+    //                 code.textContent = attrs.code;
+    //                 hljs.highlightBlock(code);
+    //                 element.html(pre.outerHTML);
+    //             }
+    //         }
+    //     }
+    // });
 
     app.component("home", {
         templateUrl: templatePath("home"),
