@@ -39,7 +39,8 @@
             "pl",
             "ps1",
             "php",
-            "vb"
+            "vb",
+            "ts"
         ],
         "notes": {
             "cpp": [
@@ -67,7 +68,8 @@
             "pl",
             "ps1",
             "php",
-            "vb"
+            "vb",
+            "ts"
         ]
     },
     "comments": {
@@ -89,7 +91,8 @@
             "pl",
             "ps1",
             "php",
-            "vb"
+            "vb",
+            "ts"
         ]
     },
     "variables": {
@@ -111,7 +114,8 @@
             "pl",
             "ps1",
             "php",
-            "vb"
+            "vb",
+            "ts"
         ],
         "extraCode": {
             "js": {
@@ -186,7 +190,8 @@
             "pl",
             "ps1",
             "php",
-            "vb"
+            "vb",
+            "ts"
         ],
         "notes": {
             "cpp": [
@@ -232,7 +237,8 @@
             "pl",
             "ps1",
             "php",
-            "vb"
+            "vb",
+            "ts"
         ]
     },
     "comparison_operators": {
@@ -263,7 +269,8 @@
             "pl",
             "ps1",
             "php",
-            "vb"
+            "vb",
+            "ts"
         ],
         "notes": {
             "pl": [
@@ -322,7 +329,8 @@
             "pl",
             "ps1",
             "php",
-            "vb"
+            "vb",
+            "ts"
         ],
         "notes": {
             "js": [
@@ -367,7 +375,8 @@
             "pl",
             "ps1",
             "php",
-            "vb"
+            "vb",
+            "ts"
         ],
         "extraCode": {
             "rb": {
@@ -421,7 +430,8 @@
             "pl",
             "ps1",
             "php",
-            "vb"
+            "vb",
+            "ts"
         ]
     },
     "iterate": {
@@ -443,7 +453,8 @@
             "pl",
             "ps1",
             "php",
-            "vb"
+            "vb",
+            "ts"
         ]
     },
     "consoleInput": {
@@ -465,7 +476,8 @@
             "pl",
             "ps1",
             "php",
-            "vb"
+            "vb",
+            "ts"
         ]
     },
     "exceptions": {
@@ -487,7 +499,8 @@
             "pl",
             "ps1",
             "php",
-            "vb"
+            "vb",
+            "ts"
         ]
     },
     "regex": {
@@ -509,7 +522,8 @@
             "pl",
             "ps1",
             "php",
-            "vb"
+            "vb",
+            "ts"
         ],
         "notes": {
             "java": [
@@ -537,7 +551,8 @@
             "pl",
             "ps1",
             "php",
-            "vb"
+            "vb",
+            "ts"
         ],
         "notes": {
             "go": [
@@ -566,7 +581,8 @@
             "pl",
             "ps1",
             "php",
-            "vb"
+            "vb",
+            "ts"
         ],
         "moduleFiles": [
             "anotherModule"
@@ -620,7 +636,8 @@
             "pl",
             "ps1",
             "php",
-            "vb"
+            "vb",
+            "ts"
         ],
         "notes": {
             "pl": [
@@ -649,7 +666,8 @@
             "pl",
             "ps1",
             "php",
-            "vb"
+            "vb",
+            "ts"
         ],
         "notes": {
             "js": [
@@ -679,7 +697,8 @@
             "pl",
             "ps1",
             "php",
-            "vb"
+            "vb",
+            "ts"
         ]
     },
     "fizzbuzz": {
@@ -701,7 +720,8 @@
             "pl",
             "ps1",
             "php",
-            "vb"
+            "vb",
+            "ts"
         ]
     }
 }

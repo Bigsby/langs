@@ -8,7 +8,7 @@
       "script"
     ],
     "link": "https://www.javascript.com/",
-    "links":[
+    "links": [
       "http://es6-features.org"
     ],
     "hljs": "javascript",
@@ -234,6 +234,18 @@
     "link": "https://msdn.microsoft.com/en-us/library/aa903378(v=vs.71).aspx",
     "hljs": "vbnet",
     "mime": "text/x-vb",
+    "current": true
+  },
+  "ts": {
+    "name": "TypeScript",
+    "version": "2.0",
+    "description": "Strongly-typed Superset of JavaScript.",
+    "tags": [
+      "oop",
+      "strongly_typed",
+      "dynamic"
+    ],
+    "hljs": "typscript",
     "current": true
   }
 }

@@ -179,7 +179,7 @@
         "type": "command",
         "text": "Run compiled program",
         "command": "java filename",
-        "notes":[
+        "notes": [
           "Must be the filename containing the application entrypoint",
           "Must not containe file extension (compile result <code>.class</code>)"
         ]
@@ -255,7 +255,7 @@
         "type": "command",
         "text": "Compile code",
         "command": "vbc filename.vb [filename1.vb filename2.vb]",
-        "notes":[
+        "notes": [
           "The first file name will be used as the output <code>.exe</code> file."
         ]
       },
@@ -263,6 +263,54 @@
         "type": "command",
         "text": "Run compiled program",
         "command": "filename.exe"
+      }
+    ],
+    "ts": [
+      {
+        "type": "install",
+        "program": "Node.js",
+        "link": "https://nodejs.org/",
+        "notes": [
+          "Make sure node.exe path is in System PATH"
+        ]
+      },
+      {
+        "type": "command",
+        "text": "Install TypeScript",
+        "command": "npm install -g typescript"
+      },
+      {
+        "type": "command",
+        "text": "Install TS-node",
+        "command": "npm install -g ts-node"
+      },
+      {
+        "type": "command",
+        "text": "Initialize NPM",
+        "command": "npm init -y"
+      },
+      {
+        "type": "command",
+        "text": "Install NodeJS type reference",
+        "command": "npm install --save-dev @types/node"
+      },
+      {
+        "type": "command",
+        "text": "Initialize TypeScript",
+        "command": "tsc --init"
+      },
+      {
+        "type": "open",
+        "name": "Command Prompt",
+        "program": "cmd.exe"
+      },
+      {
+        "type": "command",
+        "text": "Run program",
+        "command": "node filename.js",
+        "notes": [
+          "If file extension is <code>.js</code> it can be omitted"
+        ]
       }
     ]
   }
