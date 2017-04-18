@@ -17,7 +17,8 @@
             "pl",
             "ps1",
             "php",
-            "vb"
+            "vb",
+            "ts"
         ]
     },
     "hello": {
@@ -278,6 +279,9 @@
             ],
             "php": [
                 "Since <b>PHP</b> does not have a constant string for false value (resolving \"1\" for <code>true</code>), <code>result</code> needs to hold the string value."
+            ],
+            "ts":[
+                "Since <code>1</code> and <code>2</code> are literals and, as such, are treated as constants (as if declared with <code>const</code> keyword), <b>TypeScript</b> inferres them as types <code>1</code> and <code>2</code>, respectively, and not <code>number</code>, as one would expect. The reason is that those values can never change. For that, at least one of the values compared need to be cast to <code>&lt;number&gt;</code>. This does not happen when variables are declared with <code>var</code> and <code>let</code> keywords where the \"expected\" type <code>number</code> is inferred."
             ]
         },
         "extraCode": {
@@ -408,6 +412,9 @@
             ],
             "go": [
                 "<b>Go</b> does not provide an operator for <b>XOR</b> (exclusive or) but the logical operation can be achieved with the inequalitiy operator <code>!=</code>."
+            ],
+            "ts":[
+                "Since <code>true</code> is a literals and, as such, is treated as a constant (as if declared with <code>const</code> keyword), <b>TypeScript</b> inferres it as type <code>true</code> and not <code>boolean</code>, as one would expect. The reason is that the value can never change. For that, at least one of the values compared need to be cast to <code>&lt;boolean&gt;</code>. This does not happen when variables are declared with <code>var</code> and <code>let</code> keywords where the \"expected\" type <code>boolean</code> is inferred."
             ]
         }
     },
