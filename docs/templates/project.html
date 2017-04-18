@@ -10,7 +10,7 @@
 </div>
 <div class="list">
     <div class="listItem" ng-repeat="imp in $ctrl.project.implementations">
-        <div class="itemHeader" ng-click="imp.$$collapsed = !imp.$$collapsed">
+        <div class="itemHeader" id="{{imp.languageId}}" ng-click="imp.$$collapsed = !imp.$$collapsed">
             <span class="language_title">{{imp.language.name}}</span>
             <div class="commandsContainer">
                 <i class="command fa" ng-class="{ 'fa-chevron-down': imp.$$collapsed, 'fa-chevron-up': !imp.$$collapsed }"></i>

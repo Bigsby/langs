@@ -11,7 +11,7 @@
     </div>
 
     <div class="listItem" ng-repeat="project in $ctrl.projects">
-        <div class="itemHeader" ng-click="project.$$collapsed = !project.$$collapsed">
+        <div class="itemHeader" id="{{project.firstImplementation.projectId}}" ng-click="project.$$collapsed = !project.$$collapsed">
             <span class="language_title">{{($ctrl.projects.length > 1 ? $index + '. ' : '') + project.name}}</span>
             <div class="commandsContainer">
                 <i class="command fa" ng-class="{ 'fa-chevron-down': project.$$collapsed, 'fa-chevron-up': !project.$$collapsed }"></i>
