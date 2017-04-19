@@ -1,7 +1,7 @@
-    global  _main
-    extern  _printf
+global  _main
+extern  _printf
 
-    section .text
+section .text
 _main:
     push    message
     call    _printf
@@ -9,3 +9,5 @@ _main:
     ret
 message:
     db  'Hello, World!', 0
+
+;> nasm -f win32 hello.asm && gcc hello.obj -o hello & hello.exe
