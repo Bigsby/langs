@@ -31,5 +31,18 @@
   },
   "ft": {
     "name": "Fortran"
+  },
+  "asm":{
+    "name": "Assembly",
+    "links":[
+      "http://www.nasm.us/",
+      "http://web.archive.org/web/20100529113659/http://home.comcast.net/~fbkotler/clueless.html",
+      "http://www.nasm.us/doc/",
+      "https://software.intel.com/en-us/articles/intel-sdm",
+      "http://www.nasm.us/doc/nasmdoc1.html",
+      "https://mingw-w64.org/doku.php",
+      "https://gcc.gnu.org/onlinedocs/gcc-6.3.0/gcc/",
+      "http://cs.lmu.edu/~ray/notes/nasmtutorial/"
+    ]
   }
 }
