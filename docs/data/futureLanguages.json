@@ -12,8 +12,8 @@
     "current": false
   },
   "hs": {
-    "highlight": "haskell",
     "name": "Haskell",
+    "hljs": "haskel",
     "link": "https://www.haskell.org/",
     "current": false
   },
@@ -34,6 +34,7 @@
   },
   "asm":{
     "name": "Assembly",
+    "hljs": "x86asm",
     "links":[
       "http://www.nasm.us/",
       "http://web.archive.org/web/20100529113659/http://home.comcast.net/~fbkotler/clueless.html",
