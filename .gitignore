@@ -254,4 +254,8 @@ paket-files/
 # Compiled files
 *.exe
 *.obj
+# Java
 *.class
+# Erlang
+*.beam
+*.dump
