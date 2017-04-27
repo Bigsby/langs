@@ -3,4 +3,4 @@
 
 start() -> 
     io:fwrite("Hello, World!"),
-    init:stop().
+    erlang:halt().

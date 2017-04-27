@@ -317,7 +317,10 @@
       {
         "type": "install",
         "program": "Erlang/OTP",
-        "link": "https://www.erlang.org/downloads"
+        "link": "https://www.erlang.org/downloads",
+        "notes": [
+          "Make sure erl.exe is in System PATH. It sits in <code>bin</code> folder in the installation folder."
+        ]
       },
       {
         "type": "open",
@@ -326,8 +329,16 @@
       },
       {
         "type": "command",
-        "text": "Run program",
-        "command": "go run filename.go"
+        "text": "Compile code",
+        "command": "erl -compile filname[.erl]"
+      },
+      {
+        "type": "command",
+        "text": "Run compiled program",
+        "command": "erl -noshell -run filname",
+        "notes": [
+          "<code>-noshell</code> prevents Erlang shell to open."
+        ]
       }
     ]
   }
