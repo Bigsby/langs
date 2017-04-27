@@ -312,6 +312,24 @@
           "If file extension is <code>.js</code> it can be omitted"
         ]
       }
+    ],
+    "erl": [
+      {
+        "type": "install",
+        "program": "Erlang/OTP",
+        "link": "https://www.erlang.org/downloads"
+      },
+      {
+        "type": "open",
+        "name": "Command Prompt",
+        "program": "cmd.exe"
+      },
+      {
+        "type": "command",
+        "text": "Run program",
+        "command": "go run filename.go"
+      }
     ]
   }
+  
 }
