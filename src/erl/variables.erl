@@ -2,12 +2,13 @@
 -export([start/0]).
 
 start() -> 
-    Local = #{sentence => "This is the sentence.~n"},
+    put(sentence, "This is the sentence.~n"),
 
-    io:fwrite(maps:get(sentence, Local)),
-    io:fwrite(maps:get(sentence, Local)),
+    io:fwrite(get(sentence)),
+    io:fwrite(get(sentence)),
     
-    maps:update(sentence, "This is another sentence.", Local),
-    io:fwrite(maps:get(sentence, Local)),
+    put(sentence, "This another sentence."),
+    
+    io:fwrite(get(sentence)),
 
     erlang:halt().
