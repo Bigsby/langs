@@ -247,5 +247,13 @@
     ],
     "hljs": "typscript",
     "current": true
+  },
+  "erl": {
+    "name": "Erlang",
+    "version": "8.3",
+    "description": "General purpose functional used mostly for concurrent processing",
+    "tags": [
+      "functional"
+    ]
   }
 }

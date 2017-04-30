@@ -18,7 +18,8 @@
             "ps1",
             "php",
             "vb",
-            "ts"
+            "ts",
+            "erl"
         ]
     },
     "hello": {
@@ -41,7 +42,8 @@
             "ps1",
             "php",
             "vb",
-            "ts"
+            "ts",
+            "erl"
         ],
         "notes": {
             "cpp": [
@@ -70,7 +72,8 @@
             "ps1",
             "php",
             "vb",
-            "ts"
+            "ts",
+            "erl"
         ]
     },
     "comments": {
@@ -93,7 +96,8 @@
             "ps1",
             "php",
             "vb",
-            "ts"
+            "ts",
+            "erl"
         ]
     },
     "variables": {
@@ -116,7 +120,8 @@
             "ps1",
             "php",
             "vb",
-            "ts"
+            "ts",
+            "erl"
         ],
         "extraCode": {
             "js": {
@@ -192,7 +197,8 @@
             "ps1",
             "php",
             "vb",
-            "ts"
+            "ts",
+            "erl"
         ],
         "notes": {
             "cpp": [
@@ -239,7 +245,8 @@
             "ps1",
             "php",
             "vb",
-            "ts"
+            "ts",
+            "erl"
         ]
     },
     "comparison_operators": {
@@ -271,7 +278,8 @@
             "ps1",
             "php",
             "vb",
-            "ts"
+            "ts",
+            "erl"
         ],
         "notes": {
             "pl": [
@@ -334,7 +342,8 @@
             "ps1",
             "php",
             "vb",
-            "ts"
+            "ts",
+            "erl"
         ],
         "notes": {
             "js": [
@@ -380,7 +389,8 @@
             "ps1",
             "php",
             "vb",
-            "ts"
+            "ts",
+            "erl"
         ],
         "extraCode": {
             "rb": {
@@ -438,7 +448,8 @@
             "ps1",
             "php",
             "vb",
-            "ts"
+            "ts",
+            "erl"
         ]
     },
     "iterate": {
@@ -461,7 +472,8 @@
             "ps1",
             "php",
             "vb",
-            "ts"
+            "ts",
+            "erl"
         ]
     },
     "consoleInput": {
@@ -484,7 +496,8 @@
             "ps1",
             "php",
             "vb",
-            "ts"
+            "ts",
+            "erl"
         ]
     },
     "exceptions": {
@@ -507,7 +520,8 @@
             "ps1",
             "php",
             "vb",
-            "ts"
+            "ts",
+            "erl"
         ]
     },
     "regex": {
@@ -530,7 +544,8 @@
             "ps1",
             "php",
             "vb",
-            "ts"
+            "ts",
+            "erl"
         ],
         "notes": {
             "java": [
@@ -559,7 +574,8 @@
             "ps1",
             "php",
             "vb",
-            "ts"
+            "ts",
+            "erl"
         ],
         "notes": {
             "go": [
@@ -589,7 +605,8 @@
             "ps1",
             "php",
             "vb",
-            "ts"
+            "ts",
+            "erl"
         ],
         "moduleFiles": [
             "anotherModule"
@@ -674,7 +691,8 @@
             "ps1",
             "php",
             "vb",
-            "ts"
+            "ts",
+            "erl"
         ],
         "notes": {
             "js": [
@@ -705,7 +723,8 @@
             "ps1",
             "php",
             "vb",
-            "ts"
+            "ts",
+            "erl"
         ]
     },
     "fizzbuzz": {
@@ -728,7 +747,8 @@
             "ps1",
             "php",
             "vb",
-            "ts"
+            "ts",
+            "erl"
         ]
     }
 }
