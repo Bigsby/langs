@@ -245,7 +245,7 @@
       "strongly_typed",
       "dynamic"
     ],
-    "hljs": "typscript",
+    "hljs": "typescript",
     "current": true
   },
   "erl": {
@@ -254,6 +254,7 @@
     "description": "General purpose functional used mostly for concurrent processing",
     "tags": [
       "functional"
-    ]
+    ],
+    "hljs": "erlang"
   }
 }

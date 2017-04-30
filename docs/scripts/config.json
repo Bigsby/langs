@@ -3,7 +3,8 @@
         "hljs/languages/go.min",
         "hljs/languages/fsharp.min",
         "hljs/languages/powershell.min",
-        "hljs/languages/vbnet.min"
+        "hljs/languages/vbnet.min",
+        "hljs/languages/erlang.min"
     ],
     "styles": [
         "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
