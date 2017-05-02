@@ -661,7 +661,8 @@
             "ps1",
             "php",
             "vb",
-            "ts"
+            "ts",
+            "erl"
         ],
         "notes": {
             "pl": [
