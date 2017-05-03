@@ -259,3 +259,5 @@ paket-files/
 # Erlang
 *.beam
 *.dump
+*.o
+*.hi

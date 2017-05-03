@@ -15,7 +15,9 @@
         "**/*.obj": true,
         "**/*.class": true,
         "**/*.beam": true,
-        "**/erl_crash.dump": true
+        "**/erl_crash.dump": true,
+        "**/*.o": true,
+        "**/*.hi": true
     },
     "files.associations": {
         "iostream": "cpp",

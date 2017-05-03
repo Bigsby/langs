@@ -13,9 +13,11 @@
   },
   "hs": {
     "name": "Haskell",
-    "hljs": "haskel",
+    "hljs": "haskell",
     "link": "https://www.haskell.org/",
-    "current": false
+    "links": [
+      "http://rigaux.org/language-study/syntax-across-languages-per-language/Haskell.html"
+    ]
   },
   "lisp": {
     "name": "Lisp"
