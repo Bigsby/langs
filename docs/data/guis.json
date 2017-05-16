@@ -1,0 +1,115 @@
+{
+    "js": [
+        {
+            "name": "AppJS",
+            "link": "http://langs.bigsbyspot.org"
+        },
+        {
+            "name": "Electron",
+            "link": "https://electron.atom.io/"
+        }
+    ],
+    "cpp": [
+        {
+            "name": "MFC",
+            "link": "https://msdn.microsoft.com/en-us/library/d06h2x6e.aspx"
+        },
+        {
+            "name": "C++/CLI",
+            "link": "https://msdn.microsoft.com/en-us/library/68td296t.aspx"
+        }
+    ],
+    "py": [
+        {
+            "name": "Tkinter",
+            "link": "https://wiki.python.org/moin/TkInter"
+        }
+    ],
+    "fs":[
+        {
+            "name": "yeoman",
+            "link": "https://github.com/fsprojects/generator-fsharp"
+        },
+        {
+            "name": "FSharp.Desktop.UI",
+            "link": "https://github.com/fsprojects/FSharp.Desktop.UI"
+        },
+        {
+            "name": "FsXaml",
+            "link": "https://github.com/fsprojects/FsXaml"
+        }
+    ],
+    "go":[
+        {
+            "name" : "List",
+            "link": "https://github.com/avelino/awesome-go#gui"
+        },
+         {
+            "name" : "Walk",
+            "link": "https://github.com/lxn/walk"
+        }
+    ],
+    "rb":[
+        {
+            "name" : "Shoes!",
+            "link": "http://shoesrb.com/"
+        },
+        {
+            "name" : "List",
+            "link": "https://www.ruby-toolbox.com/categories/GUI_Frameworks",
+            "alt": "https://en.wikibooks.org/wiki/Ruby_Programming/GUI_Toolkit_Modules"
+        },
+        {
+            "name": "Visual Ruby",
+            "link": "http://visualruby.net/"
+        }
+    ],
+    "java":[
+        {
+            "name": "AWT",
+            "link": "https://www.tutorialspoint.com/javaexamples/gui_font.htm"
+        },
+        {
+            "name": "sample",
+            "link": "https://www3.ntu.edu.sg/home/ehchua/programming/java/j4a_gui.html"
+        },
+        {
+            "name": "docs",
+            "link": "http://docs.oracle.com/javase/tutorial/uiswing/"
+        }
+    ],
+    "pl":[
+        {
+            "name": "list",
+            "link": "http://perl-begin.org/uses/GUI/"
+        }
+    ],
+    "ps1":[
+        {
+            "name": "sample",
+            "link": "https://foxdeploy.com/2015/04/10/part-i-creating-powershell-guis-in-minutes-using-visual-studio-a-new-hope/",
+            "alt": "https://blogs.technet.microsoft.com/heyscriptingguy/2011/07/24/create-a-simple-graphical-interface-for-a-powershell-script/"
+        },
+        {
+            "name": "POSH-GUI",
+            "link": "https://poshgui.com/#"
+        },
+        {
+            "name": "PowerShell Studio 2017",
+            "link": "https://www.sapien.com/software/powershell_studio"
+        }
+    ],
+    "cross": [
+        {
+            "name": "wxWidgets",
+            "link": "https://www.wxwidgets.org/"
+        },
+        {
+            "name" : "gtk",
+            "link": ""
+        },
+        {
+            "name": "wx"
+        }
+    ]
+}
