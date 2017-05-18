@@ -261,3 +261,5 @@ paket-files/
 *.dump
 *.o
 *.hi
+# Kotlin
+*.jar

@@ -17,7 +17,8 @@
         "**/*.beam": true,
         "**/erl_crash.dump": true,
         "**/*.o": true,
-        "**/*.hi": true
+        "**/*.hi": true,
+        "**/*.jar": true
     },
     "files.associations": {
         "iostream": "cpp",

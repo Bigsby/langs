@@ -19,6 +19,13 @@
       "http://rigaux.org/language-study/syntax-across-languages-per-language/Haskell.html"
     ]
   },
+  "kt":{
+    "name": "Kotlin",
+    "link": "https://kotlinlang.org/",
+    "links": [
+      "https://medium.com/@napperley/kotlin-tutorial-8-modularity-d2973ba48637"
+    ]
+  },
   "lisp": {
     "name": "Lisp"
   },

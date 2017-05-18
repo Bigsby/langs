@@ -1,4 +1,8 @@
 {
+    "patternMatching":{
+        "name": "Pattern Matching",
+        "description": "To swtich between options of code flow."
+    },
     "parsing": {
         "name": "Parsing",
         "show": false,
