@@ -15,3 +15,7 @@ List of languages is:
 - Java
 - Perl
 - PowerShell
+- PHP
+- VB.Net
+- TypeScript
+- Erlang
