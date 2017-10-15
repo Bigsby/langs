@@ -348,5 +348,35 @@
                 "command": "filname.exe"
             }
         ]
+    },
+    "debug":{
+        "cpp":[
+            {
+                "type":"install",
+                "program": "C/C++ for Visual Studio Code",
+                "link": "https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools"
+            },
+            {
+                "type": "command",
+                "text":"Install debugger",
+                "command": "mingw-get.exe install gdb"
+            },
+            {
+                "type":"code",
+                "files": [
+                    "program.cpp"
+                ]
+            },
+            {
+                "type": "image",
+                "url": "ToolBar.PNG",
+                "text": "Click <b>Debug</b> icon on the (left) toolbar."
+            },
+            {
+                "type": "image",
+                "url": "ConfigureLaunch.PNG",
+                "text": "Click Debug <b>Settings</b> to configure how and what to launch."
+            }
+        ]
     }
 }
