@@ -5,10 +5,15 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch erlang",
-            "type": "erlang",
+            "type": "node",
             "request": "launch",
-            "cwd": "${workspaceRoot}"
+            "name": "Launch Program",
+            "sourceMaps": true,
+            "program": "${workspaceFolder}/program.ts",
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ],
+            "preLaunchTask": "build"
         }
     ]
 }

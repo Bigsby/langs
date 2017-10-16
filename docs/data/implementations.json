@@ -349,7 +349,7 @@
             }
         ]
     },
-    "debug":{
+    "debugging":{
         "cpp":[
             {
                 "type":"install",

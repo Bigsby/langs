@@ -5,10 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch erlang",
-            "type": "erlang",
+            "name": "Launch",
+            "type": "clr",
             "request": "launch",
-            "cwd": "${workspaceRoot}"
+            "program": "${workspaceRoot}/program.exe",
+            "cwd": "${workspaceRoot}",
+            "preLaunchTask": "build"
         }
     ]
 }

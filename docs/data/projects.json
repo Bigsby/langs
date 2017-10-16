@@ -752,13 +752,22 @@
             "erl"
         ]
     },
-    "debug":{
+    "debugging":{
         "name": "Debug (in VS Code)",
         "type": "steps",
         "description": "Interrupt code execution and evaluate state.",
         "text": "It's all great when computer programs work. The reality is that only happens in a very low percentage in first ru n/test and, sometimes, even after years of usage, a new scenario is found that <em>breaks</em> the program. To understand what is happening one needs to interrupt the program at certain points - lines in code - and evaluate state - variable values - to assess the problem and, eventuakky, fix it.",
         "languages":[
-            
+            "cpp",
+            "js",
+            "go",
+            "java",
+            "cs",
+            "php",
+            "ps1",
+            "py",
+            "ts",
+            "vb"
         ]
     }
 }
