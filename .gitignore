@@ -263,3 +263,7 @@ paket-files/
 *.hi
 # Kotlin
 *.jar
+
+src/ts/package.json
+src/fs/[Ff][Ss]harp.[Cc]ore.dll
+*.out
