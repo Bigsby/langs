@@ -1,4 +1,6 @@
 <?php
+date_default_timezone_set('UTC');
+
 function GetAgeInYears($birthday){
     $today = new DateTime();
     return $birthday->diff($today)->y;
