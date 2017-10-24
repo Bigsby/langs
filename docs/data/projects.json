@@ -43,7 +43,8 @@
             "php",
             "vb",
             "ts",
-            "erl"
+            "erl",
+            "c"
         ],
         "notes": {
             "cpp": [
@@ -73,7 +74,8 @@
             "php",
             "vb",
             "ts",
-            "erl"
+            "erl",
+            "c"
         ]
     },
     "comments": {
@@ -97,7 +99,8 @@
             "php",
             "vb",
             "ts",
-            "erl"
+            "erl",
+            "c"
         ]
     },
     "variables": {
@@ -121,7 +124,8 @@
             "php",
             "vb",
             "ts",
-            "erl"
+            "erl",
+            "c"
         ],
         "extraCode": {
             "js": {
@@ -198,7 +202,8 @@
             "php",
             "vb",
             "ts",
-            "erl"
+            "erl",
+            "c"
         ],
         "notes": {
             "cpp": [
@@ -246,7 +251,8 @@
             "php",
             "vb",
             "ts",
-            "erl"
+            "erl",
+            "c"
         ]
     },
     "comparison_operators": {
@@ -279,7 +285,8 @@
             "php",
             "vb",
             "ts",
-            "erl"
+            "erl",
+            "c"
         ],
         "notes": {
             "pl": [
@@ -343,7 +350,8 @@
             "php",
             "vb",
             "ts",
-            "erl"
+            "erl",
+            "c"
         ],
         "notes": {
             "js": [
@@ -390,7 +398,8 @@
             "php",
             "vb",
             "ts",
-            "erl"
+            "erl",
+            "c"
         ],
         "extraCode": {
             "rb": {
@@ -449,7 +458,8 @@
             "php",
             "vb",
             "ts",
-            "erl"
+            "erl",
+            "c"
         ]
     },
     "iterate": {
@@ -473,7 +483,8 @@
             "php",
             "vb",
             "ts",
-            "erl"
+            "erl",
+            "c"
         ]
     },
     "consoleInput": {
@@ -497,7 +508,8 @@
             "php",
             "vb",
             "ts",
-            "erl"
+            "erl",
+            "c"
         ]
     },
     "exceptions": {
@@ -521,7 +533,8 @@
             "php",
             "vb",
             "ts",
-            "erl"
+            "erl",
+            "c"
         ]
     },
     "regex": {
@@ -606,7 +619,8 @@
             "php",
             "vb",
             "ts",
-            "erl"
+            "erl",
+            "c"
         ],
         "moduleFiles": [
             "anotherModule"
@@ -662,7 +676,8 @@
             "php",
             "vb",
             "ts",
-            "erl"
+            "erl",
+            "c"
         ],
         "notes": {
             "pl": [
@@ -693,7 +708,8 @@
             "php",
             "vb",
             "ts",
-            "erl"
+            "erl",
+            "c"
         ],
         "notes": {
             "js": [
@@ -749,7 +765,8 @@
             "php",
             "vb",
             "ts",
-            "erl"
+            "erl",
+            "c"
         ]
     },
     "debugging":{
