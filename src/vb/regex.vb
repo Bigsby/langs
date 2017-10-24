@@ -12,12 +12,12 @@ Public Module Program
         End If
 
          Console.WriteLine("Groups of '^([a-z]+)\-(\d+)$' found in 'abcdef-12345'")
-         Dim codeRegexp = new Regex("^([a-z]+)\-(\d+)$")
-         Dim matches = codeRegexp.Match("abcdef-12345")
-         Console.WriteLine($"Found {matches.Groups.Count} groups.")
+         Dim codeRegexp As Regex = new Regex("^([a-z]+)\-(\d+)$")
+         Dim matches As Match = codeRegexp.Match("abcdef-12345")
+         Console.WriteLine("Found " & matches.Groups.Count & " groups.")
 
          For groupIndex As Integer = 0 To matches.Groups.Count - 1
-             Console.WriteLine($"[{groupIndex}] = {matches.Groups(groupIndex)}")
+             Console.WriteLine("[" & groupIndex & "] = " & matches.Groups(groupIndex).Value)
          Next
     End Sub
 End Module

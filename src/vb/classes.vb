@@ -28,13 +28,13 @@ Public Module Program
             End Set
         End Property
 
-        Public Function FullName()
+        Public Function FullName() As String
             FullName = FirstName + " " + LastName
         End Function
     End Class
 
     Sub Main()
-        Dim montyPython = New MontyPython("John", "Cleese")
+        Dim montyPython As MontyPython = New MontyPython("John", "Cleese")
         Console.WriteLine("Monty Python is " + montyPython.FullName + ".")
 
         montyPython.FirstName = "Eric"

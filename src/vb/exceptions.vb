@@ -12,7 +12,7 @@ Public Module Program
             DoStuff(True)
             DoStuff(False)
         Catch ex As System.Exception
-            System.Console.WriteLine($"ERROR: {ex.Message}")
+            System.Console.WriteLine("ERROR: " & ex.Message)
         End Try
     End Sub
 End Module

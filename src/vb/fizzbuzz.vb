@@ -3,7 +3,7 @@ Imports System
 Public Module Program
     Sub Main()
 
-        For i = 1 To 100
+        For i As Integer = 1 To 100
             If i Mod 3 = 0 And i Mod 5 = 0
                 Console.Write("FizzBuzz")
             ElseIf i Mod 3 = 0
