@@ -28,7 +28,8 @@
                 "link": "https://www.visualstudio.com/vs/cplusplus/#downloadvs",
                 "alternative": "https://www.visualstudio.com/downloads/",
                 "notes": [
-                    "If installing Visual Studio, make sure to enable Features > Programming Languages > Visual C++ > Common Tools for Visual C++."
+                    "If installing Visual Studio, make sure to enable Features > Programming Languages > Visual C++ > Common Tools for Visual C++.",
+                    "g++ file.cpp -std=c++11"
                 ]
             },
             {

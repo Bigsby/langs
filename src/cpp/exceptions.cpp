@@ -5,7 +5,7 @@ void DoStuff(bool inError)
 {
     if (inError)
     {
-        throw std::exception("An error occured!");
+        throw std::runtime_error("An error occured!");
     }
     std::cout << "Doing stuff!" << std::endl;
 }

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <ctime>
+#include <cstdio>
 
 using namespace std;
 
@@ -41,7 +42,8 @@ int main()
     int age = getAgeInYears(birthday);
     cout << "John Cleese was born in " << formattedBirthday << " and is " << age << " years old." << endl;
 
-    tm parsedDate = parseDate("1975-11-10T01:25:00");
+    char dateString[] = "1975-11-10T01:25:00";
+    tm parsedDate = parseDate((dateString));
     char formattedParsedDate[50];
     strftime(formattedParsedDate, 50, "%FT%T", &parsedDate);
     cout << "Parsed date is " << formattedParsedDate;
