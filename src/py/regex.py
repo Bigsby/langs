@@ -9,7 +9,7 @@ else:
 print("Groups of '^([a-z]+)\\-(\\d+)$' found in 'abcdef-12345'")
 codeRegex = re.compile("^([a-z]+)\\-(\\d+)$")
 matches = codeRegex.match("abcdef-12345")
-print(f"Found {len(matches.groups())} groups.")
+print("Found ", len(matches.groups()), " groups.")
 
 for groupIndex,match in enumerate(matches.groups()):
-    print(f"[{groupIndex}] = {match}")
+    print("[", groupIndex, "] = ", match)

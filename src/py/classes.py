@@ -7,8 +7,8 @@ class MontyPython:
         return self.FirstName + " " + self.LastName
 
 montyPython = MontyPython("John", "Cleese")
-print(f"Monty Python is {montyPython.FullName()}.")
+print("Monty Python is", montyPython.FullName(), ".")
 
 montyPython.FirstName = "Eric"
 montyPython.LastName = "Idle"
-print(f"Now, Monty Python is {montyPython.FullName()}.")
+print("Now, Monty Python is", montyPython.FullName(), ".")

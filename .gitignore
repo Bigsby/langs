@@ -267,3 +267,5 @@ paket-files/
 src/ts/package.json
 src/fs/[Ff][Ss]harp.[Cc]ore.dll
 *.out
+
+__pycache__/
