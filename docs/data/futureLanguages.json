@@ -32,9 +32,6 @@
   "assembly": {
     "name": "Assembly"
   },
-  "ps1": {
-    "name": "PowerShell"
-  },
   "bat": {
     "name": "DOS .bat"
   },

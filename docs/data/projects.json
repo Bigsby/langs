@@ -295,7 +295,7 @@
             "php": [
                 "Since <b>PHP</b> does not have a constant string for false value (resolving \"1\" for <code>true</code>), <code>result</code> needs to hold the string value."
             ],
-            "ts":[
+            "ts": [
                 "Since <code>1</code> and <code>2</code> are literals and, as such, are treated as constants (as if declared with <code>const</code> keyword), <b>TypeScript</b> inferres them as types <code>1</code> and <code>2</code>, respectively, and not <code>number</code>, as one would expect. The reason is that those values can never change. For that, at least one of the values compared need to be cast to <code>&lt;number&gt;</code>. This does not happen when variables are declared with <code>var</code> and <code>let</code> keywords where the \"expected\" type <code>number</code> is inferred."
             ]
         },
@@ -432,7 +432,7 @@
             "go": [
                 "<b>Go</b> does not provide an operator for <b>XOR</b> (exclusive or) but the logical operation can be achieved with the inequalitiy operator <code>!=</code>."
             ],
-            "ts":[
+            "ts": [
                 "Since <code>true</code> is a literals and, as such, is treated as a constant (as if declared with <code>const</code> keyword), <b>TypeScript</b> inferres it as type <code>true</code> and not <code>boolean</code>, as one would expect. The reason is that the value can never change. For that, at least one of the values compared need to be cast to <code>&lt;boolean&gt;</code>. This does not happen when variables are declared with <code>var</code> and <code>let</code> keywords where the \"expected\" type <code>boolean</code> is inferred."
             ]
         }
@@ -767,24 +767,6 @@
             "ts",
             "erl",
             "c"
-        ]
-    },
-    "debugging":{
-        "name": "Debug (in VS Code)",
-        "type": "steps",
-        "description": "Interrupt code execution and evaluate state.",
-        "text": "It's all great when computer programs work. The reality is that only happens in a very low percentage in first ru n/test and, sometimes, even after years of usage, a new scenario is found that <em>breaks</em> the program. To understand what is happening one needs to interrupt the program at certain points - lines in code - and evaluate state - variable values - to assess the problem and, eventuakky, fix it.",
-        "languages":[
-            "cpp",
-            "js",
-            "go",
-            "java",
-            "cs",
-            "php",
-            "ps1",
-            "py",
-            "ts",
-            "vb"
         ]
     }
 }
