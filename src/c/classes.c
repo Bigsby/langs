@@ -21,7 +21,7 @@ const char* fullName(MontyPython montyPython)
     return result;
 }
 
-main()
+int main()
 {
     MontyPython montyPython = { "John",  "Cleese" };
     printf("Monty Python is %s.\n", fullName(montyPython));
@@ -30,4 +30,6 @@ main()
     strcpy(montyPython.lastName, "Idle");
 
     printf("Now, Monty Python is %s.\n", fullName(montyPython));
+
+    return 0;
 }

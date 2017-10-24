@@ -13,8 +13,10 @@ int DoSum(int a, int b)
     return a + b;
 }
 
-main()
+int main()
 {
     DoStuff();
     printf("2 + 1 = %d", DoSum(2, 1));
+
+    return 0;
 }

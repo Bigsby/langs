@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-main()
+int main()
 {
 	char* sentence = "This is the sentence.";
 	printf("%s\n", sentence);
@@ -8,4 +8,6 @@ main()
 	
 	sentence = "This is another sentence.";
 	printf("%s", sentence);
+    
+    return 0;
 }

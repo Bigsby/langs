@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-main()
+int main()
 {
     int result = 1 == 2;
     printf("1 equals 2 is %d\n", result);
@@ -19,4 +19,6 @@ main()
 	
 	result = 1 <= 2;
 	printf("1 less than or equals 2 is %d", result);
+
+	return 0;
 }

@@ -13,7 +13,7 @@ void DoStuff(int inError)
         printf("Doing stuff!\n");
 }
 
-main()
+int main()
 {
     DoStuff(0);
     if (errno)
@@ -36,4 +36,6 @@ main()
             }
         }
     }
+    
+    return 0;
 }

@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-main()
+int main()
 {
     int c;
     FILE *file;
@@ -10,4 +10,6 @@ main()
             putchar(c);
         fclose(file);
     }
+    
+    return 0;
 }

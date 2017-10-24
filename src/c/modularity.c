@@ -1,6 +1,8 @@
 extern void DoOtherStuff();
 
-main()
+int main()
 {
     DoOtherStuff();
+    
+    return 0;
 }

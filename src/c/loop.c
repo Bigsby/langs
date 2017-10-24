@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-main()
+int main()
 {
     int value = 1;
 
@@ -8,4 +8,6 @@ main()
         printf("%d\n", value);
         value += 1;
     }
+    
+    return 0;
 }

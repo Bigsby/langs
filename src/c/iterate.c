@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-main()
+int main()
 {
     int setOfItems[3] = {1, 2, 3};
     int i;
@@ -9,4 +9,6 @@ main()
     {
         printf("%d\n", setOfItems[i]);  
     }
+    
+    return 0;
 }

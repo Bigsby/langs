@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-main()
+int main()
 {
     int value = 1;
     if (value)
@@ -25,4 +25,6 @@ main()
         printf("Got else");
     else
         printf("Got if else");
+        
+    return 0;
 }

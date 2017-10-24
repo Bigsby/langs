@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-main()
+int main()
 {
 	printf("Hello, Comments!");
 	
@@ -10,4 +10,6 @@ main()
 	This is a 
 	multiline comment
 	*/
+
+	return 0;
 }

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-main()
+int main()
 {
 	char joining[10] = "Joining ";
     char strings[10] = "strings.";
@@ -15,4 +15,6 @@ main()
 	
     int value = 3;
     printf("The value %d interpolated", value);
+    
+    return 0;
 }
