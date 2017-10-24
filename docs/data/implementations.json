@@ -107,7 +107,7 @@
             {
                 "type": "command",
                 "text": "Run program",
-                "command": "go run filename.go"
+                "command": "go run [filename1.go filename2.go] filename.go"
             }
         ],
         "rb": [{
@@ -141,7 +141,8 @@
                 "text": "Compile code",
                 "command": "csc [filename1.cs filename2.cs] filename.cs",
                 "notes": [
-                    "The output file will be named after the file that contains the application entrypoint."
+                    "The output file will be named after the file that contains the application entrypoint.",
+                    "In Mono (mcs) the output file will be named after the fisrt parameter file."
                 ]
             },
             {
