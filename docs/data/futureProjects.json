@@ -121,5 +121,10 @@
             "ts",
             "vb"
         ]
+    },
+    "fileSystem":{
+        "name": "File System",
+        "type":"code",
+        "description": "Listing files and folder from the file system."
     }
 }
