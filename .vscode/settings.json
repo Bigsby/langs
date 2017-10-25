@@ -25,6 +25,11 @@
         "xutility": "cpp",
         "regex": "cpp",
         "xlocale": "cpp",
-        "fstream": "cpp"
+        "fstream": "cpp",
+        "initializer_list": "c",
+        "list": "c",
+        "type_traits": "c",
+        "vector": "c",
+        "xstring": "c"
     }
 }
