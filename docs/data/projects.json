@@ -721,6 +721,29 @@
             ]
         }
     },
+    "fileSystem": {
+        "name": "File System",
+        "type": "code",
+        "show": true,
+        "description": "Listing files and folder from the file system.",
+        "text": "Being able to interact with the file system, listing its contents and file properties is kinda handy.",
+        "output": "/subFolder\ncontent.txt,60B\nmultipleLines.txt,22B",
+        "languages":[
+            "js",
+            "java",
+            "cs",
+            "py",
+            "php",
+            "ts",
+            "rb",
+            "vb",
+            "pl",
+            "go",
+            "fs",
+            "erl",
+            "ps1"
+        ]
+    },
     "httpGet": {
         "name": "HTTP Get",
         "show": true,

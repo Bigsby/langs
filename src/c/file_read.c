@@ -10,6 +10,13 @@ int main()
             putchar(c);
         fclose(file);
     }
+
+    file = fopen("../files/multipleLines.txt", "r");
+    if (file) {
+        while ((c = getc(file)) != EOF)
+            putchar(c);
+        fclose(file);
+    }
     
     return 0;
 }
