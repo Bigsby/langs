@@ -16,10 +16,7 @@
         "languages",
         "projects",
         "programs",
-        "tags",
-        "implementations",
-        "runtimes",
-        "ides"
+        "implementations"
     ],
     "ga": "UA-94110702-1",
     "metadata":{

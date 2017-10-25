@@ -1,0 +1,817 @@
+[
+    {
+        "id": "setup",
+        "name": "Setup & Run",
+        "show": true,
+        "type": "steps",
+        "description": "What needs to be installed to get started on each language.",
+        "text": "<p>Since the computer and the, already very high-level, Operating System that is running don't know much more than machine code, the code, of each language, needs to be compiled and/or have a runtime to run it.</p><p>Here are the steps required to run a program.</p>",
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl"
+        ]
+    },
+    {
+        "id": "hello",
+        "name": "Hello World!",
+        "show": true,
+        "description": "Of course, the first project is a 'Hello, World'.",
+        "text": "<p>Every tutorial of every language starts with an app that simply outputs \"Hello, World\". It serves the purposes of making sure everything (compile, runtime, etc.) is in place and, also, displaying the most simple structure of a program.</p>",
+        "type": "code",
+        "output": "Hello, World!",
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl",
+            "c"
+        ],
+        "notes": {
+            "cpp": [
+                "<code>cout</code> is the console output stream",
+                "<code>&lt;&lt;</code> is the operator that \"means\" write to stream."
+            ]
+        }
+    },
+    {
+        "id": "exit",
+        "name": "Exit",
+        "show": true,
+        "description": "Exit the running program",
+        "text": "<p>The most important thing after stafting a computer program is, by far, exiting it. <cite>The user doesn't want to use your software. The user wants to have used your software.</cite></p>",
+        "type": "code",
+        "output": "Exiting...",
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl",
+            "c"
+        ]
+    },
+    {
+        "id": "comments",
+        "name": "Commenting",
+        "show": true,
+        "description": "Non-processed statements.",
+        "text": "<p>The first thing to do after writing some code is writing non-code, i.e., comments. Most of the times to comment some code that is no longer needed.</p>",
+        "type": "code",
+        "output": "Hello, Comments!",
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl",
+            "c"
+        ]
+    },
+    {
+        "id": "variables",
+        "name": "Variables",
+        "show": true,
+        "description": "Holding in-memory values to be (re)used.",
+        "text": "<p>One could always access the computer memory alocations by its number/position but it's way more practical to name them and use the name for future reference.</p>",
+        "type": "code",
+        "output": "This is the sentence.\nThis is the sentence.\nThis is another sentence.",
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl",
+            "c"
+        ],
+        "extraCode": {
+            "js": {
+                "dynamic": {
+                    "text": "Since <b>JavaScript</b> is a dynamic language <code>var x = ...</code> doesn't enforce a type on the variable and, as such, the variable can change type. Because of that, this code is totally valid and has the exact same output."
+                }
+            },
+            "pl": {
+                "dynamic": {
+                    "text": "Since <b>Perl</b> is a dynamic language <code>$x = ...</code> doesn't enforce a type on the variable and, as such, the variable can change type. Because of that, this code is totally valid and has the exact same output."
+                }
+            },
+            "py": {
+                "dynamic": {
+                    "text": "Since <b>Python</b> is a dynamic language <code>x = ...</code> doesn't enforce a type on the variable and, as such, the variable can change type. Because of that, this code is totally valid and has the exact same output."
+                }
+            },
+            "rb": {
+                "dynamic": {
+                    "text": "Since <b>Ruby</b> is a dynamic language <code>$x = ...</code> doesn't enforce a type on the variable and, as such, the variable can change type. Because of that, this code is totally valid and has the exact same output."
+                }
+            },
+            "cs": {
+                "dynamic": {
+                    "text": "Although <b>C#</b> is strongly-typed, one can treat variables dynamically be using the \"generic\" (base) type <code>object</code>. The following code will have the exact same output."
+                }
+            },
+            "java": {
+                "dynamic": {
+                    "text": "Although <b>Java</b> is strongly-typed, one can treat variables dynamically be using the \"generic\" (base) type <code>Object</code>. The following code will have the exact same output."
+                }
+            },
+            "ps1": {
+                "dynamic": {
+                    "text": "Since <b>PowerShell</b> is a dynamic language <code>$x = ...</code> doesn't enforce a type on the variable and, as such, the variable can change type. Because of that, this code is totally valid and has the exact same output."
+                }
+            },
+            "php": {
+                "dynamic": {
+                    "text": "Since <b>PHP</b> is a dynamic language <code>var $x = ...</code> doesn't enforce a type on the variable and, as such, the variable can change type. Because of that, this code is totally valid and has the exact same output."
+                }
+            },
+            "vb": {
+                "dynamic": {
+                    "text": "Although <b>VB.Net</b> is strongly-typed, one can treat variables dynamically be using the \"generic\" (base) type <code>Object</code>. The following code will have the exact same output."
+                }
+            }
+        },
+        "notes": {
+            "fs": [
+                "<code>mutable</code> keyword is required for variables to have the ability to change its value.",
+                "Assigning on variable declaration uses <code>=</code> but reseting uses <code>&lt;-</code>."
+            ]
+        }
+    },
+    {
+        "id": "strings",
+        "name": "Text | Strings",
+        "show": true,
+        "description": "Working with sequences of characters. Concatenating, interpolation, etc.",
+        "text": "Handling text (or sequences of characters) to be able to display (meaningful) messages.",
+        "type": "code",
+        "output": "Joining strings.\nThe value 3 in interpolated",
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl",
+            "c"
+        ],
+        "notes": {
+            "cpp": [
+                "There is no actual string concatenation and intrapolation in <b>C++</b>. In fact, the \"simplest\" way to achieve that functionality is using the <code>std::string</code> class that encapsulates all the handling of the underlying <code>char*</code>."
+            ]
+        },
+        "extraCode": {
+            "py": {
+                "interpolation": {
+                    "text": "The code above is only available in <b>Pythong 3.6</b>. These other options are still valid, each one, returning the same last line as before."
+                }
+            },
+            "fs": {
+                "types": {
+                    "text": "There are more types known to <code>printfn</code>. Here are some examples, although there is way more to it...",
+                    "output": "The string string in interpolated\nThe boolean true in interpolated\nThe integer 123 in interpolated\nThe float 12.300000 in interpolated\nThe list [|\"Joining \"; \"strings.\"|] in interpolated\nThe object 12.3 in interpolated"
+                }
+            },
+            "php": {
+                "heredoc": {
+                    "text": "<b>Heredoc</b> strings allow for string to be read <span style='font-style: italic'>as is</span>, i.e., keep new lines.",
+                    "output": "First line\nSecond line\nThis is a\nmultiline string"
+                }
+            }
+        }
+    },
+    {
+        "id": "dry",
+        "name": "Functions",
+        "show": true,
+        "description": "Wrapping functionality in a code block that can be reused.",
+        "text": "<b>Dont Repeat Yourself</b>. Reusing code is one the finest arts in software development. For that, languages provide their ways to define, implement and call (invoke) these wrappers of sequences of instructions.",
+        "type": "code",
+        "output": "Doing stuff!\n2 + 1 = 3",
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl",
+            "c"
+        ]
+    },
+    {
+        "id": "comparison_operators",
+        "name": "Comparison Operators",
+        "show": true,
+        "description": "Comparing stuff.",
+        "text": "<p>The ability to compare values is essential to, life and, every computer program. It allows the program to follow different paths if so state is verified.</p>",
+        "type": "code",
+        "output": "1 equals 2 is false\n1 not equals 2 is true\n1 larger than 2 is false\n1 larger than or equals 2 is false\n1 less than 2 is true\n1 less than or equals 2 is true",
+        "alternativeOutputs": [{
+                "text": "Some output booleans as 1 (one) for true and 0 (zero) for false.",
+                "output": "1 equals 2 is 0\n1 not equals 2 is 1\n1 larger than 2 is 0\n1 larger than or equals 2 is 0\n1 less than 2 is 1\n1 less than or equals 2 is 1"
+            },
+            {
+                "text": "Some output booleans with a first capital letter, i.e., True and False.",
+                "output": "1 equals 2 is False\n1 not equals 2 is True\n1 larger than 2 is False\n1 larger than or equals 2 is False\n1 less than 2 is True\n1 less than or equals 2 is True"
+            }
+        ],
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl",
+            "c"
+        ],
+        "notes": {
+            "pl": [
+                "Since <b>Perl</b> does not have a constant string for false value (resolving \"1\" for <code>true</code>), <code>result</code> needs to hold the string value."
+            ],
+            "php": [
+                "Since <b>PHP</b> does not have a constant string for false value (resolving \"1\" for <code>true</code>), <code>result</code> needs to hold the string value."
+            ],
+            "ts": [
+                "Since <code>1</code> and <code>2</code> are literals and, as such, are treated as constants (as if declared with <code>const</code> keyword), <b>TypeScript</b> inferres them as types <code>1</code> and <code>2</code>, respectively, and not <code>number</code>, as one would expect. The reason is that those values can never change. For that, at least one of the values compared need to be cast to <code>&lt;number&gt;</code>. This does not happen when variables are declared with <code>var</code> and <code>let</code> keywords where the \"expected\" type <code>number</code> is inferred."
+            ]
+        },
+        "extraCode": {
+            "js": {
+                "typeComparison": {
+                    "text": "Being a dynamic language, it's useful to also be able to tell if the values also share type.",
+                    "output": "1 == \"1\" is true\n1 === \"1\" is false"
+                }
+            },
+            "php": {
+                "typeComparison": {
+                    "text": "Being a dynamic language, it's useful to also be able to tell if the values also share type.",
+                    "output": "1 == \"1\" is true\n1 === \"1\" is false"
+                },
+                "alternative": {
+                    "text": "There is an alternative operator for inequality.",
+                    "output": "1 not equals 2 is true"
+                }
+            },
+            "rb": {
+                "typeComparison": {
+                    "text": "Being a dynamic language, it's useful to also be able to tell if the values also share type.",
+                    "output": "1 == 1.0 is true\n1.eql?1.0 is false"
+                }
+            }
+        },
+        "todo": [
+            "reference equals",
+            "type comparison on dynamic languages",
+            "alternative operatores in PHP https://www.w3schools.com/php/php_operators.asp"
+        ]
+    },
+    {
+        "id": "ifelse",
+        "name": "If/Else",
+        "show": true,
+        "description": "Evey language has, at least, one conditional statement.",
+        "text": "<p>Choosing what to do and where to go is when some state occurs is almost all you need to write computer programs.</p>",
+        "type": "code",
+        "output": "Got true\nGot else\nGot if else",
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl",
+            "c"
+        ],
+        "notes": {
+            "js": [
+                "As a <b>C-based</b> language, single statement blocks (like in the second if/else) are possible without brackets <code>{ ... }</code>."
+            ],
+            "cpp": [
+                "As a <b>C-based</b> language, single statement blocks (like in the second if/else) are possible without brackets <code>{ ... }</code>."
+            ],
+            "cs": [
+                "As a <b>C-based</b> language, single statement blocks (like in the second if/else) are possible without brackets <code>{ ... }</code>."
+            ],
+            "java": [
+                "As a <b>C-based</b> language, single statement blocks (like in the second if/else) are possible without brackets <code>{ ... }</code>."
+            ]
+        }
+    },
+    {
+        "id": "logical_operators",
+        "name": "Logical Operators",
+        "show": true,
+        "description": "And, Or, Not ...",
+        "text": "<p>Like comparing values it is also essential in, life and, every computer program to be \"join\" logical values (true and false)</p>",
+        "type": "code",
+        "output": "true and false is false\ntrue or false is true\ntrue xor false is true\nnot true is false",
+        "alternativeOutputs": [{
+                "text": "Some output booleans as 1 (one) for true and 0 (zero) for false.",
+                "output": "true and false is 0\ntrue or false is 1\nnot true is 0"
+            },
+            {
+                "text": "Some output booleans with a first capital letter, i.e., True and False.",
+                "output": "true and false is False\ntrue or false is True\nnot true is False"
+            }
+        ],
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl",
+            "c"
+        ],
+        "extraCode": {
+            "rb": {
+                "spell": {
+                    "text": "Some logical operators can also be spelled with the exact same result."
+                }
+            },
+            "pl": {
+                "spell": {
+                    "text": "Some logical operators can also be spelled with the exact same result."
+                }
+            },
+            "php": {
+                "spell": {
+                    "text": "Logical operators <b>AND</b> and <b>OR</b> can also be spelled with the exact same result."
+                }
+            }
+        },
+        "notes": {
+            "js": [
+                "<b>JavaScript</b> does not provide an operator for <b>XOR</b> (exclusive or) but the logical operation can be achieved with the inequalitiy operator <code>!=</code>."
+            ],
+            "fs": [
+                "<b>F#</b> does not provide an operator for <b>XOR</b> (exclusive or) but the logical operation can be achieved with the inequalitiy operator <code>&lt;&gt;</code>."
+            ],
+            "pl": [
+                "<b>Perl</b> does not provide an operator for <b>XOR</b> (exclusive or) but the logical operation can be achieved with the inequalitiy operator <code>!=</code>.",
+                "Since <b>Perl</b> Perl does not have a constant string for false value (resolving \"1\" for <code>true</code>), <code>result</code> needs to hold the string value."
+            ],
+            "go": [
+                "<b>Go</b> does not provide an operator for <b>XOR</b> (exclusive or) but the logical operation can be achieved with the inequalitiy operator <code>!=</code>."
+            ],
+            "ts": [
+                "Since <code>true</code> is a literals and, as such, is treated as a constant (as if declared with <code>const</code> keyword), <b>TypeScript</b> inferres it as type <code>true</code> and not <code>boolean</code>, as one would expect. The reason is that the value can never change. For that, at least one of the values compared need to be cast to <code>&lt;boolean&gt;</code>. This does not happen when variables are declared with <code>var</code> and <code>let</code> keywords where the \"expected\" type <code>boolean</code> is inferred."
+            ]
+        }
+    },
+    {
+        "id": "loop",
+        "name": "Looping",
+        "show": true,
+        "description": "Repeating until...or not.",
+        "text": "<p>The ability to repeat a set of operations until a state is valid.</p>",
+        "type": "code",
+        "output": "1\n2\n3\n4\n5\n6\n7\n8\n9",
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl",
+            "c"
+        ]
+    },
+    {
+        "id": "iterate",
+        "name": "Iterating",
+        "show": true,
+        "description": "Repeat for every item in a set.",
+        "text": "Repeating a set of operations for every item in a set.",
+        "type": "code",
+        "output": "1\n2\n3",
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl",
+            "c"
+        ]
+    },
+    {
+        "id": "consoleInput",
+        "name": "User Input",
+        "show": true,
+        "description": "Receiving and handling user input.",
+        "text": "<p>Interacting with the user is frightening but necessary.</p>",
+        "type": "code",
+        "output": "What do say you?\nHello, computer\nYou said: Hello, computer",
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl",
+            "c"
+        ]
+    },
+    {
+        "id": "exceptions",
+        "name": "Exceptions",
+        "show": true,
+        "description": "Raising and catching errors.",
+        "text": "<p>Throwing exceptions when something is not right in runtime and, most importantly, having the ability to catch error to prevent craches. Some languages might raise instead of throw and some languages have errors instead of exceptions.</p>",
+        "type": "code",
+        "output": "Doing stuff!\nERROR: An error occured!",
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl",
+            "c"
+        ]
+    },
+    {
+        "id": "regex",
+        "name": "Regular Expressions",
+        "show": true,
+        "description": "Using Regular Expressions to match text.",
+        "text": "Regular expressions are way, loved by some, hated by others, to find text in text.",
+        "type": "code",
+        "output": "Is '^\\d+$' mathed by '123456'?\nyes\nGroups of '^([a-z]+)\\-(\\d+)$' found in 'abcdef-12345'\nFound 3 groups.\n[0] = abcdef-12345\n[1] = abcdef\n[2] = 12345",
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl"
+        ],
+        "notes": {
+            "java": [
+                "<code>matches.find();</code> is required so that the groups are populated on the <code>Matcher</code> object.",
+                "<code>Matcher.groupCount()</code> does not include group of index <code>0</code> containing the complete matched text, containing the captured groups."
+            ]
+        }
+    },
+    {
+        "id": "dating",
+        "name": "Date and Time",
+        "show": true,
+        "description": "Handling date and time units",
+        "text": "Handling date and time has been, since the beginning of computer programming, not that of a straight forward task.",
+        "type": "code",
+        "output": "John Cleese was born in 1939-10-27 and is 77 years old.\nParsed date is 1975-11-10T01:25:00",
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl"
+        ],
+        "notes": {
+            "go": [
+                "<b>Go</b> does formatting, for parsing and transforming, \"by example\", e.g., <code>2006-01-02T15:04:05</code>, following sample values defined <a target=\"_blank\" href=\"https://golang.org/src/time/format.go\">here.</a>."
+            ],
+            "java": [
+                "<code>DateTimeFormatter</code>'s, like <code>ISO_LOCAL_DATE_TIME</code> can be retrieved <a target=\"_blank\" href=\"https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html\">here</a>."
+            ]
+        }
+    },
+    {
+        "id": "modularity",
+        "name": "Modules",
+        "show": true,
+        "description": "Devide and conquer. Separate code and inter-reference.",
+        "text": "When projects start to grow and/or get complex, it's, usually, good practise to spread the code through different files that contain different parts of the program. This helps not only in maintainability but also in seperating functionality concerns and, thus, the overall arquitecture of the whole solution.",
+        "type": "code",
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl",
+            "c"
+        ],
+        "moduleFiles": [
+            "anotherModule"
+        ],
+        "notes": {
+            "js": [
+                "Simply run <code>node modularity.js</code>"
+            ],
+            "cpp": [
+                "Build one program file, i.e., <code>cl modularity.cpp</code>"
+            ],
+            "py": [
+                "Simply run <code>py modularity.py</code>"
+            ],
+            "fs": [
+                "Order of build is <b>very</b> relevant for the program to run needs to be the last file referenced and, as such, can omit module declaration, i.e., <code>fsc anotherModule.fs modularity.fs</code> "
+            ],
+            "go": [
+                "Run both files, i.e., <code>go run modularity.go anotherModule.go</code>"
+            ],
+            "rb": [
+                "Simply run <code>ruby modularity.rb</code>"
+            ],
+            "cs": [
+                "Build both files, i.e., <code>csc modularity.cs anotherModule.cs</code> but run only <code>modularity.exe</code>"
+            ],
+            "java": [
+                "Build and run only program file, i.e., <code>javac modularity.java</code> and <code>java modularity</code>"
+            ],
+            "pl": [
+                "Module files need to return a \"good\" value when parsed hence <code>1;</code> in the end of the module file.",
+                "The module files need to have <code>.pm</code> extension."
+            ]
+        }
+    },
+    {
+        "id": "classes",
+        "name": "Classes",
+        "show": true,
+        "desctription": "Define custom object types.",
+        "text": "Define custom types to hold data and/or functionality",
+        "type": "code",
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl",
+            "c"
+        ],
+        "notes": {
+            "pl": [
+                "<b>Perl</b> doesn't, actually, have classes in a \"type-defining\" sense. <code>package</code> serves the purpose of creating scope.",
+                "<code>bless</code> associates the reference (<code>$self</code>) with the package (class) name, i.e., <code>MontyPython</code>, and the remaining \"members\" of the package.",
+                "<code>shift</code> \"pops\" out the first value of the <code>sub</code> arguments and shifts the rest \"left\". The first value in the array in <code>sub</code> is what is on the left of <code>-&gt;</code>, i.e., the package name <code>MontyPython</code> in <code>MontyPython-&gt;new({...})</code> and a reference to <code>$montyPython</code> in <code>$montyPython-&gt;fullName()</code>."
+            ]
+        }
+    },
+    {
+        "id": "file_read",
+        "name": "Read from File",
+        "show": true,
+        "description": "Reading from the File System",
+        "text": "Working with the File System (local files) is, at least, kinda handy.",
+        "output": "This from a file in the File System\nThis is the second line\n- Line 1\n- Line 2\n- Line 3",
+        "type": "code",
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl",
+            "c"
+        ],
+        "notes": {
+            "js": [
+                "<code>fs</code> is the core module that handles File System operations.",
+                "<code>readline</code> is a core module that allows some specific stream reading, like line by line reading."
+            ],
+            "py": [
+                "<code>end=\"\"</code> is used to prevent print outputing a new line."
+            ]
+        }
+    },
+    {
+        "id": "file_system",
+        "name": "File System",
+        "type": "code",
+        "show": true,
+        "description": "Listing files and folder from the file system.",
+        "text": "Being able to interact with the file system, listing its contents and file properties is kinda handy.",
+        "output": "/subFolder\ncontent.txt,60B\nmultipleLines.txt,22B",
+        "languages":[
+            "js",
+            "java",
+            "cs",
+            "py",
+            "php",
+            "ts",
+            "rb",
+            "vb",
+            "pl",
+            "go",
+            "fs",
+            "erl",
+            "ps1"
+        ]
+    },
+    {
+        "id": "httpGet",
+        "name": "HTTP Get",
+        "show": true,
+        "description": "Making an HTTP request",
+        "text": "The ability to make web calls is paramount for almost every application.",
+        "type": "code",
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl"
+        ]
+    },
+    {
+        "id": "fizzbuzz",
+        "name": "FizzBuzz",
+        "show": true,
+        "description": "Solving the children's game about division.",
+        "text": "Count the numbers from 1 to 100 but saying \"Fizz\" instead of the number when the number is devidable by 3, \"Buzz\" when the number is dividable by 5 and \"FizzBuzz\" when the number is dividable by both 3 and 5.",
+        "type": "code",
+        "output": "1,2,Fizz,4,Buzz,Fizz,7,8,Fizz...",
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl",
+            "c"
+        ]
+    }
+]
