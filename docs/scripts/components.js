@@ -114,6 +114,23 @@ module.exports = function (app) {
             if (!vm.project.implementations) {
                 vm.project.implementations = [];
 
+                // for (var languageId in data.languages){
+                //     if (vm.project.languages.includes(languageId))
+                //     {
+                //         var implementation = GetImplementation(
+                //             data,
+                //             languageId,
+                //             data.languages[languageId],
+                //             vm.projectId,
+                //             vm.project,
+                //             vm.codeRoot,
+                //             vm.codeRawRoot);
+                //     }
+
+                //     if (implementation)
+                //         vm.project.implementations.push(implementation);
+                // }
+
                 vm.project.languages.forEach(function (languageId) {
                     var implementation = GetImplementation(
                         data,
