@@ -1,7 +1,7 @@
 from os import listdir
 from os.path import isdir, isfile, join, dirname, getsize, abspath
 
-folderPath = join(dirname(__file__), "..\\files")
+folderPath = join(dirname(__file__), "../files")
 
 folders = []
 files = []
