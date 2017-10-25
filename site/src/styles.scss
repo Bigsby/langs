@@ -1,0 +1,201 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #000030;
+    color: #fff;
+    text-align: center;
+    padding: 2em;
+    cursor: pointer;
+    z-index: 100;
+    flex-grow: 0;
+}
+
+@media only screen and (max-width: 767px) {
+    header {
+        padding: 1em;
+    }
+}
+
+    header h1, header h2, header h3, header h4, header h5, header h6 {
+        margin: 0;
+        color: white;
+    }
+
+footer{
+    background-color: #000030;
+    color: #fff;
+    font-size: .5em;
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 5px;
+}
+
+    footer .link, .link:visited, .link:hover {
+        color: #fff;
+        overflow-y: auto;
+    }
+
+.content{
+    padding: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+    display: flex;
+}
+
+.innerContent{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.innerContent > *:last-child{
+    margin-bottom: 5em;
+}
+
+a, a:visited, a:hover {
+    color: #2951BD;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: #995522;
+}
+
+.underlined{
+    text-decoration: underline;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.italic{
+    font-style: italic;
+}
+
+.noBulletList{
+    list-style: none;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.clickable{
+    cursor: pointer;
+}
+
+select {
+    font-size: 1.3em;
+    padding: .1em;
+    margin: 10px;
+    border: 2px solid #000030;;
+    border-radius: 10px;
+    overflow-y: auto;
+}
+
+input[type]:focus, select, button {
+    outline: none;
+}
+
+input[type]:focus, button:focus, select:focus{
+    border: 2px solid #2951BD;
+}
+
+button, input[type=button], input[type=submit] {
+    font-weight: bold;
+    font-size: 1.3em;
+    padding: .1em;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #000030;
+    color: white;
+    border-radius: 10px;
+}
+
+button:active, input[type=button]:active, input[type=submit]:active {
+    font-size: 1.2em;
+    padding: .1em .3em;
+}
+
+button:disabled, 
+button[disabled], 
+input[type=button], 
+input[type=submit][disabled], 
+input[type=button][disabled], 
+input[type=submit][disabled],
+input[type=submit][disabled], 
+input[type=button][disabled], 
+input[type=submit][disabled] {
+    background-color: #505050;
+    cursor: default;
+}
+
+input[type=checkbox] {
+	-webkit-appearance: none;
+	background-color: #fff;
+	border: 2px solid #000030;
+	padding: 15px;
+	border-radius: 10px;
+	display: inline-block;
+	position: relative;
+    color: #000030;
+}
+
+input[type=checkbox]:checked:after {
+	content: '\2714';
+	font-size: 1.7em;
+	position: absolute;
+	top: 0px;
+	left: 6px;
+}
+
+input[type=color]{
+    height: 2.5em;
+    border-radius: 10px;
+    background-color: #fff;
+	border: 2px solid #000030;
+}
+
+.loaderContainer{
+    display: flex;
+    align-content: center;
+}
+
+code-highlight > pre, .output{
+    white-space: pre-wrap;
+    overflow-x: auto;
+    border: 3px solid #506080;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+    code-highlight, .output {
+        white-space: nowrap;
+        overflow-x: auto;
+    }
+}
