@@ -1,0 +1,12 @@
+<h1>{{language?.name}}</h1>
+<div [innerText]="language?.description"></div>
+
+<div class="collapseContainer">
+    <a type="button" (click)="collapseAll()">Collapse All</a>
+    <a type="button" (click)="expandAll()">Expand All</a>
+</div>
+<div *ngFor="let project of projects">
+    <div class="list-header" (click)="project.collapsed = !project.collapsed">{{project.name}}</div>
+    <project-header *ngIf="!project.collapsed" [project]="project"></project-header>
+    <code-implementation *ngIf="!project.collapsed" [language]="language" [project]="project"></code-implementation>
+</div>

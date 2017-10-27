@@ -1,0 +1,19 @@
+@import "../../styles/colors";
+
+.listTitle {
+    text-align: center;
+}
+
+.programsList {
+    list-style: none;
+}
+
+.langItem{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .version{
+        font-size: .7em;
+    }
+}

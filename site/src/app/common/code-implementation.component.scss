@@ -1,0 +1,10 @@
+@import "../../styles/colors";
+
+pre {
+    border: 1px solid $outline-color;
+    padding: 10px;
+
+    div {
+        overflow: auto;
+    }
+}

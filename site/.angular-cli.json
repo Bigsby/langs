@@ -9,6 +9,7 @@
       "outDir": "dist",
       "assets": [
         "assets",
+        "data",
         "favicon.ico"
       ],
       "index": "index.html",
@@ -19,7 +20,8 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.scss"
+        "styles/main.scss",
+        "styles/tomorrow.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",

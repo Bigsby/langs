@@ -269,3 +269,5 @@ src/fs/[Ff][Ss]harp.[Cc]ore.dll
 *.out
 
 __pycache__/
+
+.vscode/chrome

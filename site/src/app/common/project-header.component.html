@@ -1,0 +1,6 @@
+<div [innerHTML]="project?.text"></div>
+
+<div *ngIf="project?.output">
+    <p style="text-decoration:underline">Expected Output:</p>
+    <output><pre>{{project.output}}</pre></output>
+</div>

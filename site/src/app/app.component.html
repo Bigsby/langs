@@ -1,1 +1,13 @@
-Here will be the "Hello, Languages" website.
+<header [routerLink]="['/']">
+    <h1>Hello Languages</h1>
+    <h4>A tour of programming languages</h4>
+</header>
+<section class="content">
+    <section class="innerContent">
+        <router-outlet></router-outlet>
+    </section>
+</section>
+<footer>
+    <span class="copy">&copy; 2017 Bigsby</span>
+    <a class="link" target="_blank" href="http://bigsbyspot.org">about the author</a>
+</footer>

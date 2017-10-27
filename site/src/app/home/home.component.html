@@ -1,0 +1,71 @@
+<div class="listsContainer">
+  <div>
+    <h3>Languages</h3>
+      <div class="list-header langItem" [routerLink]="['/language', language.id]" *ngFor="let language of languages"><span>{{language.name}}</span> <span class="version">({{language.version}})</span></div>
+  </div>
+  <div>
+    <h3>Projects</h3>
+      <div class="list-header" [routerLink]="['/project', project.id]" *ngFor="let project of projects; let i = index">{{i}}. {{project.name}}</div>
+  </div>
+</div>
+
+<p>
+  Money in software development is in:
+</p>
+<ul>
+  <li>Good requirements</li>
+  <li>Good implementations</li>
+</ul>
+<p>
+  The choice of the programming language is close to irrelevant to fulfill a set of requirements with a good implementation,
+  i.e., algorithm. A particular language, most importantly, the runtime where the code will, eventually, run in and its included
+  libraries, might help one get there faster or in a "nicer" way, one might have preferences regarding syntax, paradigma,
+  etc., but all that has little impact on end value. There is, virtually, nothing only one language "does" or one language
+  "doesn't".
+</p>
+<p>
+  Having that in mind, here goes an exploration of the basics, similarities and differences of some of the most used programming
+  languages. Simple to complex examples implemented parallelly on each language to outline its implementation of the intended
+  funcitonalilty. It might also serve as a quick cheatsheet.
+</p>
+<div class="notes">
+  <p class="title">Notes:</p>
+  <ul>
+    <li>No libraries other than the ones included in the runtime or the operating system are used.</li>
+    <li>As a consequence of the previous point, the implementations are not necessarily the common practise.</li>
+    <li>The code here was tested on Windows (10), macOS (High Sierra) and Linux (Ubuntu 16.04 &amp; 17.10). The documentation
+      here is, for now, Windows driven. macOS and Linux installs will be included, in the future. Until then, refer to:
+      <ul>
+        <li>
+          <url href="https://gist.github.com/Bigsby/fb3b1c533f148f921bd79eb7efac9879">For Linux (Debian/Ubuntu) installs</url>
+        </li>
+        <li>
+          <url href="https://gist.github.com/Bigsby/c1b8dbebed9308374d1c3a897281578d">For macOS installs</url>
+        </li>
+      </ul>
+    </li>
+    <li>At least, an attempt is made to use the latest version of each language/runtime. The version used indicated in the list
+      below.
+    </li>
+    <li>The IDE used to code everything here (inlcuding this website) is
+      <url href="http://code.visualstudio.com/">Visual Studio Code</url> for its code highlighting.</li>
+  </ul>
+</div>
+
+<p>All source code can be found
+  <url href="https://github.com/Bigsby/HelloLanguages">this GitHub Repository</url>.</p>
+<p>If you have any suggestions of languages, features, etc., find any errors or have corrections to propose, feel free to
+  <url href="https://github.com/Bigsby/HelloLanguages/issues">create an issue</url>.</p>
+
+<div *ngIf="programs?.length">
+  <h2 class="listTitle">Example Programs</h2>
+  <p>Here are some example(s) of programs implemented in a variety of languages:</p>
+  <ul class="programsList">
+    <li *ngFor="let program of programs">
+      <url [href]="program.link">
+        <h3>{{program.name}}</h3>
+      </url>
+      <span [innerHTML]="program.description"></span>
+    </li>
+  </ul>
+</div>

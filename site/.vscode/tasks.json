@@ -1,0 +1,13 @@
+{
+    "tasks": [
+        {
+            "label": "build",
+            "type": "npm",
+            "script": "start",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
