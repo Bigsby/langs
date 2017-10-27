@@ -1,8 +1,10 @@
-﻿{
-    "js": {
+[
+    {
+        "id": "js",
         "name": "JavaScript",
         "version": "ES6",
         "order": 1,
+        "show": true,
         "description": "Mostly commonly used in internet web-pages and running within web browsers (e.g., Google Chrome, Mozilla Firefox, Microsoft Edge).",
         "tags": [
             "dynamic",
@@ -24,10 +26,12 @@
         ],
         "current": true
     },
-    "java": {
+    {
+        "id": "java",
         "name": "Java",
         "version": "1.8.0",
         "order": 2,
+        "show": true,
         "description": "General-purpose and object-oriented language. Meant ot \"Write once, run anywhere\".",
         "tags": [
             "strongly_typed",
@@ -49,10 +53,12 @@
         ],
         "current": true
     },
-    "cs": {
+    {
+        "id": "cs",
         "name": "C#",
         "version": "7.0",
         "order": 3,
+        "show": true,
         "description": "General-purpose, object and component oriented declarative language that runs under .Net runtimes.",
         "tags": [
             "strongly_typed",
@@ -72,10 +78,12 @@
         ],
         "current": true
     },
-    "py": {
+    {
+        "id": "py",
         "name": "Python",
         "version": "3.6",
         "order": 4,
+        "show": true,
         "description": "High-level scripting language with emphasis on readability and simplicity of coding general-purpose functionalilty.",
         "tags": [
             "script",
@@ -94,10 +102,12 @@
         ],
         "current": true
     },
-    "php": {
+    {
+        "id": "php",
         "name": "PHP",
         "version": "7.1.2",
         "order": 5,
+        "show": true,
         "description": "Scripting languge for web pages.",
         "tags": [
             "script",
@@ -109,10 +119,12 @@
         "mime": "text/x-php",
         "current": true
     },
-    "cpp": {
+    {
+        "id": "cpp",
         "name": "C++",
         "version": "11",
         "order": 6,
+        "show": true,
         "description": "Low-level language that compiles directly to processors native machine code and, as such, is highly optimized.",
         "tags": [
             "dynamic",
@@ -132,17 +144,22 @@
         ],
         "current": true
     },
-    "c": {
+    {
+        "id": "c",
         "name": "C",
         "version": "11",
+        "hljs": "c",
         "order": 7,
+        "show": true,
         "description": "A general-purpose, procedural, imperative computer low-level programming language.",
         "current": true
     },
-    "ts": {
+    {
+        "id": "ts",
         "name": "TypeScript",
         "version": "2.0",
         "order": 8,
+        "show": true,
         "description": "Strongly-typed Superset of JavaScript.",
         "tags": [
             "oop",
@@ -152,10 +169,12 @@
         "hljs": "typescript",
         "current": true
     },
-    "rb": {
+    {
+        "id": "rb",
         "name": "Ruby",
         "version": "2.3.3",
         "order": 9,
+        "show": true,
         "description": "Multi-paradigm language.",
         "tags": [
             "script",
@@ -176,10 +195,12 @@
         ],
         "current": true
     },
-    "vb": {
+    {
+        "id": "vb",
         "name": "VB.Net",
         "version": "15",
         "order": 10,
+        "show": true,
         "description": "Visual Basic that runs on .Net runtimes.",
         "tags": [
             "oop",
@@ -193,10 +214,12 @@
         "mime": "text/x-vb",
         "current": true
     },
-    "pl": {
+    {
+        "id": "pl",
         "name": "Perl",
         "version": "5.14.2",
         "order": 11,
+        "show": true,
         "description": "General-purpose, high-level \"intended\" for easy text processing.",
         "tags": [
             "script",
@@ -210,10 +233,12 @@
         "current": true,
         "moduleExtension": "pm"
     },
-    "go": {
+    {
+        "id": "go",
         "name": "Go",
         "version": "1.8",
         "order": 12,
+        "show": true,
         "description": "Scalable and readable for networking and multiprocessing.",
         "tags": [
             "script",
@@ -229,10 +254,12 @@
         ],
         "current": true
     },
-    "fs": {
+    {
+        "id": "fs",
         "name": "F#",
         "version": "4.0",
         "order": 13,
+        "show": true,
         "description": "Functional and imperative language that runs on .Net runtimes.",
         "tags": [
             "strongly_typed",
@@ -252,20 +279,24 @@
         ],
         "current": true
     },
-    "erl": {
+    {
+        "id": "erl",
         "name": "Erlang",
         "version": "8.3",
         "order": 14,
+        "show": true,
         "description": "General purpose functional used mostly for concurrent processing",
         "tags": [
             "functional"
         ],
         "hljs": "erlang"
     },
-    "ps1": {
+    {
+        "id": "ps1",
         "name": "PowerShell",
         "version": "5.1",
         "order": 15,
+        "show": true,
         "description": "Cross-platform language for system automation and configuration.",
         "tags": [
             "script",
@@ -278,4 +309,4 @@
         "mime": "application/x-powershell",
         "current": true
     }
-}
+]

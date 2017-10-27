@@ -4,3 +4,11 @@
     <p style="text-decoration:underline">Expected Output:</p>
     <output><pre>{{project.output}}</pre></output>
 </div>
+
+<div *ngIf="project?.alternativeOutputs">
+    <p style="text-decoration:underline">Alternative Output(s):</p>
+    <div *ngFor="let output of project.alternativeOutputs">
+        <p [innerHTML]="output.text"></p>
+        <output><pre>{{output.output}}</pre></output>
+    </div>
+</div>

@@ -3,4 +3,5 @@
 output pre { 
     border: 1px solid $outline-color;
     padding: 5px 10px;
+    overflow: auto;
 }

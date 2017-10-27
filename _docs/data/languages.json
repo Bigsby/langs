@@ -1,0 +1,281 @@
+﻿{
+    "js": {
+        "name": "JavaScript",
+        "version": "ES6",
+        "order": 1,
+        "description": "Mostly commonly used in internet web-pages and running within web browsers (e.g., Google Chrome, Mozilla Firefox, Microsoft Edge).",
+        "tags": [
+            "dynamic",
+            "script"
+        ],
+        "link": "https://www.javascript.com/",
+        "links": [
+            "http://es6-features.org"
+        ],
+        "hljs": "javascript",
+        "mime": "text/javascript",
+        "runtimes": [
+            "node",
+            "web_browsers"
+        ],
+        "ides": [
+            "npp",
+            "vscode"
+        ],
+        "current": true
+    },
+    "java": {
+        "name": "Java",
+        "version": "1.8.0",
+        "order": 2,
+        "description": "General-purpose and object-oriented language. Meant ot \"Write once, run anywhere\".",
+        "tags": [
+            "strongly_typed",
+            "il",
+            "specific_runtime",
+            "gc"
+        ],
+        "link": "https://www.java.com/",
+        "hljs": "java",
+        "mime": "text/x-java",
+        "runtimes": [
+            "java"
+        ],
+        "ides": [
+            "vscode",
+            "eclipse",
+            "intelliJ",
+            "netbeans"
+        ],
+        "current": true
+    },
+    "cs": {
+        "name": "C#",
+        "version": "7.0",
+        "order": 3,
+        "description": "General-purpose, object and component oriented declarative language that runs under .Net runtimes.",
+        "tags": [
+            "strongly_typed",
+            "il",
+            "specific_runtime",
+            "gc"
+        ],
+        "link": "https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx",
+        "hljs": "csharp",
+        "mime": "text/x-csharp",
+        "runtimes": [
+            "net"
+        ],
+        "ides": [
+            "vscode",
+            "vs"
+        ],
+        "current": true
+    },
+    "py": {
+        "name": "Python",
+        "version": "3.6",
+        "order": 4,
+        "description": "High-level scripting language with emphasis on readability and simplicity of coding general-purpose functionalilty.",
+        "tags": [
+            "script",
+            "dynamic",
+            "specific_runtime",
+            "gc"
+        ],
+        "link": "https://www.python.org/",
+        "hljs": "python",
+        "mime": "text/x-python",
+        "runtimes": [
+            "python"
+        ],
+        "ides": [
+            "vscode"
+        ],
+        "current": true
+    },
+    "php": {
+        "name": "PHP",
+        "version": "7.1.2",
+        "order": 5,
+        "description": "Scripting languge for web pages.",
+        "tags": [
+            "script",
+            "dynamic",
+            "specific_runtime"
+        ],
+        "link": "http://php.net/",
+        "hljs": "php",
+        "mime": "text/x-php",
+        "current": true
+    },
+    "cpp": {
+        "name": "C++",
+        "version": "11",
+        "order": 6,
+        "description": "Low-level language that compiles directly to processors native machine code and, as such, is highly optimized.",
+        "tags": [
+            "dynamic",
+            "strongly_typed",
+            "native"
+        ],
+        "link": "http://www.cplusplus.com/",
+        "hljs": "cpp",
+        "mime": "text/x-c++src",
+        "runtimes": [
+            "native"
+        ],
+        "ides": [
+            "npp",
+            "vscode",
+            "vs"
+        ],
+        "current": true
+    },
+    "c": {
+        "name": "C",
+        "version": "11",
+        "order": 7,
+        "description": "A general-purpose, procedural, imperative computer low-level programming language.",
+        "current": true
+    },
+    "ts": {
+        "name": "TypeScript",
+        "version": "2.0",
+        "order": 8,
+        "description": "Strongly-typed Superset of JavaScript.",
+        "tags": [
+            "oop",
+            "strongly_typed",
+            "dynamic"
+        ],
+        "hljs": "typescript",
+        "current": true
+    },
+    "rb": {
+        "name": "Ruby",
+        "version": "2.3.3",
+        "order": 9,
+        "description": "Multi-paradigm language.",
+        "tags": [
+            "script",
+            "specific_runtime",
+            "oop",
+            "dynamic",
+            "gc"
+        ],
+        "link": "https://www.ruby-lang.org/",
+        "hljs": "ruby",
+        "mime": "text/x-ruby",
+        "runtimes": [
+            "ruby"
+        ],
+        "ides": [
+            "vscode",
+            "rubyMine"
+        ],
+        "current": true
+    },
+    "vb": {
+        "name": "VB.Net",
+        "version": "15",
+        "order": 10,
+        "description": "Visual Basic that runs on .Net runtimes.",
+        "tags": [
+            "oop",
+            "strongly_typed",
+            "gc",
+            "il",
+            "specific_runtime"
+        ],
+        "link": "https://msdn.microsoft.com/en-us/library/aa903378(v=vs.71).aspx",
+        "hljs": "vbnet",
+        "mime": "text/x-vb",
+        "current": true
+    },
+    "pl": {
+        "name": "Perl",
+        "version": "5.14.2",
+        "order": 11,
+        "description": "General-purpose, high-level \"intended\" for easy text processing.",
+        "tags": [
+            "script",
+            "dynamic",
+            "specific_runtime",
+            "gc"
+        ],
+        "link": "https://www.perl.org/",
+        "hljs": "perl",
+        "mime": "text/x-perl",
+        "current": true,
+        "moduleExtension": "pm"
+    },
+    "go": {
+        "name": "Go",
+        "version": "1.8",
+        "order": 12,
+        "description": "Scalable and readable for networking and multiprocessing.",
+        "tags": [
+            "script",
+            "specific_runtime",
+            "gc"
+        ],
+        "link": "https://golang.org/",
+        "hljs": "go",
+        "mime": "text/x-go",
+        "ides": [
+            "vscode",
+            "eclipse"
+        ],
+        "current": true
+    },
+    "fs": {
+        "name": "F#",
+        "version": "4.0",
+        "order": 13,
+        "description": "Functional and imperative language that runs on .Net runtimes.",
+        "tags": [
+            "strongly_typed",
+            "il",
+            "specific_runtime",
+            "gc"
+        ],
+        "link": "http://fsharp.org/",
+        "hljs": "fsharp",
+        "mime": "text/x-fsharp",
+        "runtimes": [
+            "net"
+        ],
+        "ides": [
+            "vscode",
+            "vs"
+        ],
+        "current": true
+    },
+    "erl": {
+        "name": "Erlang",
+        "version": "8.3",
+        "order": 14,
+        "description": "General purpose functional used mostly for concurrent processing",
+        "tags": [
+            "functional"
+        ],
+        "hljs": "erlang"
+    },
+    "ps1": {
+        "name": "PowerShell",
+        "version": "5.1",
+        "order": 15,
+        "description": "Cross-platform language for system automation and configuration.",
+        "tags": [
+            "script",
+            "dynamic",
+            "specific_runtime",
+            "oop"
+        ],
+        "link": "https://github.com/PowerShell/PowerShell",
+        "hljs": "powershell",
+        "mime": "application/x-powershell",
+        "current": true
+    }
+}

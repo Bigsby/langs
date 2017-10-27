@@ -1,9 +1,15 @@
 @import "../../styles/colors";
+@import "../../styles/main";
+
+:host {
+    display: flex;
+    flex-direction: column;
+}
 
 pre {
     border: 1px solid $outline-color;
     padding: 10px;
-
+    margin-top: 0;
     div {
         overflow: auto;
     }

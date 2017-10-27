@@ -22,14 +22,15 @@ export class Project{
     description: string;
     text: string;
     languages: string[];
-    outpu: string;
+    output: string;
+    alternativeOutputs: Output;
     notes: object;
     extraCode: object;
 }
 
 export class Output {
     text: string;
-    outpu: string;
+    output: string;
 }
 
 
