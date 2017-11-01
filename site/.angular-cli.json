@@ -10,6 +10,7 @@
       "assets": [
         "assets",
         "data",
+        "files",
         "favicon.ico",
         "CNAME"
       ],
