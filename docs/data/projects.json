@@ -188,6 +188,9 @@
             "fs": [
                 "<code>mutable</code> keyword is required for variables to have the ability to change its value.",
                 "Assigning on variable declaration uses <code>=</code> but reseting uses <code>&lt;-</code>."
+            ],
+            "sh": [
+                "No spaces on either side of <code>=</code> sign."
             ]
         }
     },
@@ -313,6 +316,9 @@
             ],
             "ts": [
                 "Since <code>1</code> and <code>2</code> are literals and, as such, are treated as constants (as if declared with <code>const</code> keyword), <b>TypeScript</b> inferres them as types <code>1</code> and <code>2</code>, respectively, and not <code>number</code>, as one would expect. The reason is that those values can never change. For that, at least one of the values compared need to be cast to <code>&lt;number&gt;</code>. This does not happen when variables are declared with <code>var</code> and <code>let</code> keywords where the \"expected\" type <code>number</code> is inferred."
+            ],
+            "sh": [
+                "Spaces between operator, values and brackets (<code>[</code> amd <code>]</code>)needed."
             ]
         },
         "extraCode": {
@@ -383,6 +389,9 @@
             ],
             "java": [
                 "As a <b>C-based</b> language, single statement blocks (like in the second if/else) are possible without brackets <code>{ ... }</code>."
+            ],
+            "sh": [
+                "Spaces between operator, values and brackets (<code>[</code> amd <code>]</code>)needed."
             ]
         }
     },
