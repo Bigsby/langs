@@ -8,12 +8,7 @@ else
 fi
 
 value=0
-if [ $value -eq 1 ]
-then
-    echo "Got true"
-else
-    echo "Got false"
-fi
+if [ $value -eq 1 ]; then echo "Got true"; else echo "Got false"; fi
 
 result=3
 if [ $result -eq  1 ]
