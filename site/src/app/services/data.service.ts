@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http } from "@angular/http";
 import 'rxjs/add/operator/toPromise';
 
-import { Project, Language, Program } from './models';
+import { Project, Language, Program, ProjpectImplementation, LanguageImplementation } from './models';
 
 @Injectable()
 export class DataService {
@@ -46,5 +46,31 @@ export class DataService {
     return this.http.get("data/programs.json")
       .toPromise()
       .then(response => response.json() as Program[]);
+  }
+
+  getProjectImplementations(projectId: string): Promise<(LanguageImplementation | string)[]>{
+    return this.http.get("data/implementations.json")
+      .toPromise()
+      .then(response =>  {
+        let implementations = response.json() as ProjpectImplementation[];
+        return implementations.find(i => i.projectId == projectId).languages;
+      });
+  }
+
+  getLanguagesImplementations(languagesId: string): Promise<(LanguageImplementation | string)[]>{
+    return this.http.get("data/implementaionts.json")
+      .toPromise()
+      .then(response => {
+        let implementations = response.json() as ProjpectImplementation[];
+        let result: (LanguageImplementation | string)[] = [];
+
+        implementations.forEach(impelemntation =>{
+          if (typeof impelemntation.languages[languagesId] === "string"){
+            
+          }
+        });
+        return result;
+      });
+
   }
 }

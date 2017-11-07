@@ -13,7 +13,7 @@ export class Language {
     show: boolean;
 }
 
-export class Project{
+export class Project {
     id: string;
     name: string;
     show: boolean;
@@ -34,14 +34,28 @@ export class Output {
 }
 
 
-export enum ProjectType{
+export enum ProjectType {
     steps,
     code
 }
 
-export class Program
-{
+export class Program {
     name: string;
     link: string;
     description: string;
+}
+
+export class ProjpectImplementation {
+    projectId: string;
+    languages: (LanguageImplementation | string)[];
+}
+
+export class LanguageImplementation {
+    notes: string[];
+    isCross: boolean = true;
+}
+
+export class PlatformImplementation {
+    notAvailable: boolean;
+    notes: string;
 }
