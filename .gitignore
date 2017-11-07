@@ -270,4 +270,15 @@ src/fs/[Ff][Ss]harp.[Cc]ore.dll
 
 __pycache__/
 
-.vscode/chrome
+
+# Created by https://www.gitignore.io/api/visualstudiocode
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history
+
+# End of https://www.gitignore.io/api/visualstudiocode
