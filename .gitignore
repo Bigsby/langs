@@ -263,8 +263,10 @@ paket-files/
 *.hi
 # Kotlin
 *.jar
+# TypesSript
+src/ts/*.js
 
-src/ts/package.json
+src/ts/package-lock.json
 src/fs/[Ff][Ss]harp.[Cc]ore.dll
 *.out
 
@@ -282,3 +284,5 @@ __pycache__/
 .history
 
 # End of https://www.gitignore.io/api/visualstudiocode
+
+# NPM local project-lock
