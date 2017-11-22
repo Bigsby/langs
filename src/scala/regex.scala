@@ -9,5 +9,20 @@ object Regex extends App {
 
     println("Groups of '^([a-z]+)\\-(\\d+)$' found in 'abcdef-12345'")
 
+    val regex = """^([a-z]+)\-(\d+)$""".r
+
+    val matchOption = regex.findFirstMatchIn("abcdef-12345")
+
+    matchOption match {
+        case Some(matchData) => {
+            println("Found " + matchData.subgroups.size + " groups.")
+
+            for ((group, index) <- matchData.subgroups.zipWithIndex) {
+                println(s"[$index] = $group")
+            }
+        }
+        case None => {}
+    }
+    
     
 }
