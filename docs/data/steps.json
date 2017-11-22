@@ -1,5 +1,4 @@
-﻿[
-    {
+﻿[{
         "id": "setup",
         "js": [{
                 "type": "install",
@@ -350,23 +349,52 @@
                 "text": "Run compiled program",
                 "command": "filname.exe"
             }
+        ],
+        "scala": [
+            {
+                "type": "install",
+                "program": "Java SE Development Kit",
+                "link": "http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html"
+            },
+            {
+                "type": "install",
+                "program": "Scala binaries",
+                "link": "https://www.scala-lang.org/download/",
+                "notes": [
+                    "Make sure scala.exe and scalac.exe paths are in System PATH"
+                ]
+            },
+            {
+                "type": "open",
+                "name": "Command Prompt",
+                "program": "cmd.exe"
+            },
+            {
+                "type": "command",
+                "text": "Compile code",
+                "command": "scalac [filename1.scala filename2.scala] filename.scala"
+            },
+            {
+                "type": "command",
+                "text": "Run compiled program",
+                "command": "scala entryPointClassName"
+            }
         ]
     },
     {
         "id": "debugging",
-        "cpp":[
-            {
-                "type":"install",
+        "cpp": [{
+                "type": "install",
                 "program": "C/C++ for Visual Studio Code",
                 "link": "https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools"
             },
             {
                 "type": "command",
-                "text":"Install debugger",
+                "text": "Install debugger",
                 "command": "mingw-get.exe install gdb"
             },
             {
-                "type":"code",
+                "type": "code",
                 "files": [
                     "program.cpp"
                 ]

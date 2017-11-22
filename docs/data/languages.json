@@ -309,6 +309,16 @@
         "current": true
     },
     {
+        "id": "scala",
+        "name": "Scala",
+        "version": "2.12",
+        "order": 16,
+        "description": "Functional oriented language that runs interoperatively in Java runtime.",
+        "link": "https://www.scala-lang.org/",
+        "hljs": "scala",
+        "current": false
+    },
+    {
         "id": "sh",
         "name": "Bourne Shell",
         "hljs": "bash",
