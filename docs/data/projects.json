@@ -21,7 +21,8 @@
             "php",
             "vb",
             "ts",
-            "erl"
+            "erl",
+            "scala"
         ]
     },
     {
@@ -48,7 +49,8 @@
             "vb",
             "ts",
             "erl",
-            "c"
+            "c",
+            "scala"
         ],
         "notes": {
             "cpp": [
@@ -81,7 +83,8 @@
             "vb",
             "ts",
             "erl",
-            "c"
+            "c",
+            "scala"
         ]
     },
     {
@@ -108,7 +111,8 @@
             "vb",
             "ts",
             "erl",
-            "c"
+            "c",
+            "scala"
         ]
     },
     {
@@ -135,7 +139,8 @@
             "vb",
             "ts",
             "erl",
-            "c"
+            "c",
+            "scala"
         ],
         "extraCode": {
             "js": {
@@ -218,7 +223,8 @@
             "vb",
             "ts",
             "erl",
-            "c"
+            "c",
+            "scala"
         ],
         "notes": {
             "cpp": [
@@ -269,7 +275,8 @@
             "vb",
             "ts",
             "erl",
-            "c"
+            "c",
+            "scala"
         ]
     },
     {
@@ -305,7 +312,8 @@
             "vb",
             "ts",
             "erl",
-            "c"
+            "c",
+            "scala"
         ],
         "notes": {
             "pl": [
@@ -375,7 +383,8 @@
             "vb",
             "ts",
             "erl",
-            "c"
+            "c",
+            "scala"
         ],
         "notes": {
             "js": [
@@ -428,7 +437,8 @@
             "vb",
             "ts",
             "erl",
-            "c"
+            "c",
+            "scala"
         ],
         "extraCode": {
             "rb": {
@@ -490,7 +500,8 @@
             "vb",
             "ts",
             "erl",
-            "c"
+            "c",
+            "scala"
         ]
     },
     {
@@ -517,7 +528,8 @@
             "vb",
             "ts",
             "erl",
-            "c"
+            "c",
+            "scala"
         ]
     },
     {
@@ -544,7 +556,8 @@
             "vb",
             "ts",
             "erl",
-            "c"
+            "c",
+            "scala"
         ]
     },
     {
@@ -571,7 +584,8 @@
             "vb",
             "ts",
             "erl",
-            "c"
+            "c",
+            "scala"
         ]
     },
     {
@@ -597,7 +611,8 @@
             "php",
             "vb",
             "ts",
-            "erl"
+            "erl",
+            "scala"
         ],
         "notes": {
             "java": [
@@ -629,7 +644,8 @@
             "php",
             "vb",
             "ts",
-            "erl"
+            "erl",
+            "scala"
         ],
         "notes": {
             "go": [
@@ -663,7 +679,8 @@
             "vb",
             "ts",
             "erl",
-            "c"
+            "c",
+            "scala"
         ],
         "moduleFiles": [
             "anotherModule"
@@ -722,7 +739,8 @@
             "vb",
             "ts",
             "erl",
-            "c"
+            "c",
+            "scala"
         ],
         "notes": {
             "pl": [
@@ -756,7 +774,8 @@
             "vb",
             "ts",
             "erl",
-            "c"
+            "c",
+            "scala"
         ],
         "notes": {
             "js": [
@@ -790,7 +809,8 @@
             "go",
             "fs",
             "erl",
-            "ps1"
+            "ps1",
+            "scala"
         ]
     },
     {
@@ -815,7 +835,8 @@
             "php",
             "vb",
             "ts",
-            "erl"
+            "erl",
+            "scala"
         ]
     },
     {
@@ -842,7 +863,8 @@
             "vb",
             "ts",
             "erl",
-            "c"
+            "c",
+            "scala"
         ]
     }
 ]

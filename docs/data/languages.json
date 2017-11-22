@@ -316,7 +316,7 @@
         "description": "Functional oriented language that runs interoperatively in Java runtime.",
         "link": "https://www.scala-lang.org/",
         "hljs": "scala",
-        "current": false
+        "current": true
     },
     {
         "id": "sh",
