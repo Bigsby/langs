@@ -8,10 +8,13 @@ then
 else
     echo "no"
 fi
-echo 
 
 echo "Groups of '^([a-z]+)\\-(\\d+)$' found in 'abcdef-12345'"
-echo "abcdef-12345" | grep -oP "^([a-z])+|([0-9])+$" | while read line
+matchesCount=$(echo "abcdef-12345" | grep -oP "^([a-z])+|([0-9])+$" | wc -w)
+echo "Found $matchesCount groups."
+matchIndex=0
+echo "abcdef-12345" | grep -oP "^([a-z])+|([0-9])+$"  | while read line
 do
-    echo $line
+    echo "[$matchIndex] - $line"
+    matchIndex=$(($matchCount + 1))
 done
