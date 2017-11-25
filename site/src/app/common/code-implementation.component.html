@@ -1,5 +1,5 @@
-<div class="collapseContainer"><url [href]="codeUrl">{{project.id}}.{{language.id}}</url><a class="copy" (click)="copy()">Copy</a></div>
+<div class="collapseContainer">
+    <url [href]="codeUrl">{{fileName}}.{{extension}}</url>
+    <a class="copy" (click)="copy()">Copy</a>
+</div>
 <pre><div [innerHTML]="code">loading...</div></pre>
-<ul>
-    <li *ngFor="let note of notes" [innerHTML]="note"></li>
-</ul>

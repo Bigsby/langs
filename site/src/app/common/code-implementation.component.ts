@@ -23,22 +23,27 @@ export class CodeImplementationComponent implements OnInit {
 
   @Input() project: Project;
   @Input() language: Language;
+  @Input() extension: string;
+  @Input() fileName: string;
+  // @Input() notes: string[];
   code: string;
   codeUrl: string;
   hasNotes: boolean;
-  notes: string[];
+  
   private cleanCode: string;
   constructor(private http: Http) {
   }
 
   ngOnInit(): void {
-    this.codeUrl = codeRoot + this.language.id + "/" + this.project.id + "." + this.language.id;
-    this.http.get(codeRawRoot + this.language.id + "/" + this.project.id + "." + this.language.id)
+    this.extension = this.extension || this.language.id;
+    this.fileName = this.fileName || this.project.id;
+    this.codeUrl = codeRoot + this.language.id + "/" + this.fileName + "." + this.extension;
+    this.http.get(codeRawRoot + this.language.id + "/" + this.fileName + "." + this.extension)
       .toPromise()
       .then(response => {
         this.cleanCode = response.text();
         this.code = hljs.highlight(this.language.hljs, this.cleanCode, true).value;
-        this.notes = this.project.notes ? this.project.notes[this.language.id] : [];
+        //this.notes = this.project.notes ? this.project.notes[this.language.id] : [];
       });
   }
 

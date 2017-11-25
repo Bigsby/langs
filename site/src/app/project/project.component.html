@@ -7,5 +7,12 @@
 </div>
 <div *ngFor="let language of languages">
     <div class="list-header" (click)="language.collapsed = !language.collapsed">{{language.name}}</div>
-    <code-implementation *ngIf="!language.collapsed" [language]="language" [project]="project"></code-implementation>
+    <div *ngIf="!language.collapsed">
+        <code-implementation [language]="language" [project]="project"></code-implementation>
+        <code-implementation *ngFor="let moduleFile of project?.moduleFiles" [language]="language" [project]="project" [fileName]="moduleFile"
+            [extension]="language.moduleExtension"></code-implementation>
+        <ul>
+            <li *ngFor="let note of project.notes[language.id]" [innerHTML]="note"></li>
+        </ul>
+    </div>
 </div>

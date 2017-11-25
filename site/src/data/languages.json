@@ -308,5 +308,43 @@
         "hljs": "powershell",
         "mime": "application/x-powershell",
         "current": true
+    },
+    {
+        "id": "scala",
+        "name": "Scala",
+        "version": "2.12",
+        "order": 16,
+        "show": true,
+        "description": "Functional oriented language that runs interoperatively in Java runtime.",
+        "link": "https://www.scala-lang.org/",
+        "hljs": "scala",
+        "current": true
+    },
+    {
+        "id": "sh",
+        "name": "Bourne Shell",
+        "hljs": "bash",
+        "version": " 4.3",
+        "show": false,
+        "link": "https://www.ibm.com/support/knowledgecenter/en/ssw_aix_71/com.ibm.aix.osdevice/bourne_shell.htm",
+        "description": "Command interpreter and command programming language",
+        "notes": [
+            "set LF in Visual Studio Code"
+        ]
+    },
+    {
+        "id": "hs",
+        "name": "Haskell",
+        "hljs": "haskell",
+        "link": "https://www.haskell.org/",
+        "show": false,
+        "links": [
+            "http://rigaux.org/language-study/syntax-across-languages-per-language/Haskell.html"
+        ]
+    },
+    {
+        "id": "makefile",
+        "name": "Makefile",
+        "show": false
     }
 ]

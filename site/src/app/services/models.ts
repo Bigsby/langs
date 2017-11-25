@@ -26,6 +26,7 @@ export class Project {
     alternativeOutputs: Output;
     notes: object;
     extraCode: object;
+    moduleFiles: string[];
 }
 
 export class Output {
