@@ -1,0 +1,451 @@
+[
+    {
+        "projectId": "setup",
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl"
+        ]
+    },
+    {
+        "projectId": "hello",
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl",
+            "c",
+            "sh"
+        ]
+    },
+    {
+        "projectId": "exit",
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl",
+            "c",
+            "sh"
+        ]
+    },
+    {
+        "projectId": "comments",
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl",
+            "c",
+            "sh"
+        ]
+    },
+    {
+        "projectId": "variables",
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl",
+            "c",
+            "sh"
+        ]
+    },
+    {
+        "projectId": "strings",
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl",
+            "c",
+            "sh"
+        ]
+    },
+    {
+        "projectId": "dry",
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl",
+            "c",
+            "sh"
+        ]
+    },
+    {
+        "projectId": "comparison_operators",
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl",
+            "c",
+            "sh"
+        ]
+    },
+    {
+        "projectId": "ifelse",
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl",
+            "c",
+            "sh"
+        ]
+    },
+    {
+        "projectId": "logical_operators",
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl",
+            "c",
+            "sh"
+        ]
+    },
+    {
+        "projectId": "loop",
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl",
+            "c",
+            "sh"
+        ]
+    },
+    {
+        "projectId": "iterate",
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl",
+            "c",
+            "sh"
+        ]
+    },
+    {
+        "projectId": "consoleInput",
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl",
+            "c",
+            "sh"
+        ]
+    },
+    {
+        "projectId": "exceptions",
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl",
+            "c",
+            "sh"
+        ]
+    },
+    {
+        "projectId": "regex",
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl",
+            "sh"
+        ]
+    },
+    {
+        "projectId": "dating",
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl",
+            "sh"
+        ]
+    },
+    {
+        "projectId": "modularity",
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl",
+            "c"
+        ]
+    },
+    {
+        "projectId": "classes",
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl",
+            "c"
+        ]
+    },
+    {
+        "projectId": "file_read",
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl",
+            "c"
+        ]
+    },
+    {
+        "projectId": "fily_system",
+        "languages": [
+            "js",
+            "java",
+            "cs",
+            "py",
+            "php",
+            "ts",
+            "rb",
+            "vb",
+            "pl",
+            "go",
+            "fs",
+            "erl",
+            "ps1"
+        ]
+    },
+    {
+        "projectId": "httpGet",
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl"
+        ]
+    },
+    {
+        "projectId": "fizzbuzz",
+        "languages": [
+            "js",
+            "cpp",
+            "py",
+            "fs",
+            "go",
+            "rb",
+            "cs",
+            "java",
+            "pl",
+            "ps1",
+            "php",
+            "vb",
+            "ts",
+            "erl",
+            "c"
+        ]
+    }
+]
