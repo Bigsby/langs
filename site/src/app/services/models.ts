@@ -60,3 +60,35 @@ export class PlatformImplementation {
     notAvailable: boolean;
     notes: string;
 }
+
+export class StepsImplementation {
+    languageId: string;
+    steps: Step[];
+}
+
+export enum Platform {
+    NA = 0,
+    linux_deb = 1 << 0,
+    linux_rpm = 1 << 1,
+    linux = linux_deb | linux_rpm,
+    macOS = 1 << 2,
+    windows = 1 << 3,
+    cross  = linux | macOS | windows
+}
+
+export class Step {
+    type: StepType;
+    program: string;
+    command: string;
+    name: string;
+    link: string;
+    notes: string[];
+}
+
+export enum StepType {
+    install,
+    open,
+    command,
+    image,
+    none
+}

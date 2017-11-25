@@ -7,6 +7,16 @@
 </div>
 <div *ngFor="let project of projects">
     <div class="list-header" (click)="project.collapsed = !project.collapsed">{{project.name}}</div>
-    <project-header *ngIf="!project.collapsed" [project]="project"></project-header>
-    <code-implementation *ngIf="!project.collapsed" [language]="language" [project]="project"></code-implementation>
+    <div *ngIf="!project.collapsed && project.type == 'code'">
+            <project-header [project]="project"></project-header>
+            <code-implementation [language]="language" [project]="project"></code-implementation>
+            <code-implementation *ngFor="let moduleFile of project?.moduleFiles" [language]="language" [project]="project" [fileName]="moduleFile"
+                [extension]="language.moduleExtension"></code-implementation>
+            <ul *ngIf="project.notes">
+                <li *ngFor="let note of project.notes[language.id]" [innerHTML]="note"></li>
+            </ul>
+    </div>
+    <div *ngIf="!project.collapsed && project.type == 'steps'">
+        <steps-implementation></steps-implementation>
+    </div>
 </div>
