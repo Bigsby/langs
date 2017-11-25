@@ -832,7 +832,7 @@
         "description": "Change behavior on invoke",
         "text": "Receiving paramters when starting the program to change its behavior.",
         "type": "code",
-        "output": "No parameters.\nFirst parameter is One\nToo many parameters",
+        "output": "No parameters.\nor\nParameter is «parameter»\nor\nToo many parameters",
         "languages":[
 
         ]
