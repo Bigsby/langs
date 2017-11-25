@@ -756,7 +756,7 @@
         "order": 18,
         "show": true,
         "description": "Reading from the File System",
-        "text": "Working with the File System (local files) is, at least, kinda handy.",
+        "text": "Reading the content of files from the local File System is, at least, kinda handy.",
         "output": "This from a file in the File System\nThis is the second line\n- Line 1\n- Line 2\n- Line 3",
         "type": "code",
         "languages": [
@@ -788,9 +788,20 @@
         }
     },
     {
+        "id": "file_write",
+        "name": "Write to File",
+        "order": 19,
+        "show": false,
+        "description": "Writing to the local File System",
+        "text": "Writing to the local File System is the first step to persist any state of a program.",
+        "output": "File Created!\nContent on file.\nFile Changed\nContent on file.\nNew Content.\nFile Deleted!",
+        "type":"code",
+        "languages":[]
+    },
+    {
         "id": "file_system",
         "name": "File System",
-        "order": 19,
+        "order": 20,
         "type": "code",
         "show": true,
         "description": "Listing files and folder from the file system.",
@@ -814,12 +825,26 @@
         ]
     },
     {
+        "id": "cliParams",
+        "name": "Command-line parameters",
+        "order": 21,
+        "show": false,
+        "description": "Change behavior on invoke",
+        "text": "Receiving paramters when starting the program to change its behavior.",
+        "type": "code",
+        "output": "No parameters.\nFirst parameter is One\nToo many parameters",
+        "languages":[
+
+        ]
+    },
+    {
         "id": "httpGet",
         "name": "HTTP Get",
-        "order": 20,
+        "order": 22,
         "show": true,
         "description": "Making an HTTP request",
         "text": "The ability to make web calls is paramount for almost every application.",
+        "output": "Content from HTTP request.",
         "type": "code",
         "languages": [
             "js",

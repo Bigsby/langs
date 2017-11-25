@@ -1,4 +1,5 @@
-[{
+[
+    {
         "id": "js",
         "name": "JavaScript",
         "version": "ES6",
@@ -329,6 +330,16 @@
         "description": "Command interpreter and command programming language",
         "notes": [
             "set LF in Visual Studio Code"
+        ]
+    },
+    {
+        "id": "hs",
+        "name": "Haskell",
+        "hljs": "haskell",
+        "link": "https://www.haskell.org/",
+        "show": false,
+        "links": [
+            "http://rigaux.org/language-study/syntax-across-languages-per-language/Haskell.html"
         ]
     },
     {
