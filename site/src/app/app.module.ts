@@ -4,6 +4,7 @@ import { HttpModule } from "@angular/http";
 
 import { AppRoutingModule, RoutedComponents } from './app-routing.module';
 import { DataService } from "./services/data.service";
+import { GoogleAnalyticsService } from "./services/google-analytics.service";
 import { AppComponent } from './app.component';
 import { UrlComponent } from "./common/url.component";
 import { ProjectHeaderComponent } from './common/project-header.component';
@@ -25,6 +26,7 @@ import { StepsImplementationComponent } from './common/steps-implementation.comp
     AppRoutingModule
   ],
   providers: [
+    GoogleAnalyticsService,
     DataService
   ],
   bootstrap: [AppComponent]
