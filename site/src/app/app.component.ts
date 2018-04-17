@@ -11,7 +11,7 @@ import { GoogleAnalyticsService } from "./services/google-analytics.service";
 })
 export class AppComponent {
   constructor(private googleAnalyticsService: GoogleAnalyticsService) {
-
+    this.appendGaTrackingCode();
   }
 
 
