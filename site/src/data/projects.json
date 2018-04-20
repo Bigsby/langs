@@ -561,6 +561,18 @@
         ]
     },
     {
+        "id": "consoling",
+        "name": "Consoling",
+        "order": 12.5,
+        "show": false,
+        "description": "Managing console display and consuming keyboard inputs.",
+        "text": "<p>Managing console display and handling keyboard inputs allows reacher CLI applications. Funtionalities are:</p><ul><li>Clear Screen;</li><li>Hide Cursor;</li><li></li>Change Text and background Color;</li><li>Capture keys.</li></ul>",
+        "type": "code",
+        "languages":[
+            
+        ]        
+    },
+    {
         "id": "exceptions",
         "name": "Exceptions",
         "order": 13,
