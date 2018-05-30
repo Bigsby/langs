@@ -254,6 +254,9 @@ paket-files/
 # Compiled files
 *.exe
 *.obj
+*.out
+*.elf
+*.bin
 # Java
 *.class
 # Erlang
