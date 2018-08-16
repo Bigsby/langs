@@ -322,7 +322,7 @@
     },
     {
         "id": "sh",
-        "name": "Bourne Shell",
+        "name": "Bourne-Again Shell",
         "hljs": "bash",
         "version": " 4.3",
         "show": false,
@@ -346,5 +346,13 @@
         "id": "makefile",
         "name": "Makefile",
         "show": false
+    },
+    {
+        "id": "ml",
+        "name": "OCaml",
+        "description": "Functional language.",
+        "url": "https://ocaml.org/",
+        "hljs": "ocaml",
+        "show": "false"
     }
 ]
