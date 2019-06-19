@@ -321,10 +321,21 @@
         "current": true
     },
     {
+        "id": "rs",
+        "name": "Rust",
+        "version": "1.35",
+        "order": 17,
+        "show": false,
+        "description": "",
+        "link": "https://www.rust-lang.org/",
+        "hljs": "rust",
+        "current": true
+    },
+    {
         "id": "sh",
         "name": "Bourne Shell",
         "hljs": "bash",
-        "version": " 4.3",
+        "version": "4.3",
         "show": false,
         "link": "https://www.ibm.com/support/knowledgecenter/en/ssw_aix_71/com.ibm.aix.osdevice/bourne_shell.htm",
         "description": "Command interpreter and command programming language",

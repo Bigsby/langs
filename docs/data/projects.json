@@ -85,7 +85,12 @@
             "erl",
             "c",
             "scala"
-        ]
+        ],
+        "notes": {
+            "rs": [
+                "Unreachable statement warning on compile."
+            ]
+        }
     },
     {
         "id": "comments",
